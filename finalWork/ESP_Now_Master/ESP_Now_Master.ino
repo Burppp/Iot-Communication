@@ -279,6 +279,8 @@ void setup()
     esp_now_register_send_cb(OnDataSent);
 }
 
+uint8_t RGB_val[3] = {0x00, 0x40, 0x00};
+bool RGB_reverse = false;
 void loop() {
     // In the loop we scan for slave
     ScanForSlave();
@@ -308,5 +310,14 @@ void loop() {
     }
 
     // wait for 3seconds to run the logic again
-    delay(3000);
+    if(!RGB_reverse)
+      RGB_val[1] += 5;
+    else
+      RGB_val[1] -= 5;
+    if(RGB_val[1] >= 0x40)
+      RGB_reverse = true;
+    if(RGB_val[1] <= 0x0A)
+      RGB_reverse = false;
+    neopixelWrite(RGB_BUILTIN, RGB_val[0], RGB_val[1], RGB_val[2]);
+    delay(100);
 }

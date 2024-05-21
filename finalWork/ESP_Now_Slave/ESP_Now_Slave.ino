@@ -78,7 +78,19 @@ void OnDataRecv(const uint8_t *mac_addr, const uint8_t *data, int data_len)
     Serial.println("");
 }
 
+uint8_t RGB_val[3] = {0x00, 0x00, 0x00};
+bool RGB_reverse = false;
 void loop() 
 {
     // Chill
+    if(!RGB_reverse)
+      RGB_val[0] += 5;
+    else
+      RGB_val[0] -= 5;
+    if(RGB_val[0] >= 0x40)
+      RGB_reverse = true;
+    if(RGB_val[0] <= 0x0A)
+      RGB_reverse = false;
+    neopixelWrite(RGB_BUILTIN, RGB_val[0], RGB_val[1], RGB_val[2]);
+    delay(100);
 }
