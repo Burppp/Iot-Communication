@@ -1,115 +1,121 @@
-#include <dummy.h>
+/**
+   ESPNOW - Basic communication - Master
+   Date: 26th September 2017
+   Author: Arvind Ravulavaru <https://github.com/arvindr21>
+   Purpose: ESPNow Communication between a Master ESP32 and a Slave ESP32
+   Description: This sketch consists of the code for the Master module.
+   Resources: (A bit outdated)
+   a. https://espressif.com/sites/default/files/documentation/esp-now_user_guide_en.pdf
+   b. http://www.esploradores.com/practica-6-conexion-esp-now/
 
-  //  Flow: Master
-  //  Step 1 : ESPNow Init on Master and set it in STA mode
-  //  Step 2 : Start scanning for Slave ESP32 (we have added a prefix of `slave` to the SSID of slave for an easy setup)
-  //  Step 3 : Once found, add Slave as peer
-  //  Step 4 : Register for send callback
-  //  Step 5 : Start Transmitting data from Master to Slave
+   << This Device Master >>
 
-#include "esp_now.h"
-#include "WiFi.h"
-#include "esp_wifi.h"
+   Flow: Master
+   Step 1 : ESPNow Init on Master and set it in STA mode
+   Step 2 : Start scanning for Slave ESP32 (we have added a prefix of `slave` to the SSID of slave for an easy setup)
+   Step 3 : Once found, add Slave as peer
+   Step 4 : Register for send callback
+   Step 5 : Start Transmitting data from Master to Slave
 
+   Flow: Slave
+   Step 1 : ESPNow Init on Slave
+   Step 2 : Update the SSID of Slave with a prefix of `slave`
+   Step 3 : Set Slave in AP mode
+   Step 4 : Register for receive callback and wait for data
+   Step 5 : Once data arrives, print it in the serial monitor
+
+   Note: Master and Slave have been defined to easily understand the setup.
+         Based on the ESPNOW API, there is no concept of Master and Slave.
+         Any devices can act as master or salve.
+*/
+
+#include <esp_now.h>
+#include <WiFi.h>
+#include <esp_wifi.h> // only for esp_wifi_set_channel()
+
+// Global copy of slave
+esp_now_peer_info_t slave;
 #define CHANNEL 1
 #define PRINTSCANRESULTS 0
 #define DELETEBEFOREPAIR 0
-//Found slaves
-esp_now_peer_info_t slave;
 
-//get mac address and send status
-void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) 
-{
-    char macStr[18];
-    snprintf(macStr, sizeof(macStr), "%02x:%02x:%02x:%02x:%02x:%02x", 
-            mac_addr[0], mac_addr[1], mac_addr[2], mac_addr[3], mac_addr[4], mac_addr[5]);
-    Serial.print("Last Packet Sent to: "); Serial.println(macStr);
-    Serial.print("Last Packet Send Status: "); Serial.println(status == ESP_NOW_SEND_SUCCESS ? "Delivery Success" : "Delivery Fail");
-}
-
-esp_err_t ESP_Now_Init()
-{
+// Init ESP Now with fallback
+void InitESPNow() {
     WiFi.disconnect();
-    if(esp_now_init() == ESP_OK)
+    if (esp_now_init() == ESP_OK) 
     {
-        Serial.println("ESP Now Init Success");
-        return ESP_OK;
+        Serial.println("ESPNow Init Success");
     }
-    else
+    else 
     {
-        Serial.println("ESP Node Init Failed");
+        Serial.println("ESPNow Init Failed");
+        // Retry InitESPNow, add a counte and then restart?
+        // InitESPNow();
+        // or Simply Restart
         ESP.restart();
-        return ESP_FAIL;
     }
 }
 
-//  Scan for slaves in AP mode
-void ScanForSlave()
+// Scan for slaves in AP mode
+void ScanForSlave() 
 {
-    //  Scan only on the channel defined before
-    int16_t scanResults = WiFi.scanNetworks(false, false, false, 300, CHANNEL);
-
+    int16_t scanResults = WiFi.scanNetworks(false, false, false, 300, CHANNEL); // Scan only on one channel
+    // reset on each scan
     bool slaveFound = 0;
     memset(&slave, 0, sizeof(slave));
 
-    if(scanResults == 0)
+    Serial.println("");
+    if (scanResults == 0) 
     {
-        Serial.println("No WiFi devices in AP mode found");
-    }
-    else
+        Serial.println("No WiFi devices in AP Mode found");
+    } 
+    else 
     {
         Serial.print("Found "); Serial.print(scanResults); Serial.println(" devices ");
-        for(int i = 0;i < scanResults;i++)
-    }
-    String SSID = WiFi.SSID(i);
-    int32_t RSSI = WiFi.RSSI(i);
-    String BSSIDstr = WiFi.BSSIDstr(i);
-
-    if (PRINTSCANRESULTS) 
-    {
-        Serial.print(i + 1);
-        Serial.print(": ");
-        Serial.print(SSID);
-        Serial.print(" (");
-        Serial.print(RSSI);
-        Serial.print(")");
-        Serial.println("");
-    }
-
-    delay(10);
-
-    //check SSID starts with "Slave"
-    if(SSID.indexOf("Slave") == 0)
-    {
-        Serial.println("Found a Slave.");
-        Serial.print(i + 1); 
-        Serial.print(": "); 
-        Serial.print(SSID); 
-        Serial.print(" ["); 
-        Serial.print(BSSIDstr); 
-        Serial.print("]"); 
-        Serial.print(" ("); 
-        Serial.print(RSSI); 
-        Serial.print(")"); 
-        Serial.println("");
-        // Get BSSID => Mac Address of the Slave
-        int mac[6];
-        if ( 6 == sscanf(BSSIDstr.c_str(), "%x:%x:%x:%x:%x:%x",  &mac[0], &mac[1], &mac[2], &mac[3], &mac[4], &mac[5] ) ) 
+        for (int i = 0; i < scanResults; ++i) 
         {
-            for (int ii = 0; ii < 6; ++ii ) 
+            // Print SSID and RSSI for each device found
+            String SSID = WiFi.SSID(i);
+            int32_t RSSI = WiFi.RSSI(i);
+            String BSSIDstr = WiFi.BSSIDstr(i);
+
+            if (PRINTSCANRESULTS) 
             {
-                slave.peer_addr[ii] = (uint8_t) mac[ii];
+                Serial.print(i + 1);
+                Serial.print(": ");
+                Serial.print(SSID);
+                Serial.print(" (");
+                Serial.print(RSSI);
+                Serial.print(")");
+                Serial.println("");
+            }
+            delay(10);
+            // Check if the current device starts with `Slave`
+            if (SSID.indexOf("Slave") == 0) 
+            {
+                // SSID of interest
+                Serial.println("Found a Slave.");
+                Serial.print(i + 1); Serial.print(": "); Serial.print(SSID); Serial.print(" ["); Serial.print(BSSIDstr); Serial.print("]"); Serial.print(" ("); Serial.print(RSSI); Serial.print(")"); Serial.println("");
+                // Get BSSID => Mac Address of the Slave
+                int mac[6];
+                if ( 6 == sscanf(BSSIDstr.c_str(), "%x:%x:%x:%x:%x:%x",  &mac[0], &mac[1], &mac[2], &mac[3], &mac[4], &mac[5] ) ) 
+                {
+                    for (int ii = 0; ii < 6; ++ii ) 
+                    {
+                        slave.peer_addr[ii] = (uint8_t) mac[ii];
+                    }
+                }
+
+                slave.channel = CHANNEL; // pick a channel
+                slave.encrypt = 0; // no encryption
+
+                slaveFound = 1;
+                // we are planning to have only one slave in this example;
+                // Hence, break after we find one, to be a bit efficient
+                break;
             }
         }
-
-        slave.channel = CHANNEL; // pick a channel
-        slave.encrypt = 0; // no encryption
-
-        slaveFound = 1;
-        // we are planning to have only one slave in this example;
-        // Hence, break after we find one, to be a bit efficient
-        break;
-    }    
+    }
 
     if (slaveFound) 
     {
@@ -126,7 +132,7 @@ void ScanForSlave()
 
 // Check if the slave is already paired with the master.
 // If not, pair the slave with master
-bool manageSlave()
+bool manageSlave() 
 {
     if (slave.channel == CHANNEL) 
     {
@@ -195,31 +201,102 @@ bool manageSlave()
     }
 }
 
-void setup() {
-    //USB2UART Init 115200 baud rate : just for debug
-    Serial.begin(115200);
-        
-    //Set device in STA mode to begin with
-    WiFi.mode(WIFI_MODE_STA);
-
-    //WiFi : HT20 mode, the second parameter is ignored
-    if(esp_wifi_set_channel(CHANNEL, WIFI_SECOND_CHAN_NONE) == ESP_OK)
+void deletePeer() 
+{
+    esp_err_t delStatus = esp_now_del_peer(slave.peer_addr);
+    Serial.print("Slave Delete Status: ");
+    if (delStatus == ESP_OK) 
     {
-        Serial.println("WiFi mode : STA / HT20");
-        Serial.print("STA MAC : ");
-        Serial.println(WiFi.macAddress());
-        Serial.print("STA CHANNEL : ");
-        Serial.println(WiFi.channel());
+        // Delete success
+        Serial.println("Success");
+    } 
+    else if (delStatus == ESP_ERR_ESPNOW_NOT_INIT) 
+    {
+        // How did we get so far!!
+        Serial.println("ESPNOW Not Init");
+    } 
+    else if (delStatus == ESP_ERR_ESPNOW_ARG) 
+    {
+        Serial.println("Invalid Argument");
     }
-
-    if(ESP_Now_Init() == ESP_OK)
+    else if (delStatus == ESP_ERR_ESPNOW_NOT_FOUND) 
     {
-        esp_now_register_send_cb(OnDataSent);
+        Serial.println("Peer not found.");
+    } 
+    else 
+    {
+        Serial.println("Not sure what happened");
     }
 }
 
-void loop() 
+uint8_t data = 0;
+// send data
+void sendData() 
 {
+    data++;
+    const uint8_t *peer_addr = slave.peer_addr;
+    Serial.print("Sending: "); Serial.println(data);
+    esp_err_t result = esp_now_send(peer_addr, &data, sizeof(data));
+    Serial.print("Send Status: ");
+    if (result == ESP_OK) 
+    {
+        Serial.println("Success");
+    } 
+    else if (result == ESP_ERR_ESPNOW_NOT_INIT) 
+    {
+        // How did we get so far!!
+        Serial.println("ESPNOW not Init.");
+    } 
+    else if (result == ESP_ERR_ESPNOW_ARG) 
+    {
+        Serial.println("Invalid Argument");
+    } 
+    else if (result == ESP_ERR_ESPNOW_INTERNAL) 
+    {
+        Serial.println("Internal Error");
+    } 
+    else if (result == ESP_ERR_ESPNOW_NO_MEM) 
+    {
+        Serial.println("ESP_ERR_ESPNOW_NO_MEM");
+    } 
+    else if (result == ESP_ERR_ESPNOW_NOT_FOUND) 
+    {
+        Serial.println("Peer not found.");
+    } 
+    else 
+    {
+        Serial.println("Not sure what happened");
+    }
+}
+
+// callback when data is sent from Master to Slave
+void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) 
+{
+    char macStr[18];
+    snprintf(macStr, sizeof(macStr), "%02x:%02x:%02x:%02x:%02x:%02x",
+            mac_addr[0], mac_addr[1], mac_addr[2], mac_addr[3], mac_addr[4], mac_addr[5]);
+    Serial.print("Last Packet Sent to: "); Serial.println(macStr);
+    Serial.print("Last Packet Send Status: "); Serial.println(status == ESP_NOW_SEND_SUCCESS ? "Delivery Success" : "Delivery Fail");
+}
+
+void setup() 
+{
+    Serial.begin(115200);
+    //Set device in STA mode to begin with
+    WiFi.mode(WIFI_STA);
+    esp_wifi_set_channel(CHANNEL, WIFI_SECOND_CHAN_NONE);
+    Serial.println("ESPNow/Basic/Master Example");
+    // This is the mac address of the Master in Station Mode
+    Serial.print("STA MAC: "); Serial.println(WiFi.macAddress());
+    Serial.print("STA CHANNEL "); Serial.println(WiFi.channel());
+    // Init ESPNow with a fallback logic
+    InitESPNow();
+    // Once ESPNow is successfully Init, we will register for Send CB to
+    // get the status of Trasnmitted packet
+    esp_now_register_send_cb(OnDataSent);
+}
+
+void loop() {
     // In the loop we scan for slave
     ScanForSlave();
     // If Slave is found, it would be populate in `slave` variable
@@ -234,12 +311,12 @@ void loop()
         {
         // pair success or already paired
         // Send data to device
-            sendData();
+        sendData();
         } 
         else 
         {
-            // slave pair failed
-            Serial.println("Slave pair failed!");
+        // slave pair failed
+        Serial.println("Slave pair failed!");
         }
     }
     else 
