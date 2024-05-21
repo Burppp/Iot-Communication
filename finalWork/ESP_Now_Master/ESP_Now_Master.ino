@@ -1,15 +1,4 @@
 /**
-   ESPNOW - Basic communication - Master
-   Date: 26th September 2017
-   Author: Arvind Ravulavaru <https://github.com/arvindr21>
-   Purpose: ESPNow Communication between a Master ESP32 and a Slave ESP32
-   Description: This sketch consists of the code for the Master module.
-   Resources: (A bit outdated)
-   a. https://espressif.com/sites/default/files/documentation/esp-now_user_guide_en.pdf
-   b. http://www.esploradores.com/practica-6-conexion-esp-now/
-
-   << This Device Master >>
-
    Flow: Master
    Step 1 : ESPNow Init on Master and set it in STA mode
    Step 2 : Start scanning for Slave ESP32 (we have added a prefix of `slave` to the SSID of slave for an easy setup)
@@ -17,16 +6,10 @@
    Step 4 : Register for send callback
    Step 5 : Start Transmitting data from Master to Slave
 
-   Flow: Slave
-   Step 1 : ESPNow Init on Slave
-   Step 2 : Update the SSID of Slave with a prefix of `slave`
-   Step 3 : Set Slave in AP mode
-   Step 4 : Register for receive callback and wait for data
-   Step 5 : Once data arrives, print it in the serial monitor
-
-   Note: Master and Slave have been defined to easily understand the setup.
-         Based on the ESPNOW API, there is no concept of Master and Slave.
-         Any devices can act as master or salve.
+   Application layer: Master
+   Step 1 : Get keyboard info
+   Step 2 : Arrange keyboard info to robot moving
+   Step 3 : Using ESP_NOW to send cmd_vel to slave
 */
 
 #include <esp_now.h>
@@ -285,7 +268,7 @@ void setup()
     //Set device in STA mode to begin with
     WiFi.mode(WIFI_STA);
     esp_wifi_set_channel(CHANNEL, WIFI_SECOND_CHAN_NONE);
-    Serial.println("ESPNow/Basic/Master Example");
+    Serial.println("ESPNow Master");
     // This is the mac address of the Master in Station Mode
     Serial.print("STA MAC: "); Serial.println(WiFi.macAddress());
     Serial.print("STA CHANNEL "); Serial.println(WiFi.channel());
