@@ -216,9 +216,33 @@ uint8_t data = 0;
 // send data
 void sendData() 
 {
-    data++;
     const uint8_t *peer_addr = slave.peer_addr;
     Serial.print("Sending: "); Serial.println(data);
+    if(Serial.available() > 0)
+    {
+      data = Serial.read();
+      Serial.println("Receive data");
+      switch (data) {
+        case 'L':
+          neopixelWrite(RGB_BUILTIN, 0x00, 0x00, 0x00);
+          break;
+        case 'R':
+          neopixelWrite(RGB_BUILTIN, 0x00, 0x00, 0x00);
+          break;
+        case 'w':
+          neopixelWrite(RGB_BUILTIN, 0x00, 0x00, 0x00);
+          break;
+        case 'a':
+          neopixelWrite(RGB_BUILTIN, 0x40, 0x00, 0x00);
+          break;
+        case 's':
+          neopixelWrite(RGB_BUILTIN, 0x00, 0x40, 0x00);
+          break;
+        case 'd':
+          neopixelWrite(RGB_BUILTIN, 0x00, 0x00, 0x40);
+          break;
+      }
+    }
     esp_err_t result = esp_now_send(peer_addr, &data, sizeof(data));
     Serial.print("Send Status: ");
     if (result == ESP_OK) 
@@ -292,6 +316,7 @@ void loop() {
         // `slave` is defined
         // Add slave as peer if it has not been added already
         bool isPaired = manageSlave();
+        sendData();
         if (isPaired) 
         {
         // pair success or already paired
@@ -310,14 +335,14 @@ void loop() {
     }
 
     // wait for 3seconds to run the logic again
-    if(!RGB_reverse)
-      RGB_val[1] += 5;
-    else
-      RGB_val[1] -= 5;
-    if(RGB_val[1] >= 0x40)
-      RGB_reverse = true;
-    if(RGB_val[1] <= 0x0A)
-      RGB_reverse = false;
-    neopixelWrite(RGB_BUILTIN, RGB_val[0], RGB_val[1], RGB_val[2]);
+    // if(!RGB_reverse)
+    //   RGB_val[1] += 5;
+    // else
+    //   RGB_val[1] -= 5;
+    // if(RGB_val[1] >= 0x40)
+    //   RGB_reverse = true;
+    // if(RGB_val[1] <= 0x0A)
+    //   RGB_reverse = false;
+    // neopixelWrite(RGB_BUILTIN, RGB_val[0], RGB_val[1], RGB_val[2]);
     delay(100);
 }
