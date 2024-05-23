@@ -316,7 +316,6 @@ void loop() {
         // `slave` is defined
         // Add slave as peer if it has not been added already
         bool isPaired = manageSlave();
-        sendData();
         if (isPaired) 
         {
         // pair success or already paired

@@ -53,6 +53,7 @@ void configDeviceAP()
 void setup() 
 {
     Serial.begin(115200);
+    Serial1.begin(115200, SERIAL_8N1, 6, 7);
     // Serial.println("ESPNow Slave");
     //Set device in AP mode to begin with
     WiFi.mode(WIFI_AP);
@@ -77,6 +78,9 @@ void OnDataRecv(const uint8_t *mac_addr, const uint8_t *data, int data_len)
     // Serial.print("Last Packet Recv Data: "); 
     Serial.println(data_len);
     Serial.println(*data);
+
+    Serial1.println(data_len);
+    Serial1.println(*data);
     // Serial.print("Last Packet Recv Data len: ");
     // Serial.println("");
 }
