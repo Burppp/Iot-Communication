@@ -84,7 +84,40 @@ fp32 k;
 
 void Chassis_Cmd_Update(uint8_t *uart_buffer)
 {
+    if(uart_buffer[0] == '1')
+    {
+        uint8_t cmd = 0;
+        if(uart_buffer[3] == 0)
+            cmd = (uart_buffer[1] - '0') * 10 + uart_buffer[2] - '0';
+        else
+            cmd = (uart_buffer[1] - '0') * 100 + (uart_buffer[2] - '0') * 10 + uart_buffer[3] - '0';
+        switch (cmd)
+        {
+            case 76://'L'
+                chassis.vx = 200;
+                break;
 
+            case 82://'R'
+                chassis.vx = 200;
+                break;
+
+            case 119://'w'
+                chassis.vx = 200;
+                break;
+
+            case 97://'a'
+                chassis.vy = -200;
+                break;
+
+            case 115://'s'
+                chassis.vx = -200;
+                break;
+
+            case 100://'d'
+                chassis.vy = 200;
+                break;
+        }
+    }
 }
 
 void USART1_IRQHandler(void)
@@ -97,6 +130,8 @@ void USART1_IRQHandler(void)
         __HAL_DMA_DISABLE(huart1.hdmarx); //使能dma_rx
 
         Chassis_Cmd_Update(&usart1_buff[0]);
+
+        memset(usart1_buff, 0, sizeof(usart1_buff));
 
         __HAL_DMA_CLEAR_FLAG(huart1.hdmarx,DMA_LISR_TCIF1); //清除传输完成标志位
 

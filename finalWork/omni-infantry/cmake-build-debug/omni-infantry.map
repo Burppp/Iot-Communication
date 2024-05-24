@@ -2012,16 +2012,16 @@ Discarded input sections
                 0x00000000        0x1 CMakeFiles/omni-infantry.elf.dir/application/Cap.c.obj
  .bss.chassis_power_output
                 0x00000000        0x1 CMakeFiles/omni-infantry.elf.dir/application/Cap.c.obj
- .debug_info    0x00000000     0x10d7 CMakeFiles/omni-infantry.elf.dir/application/Cap.c.obj
- .debug_abbrev  0x00000000      0x24a CMakeFiles/omni-infantry.elf.dir/application/Cap.c.obj
+ .debug_info    0x00000000     0x11bc CMakeFiles/omni-infantry.elf.dir/application/Cap.c.obj
+ .debug_abbrev  0x00000000      0x25b CMakeFiles/omni-infantry.elf.dir/application/Cap.c.obj
  .debug_loclists
                 0x00000000       0x24 CMakeFiles/omni-infantry.elf.dir/application/Cap.c.obj
  .debug_aranges
                 0x00000000       0x28 CMakeFiles/omni-infantry.elf.dir/application/Cap.c.obj
  .debug_rnglists
                 0x00000000       0x1a CMakeFiles/omni-infantry.elf.dir/application/Cap.c.obj
- .debug_line    0x00000000      0x2cf CMakeFiles/omni-infantry.elf.dir/application/Cap.c.obj
- .debug_str     0x00000000     0x1184 CMakeFiles/omni-infantry.elf.dir/application/Cap.c.obj
+ .debug_line    0x00000000      0x2dc CMakeFiles/omni-infantry.elf.dir/application/Cap.c.obj
+ .debug_str     0x00000000     0x1190 CMakeFiles/omni-infantry.elf.dir/application/Cap.c.obj
  .comment       0x00000000       0x56 CMakeFiles/omni-infantry.elf.dir/application/Cap.c.obj
  .debug_frame   0x00000000       0x38 CMakeFiles/omni-infantry.elf.dir/application/Cap.c.obj
  .ARM.attributes
@@ -2031,6 +2031,7 @@ Discarded input sections
  .bss           0x00000000        0x0 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
  .text.calc_power_limit
                 0x00000000       0xa0 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
+ .bss.res.0     0x00000000        0x1 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
  .bss.dangerous
                 0x00000000        0x1 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
  .bss.c         0x00000000        0x4 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
@@ -2185,7 +2186,6 @@ Discarded input sections
  .text.UI_paint_task
                 0x00000000       0x48 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
  .bss.res.0     0x00000000        0x1 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
- .bss.res.1     0x00000000        0x1 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
  .bss.ant       0x00000000        0x4 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
  .bss.asc       0x00000000        0x4 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
  .bss.ClientTXBufferCir
@@ -2304,8 +2304,8 @@ Discarded input sections
                 0x00000000        0x1 CMakeFiles/omni-infantry.elf.dir/application/launcher.c.obj
  .bss.rc_last_sw_L
                 0x00000000        0x1 CMakeFiles/omni-infantry.elf.dir/application/launcher.c.obj
- .debug_info    0x00000000     0x20bc CMakeFiles/omni-infantry.elf.dir/application/launcher.c.obj
- .debug_abbrev  0x00000000      0x33e CMakeFiles/omni-infantry.elf.dir/application/launcher.c.obj
+ .debug_info    0x00000000     0x21a1 CMakeFiles/omni-infantry.elf.dir/application/launcher.c.obj
+ .debug_abbrev  0x00000000      0x34f CMakeFiles/omni-infantry.elf.dir/application/launcher.c.obj
  .debug_loclists
                 0x00000000       0xaf CMakeFiles/omni-infantry.elf.dir/application/launcher.c.obj
  .debug_aranges
@@ -2313,7 +2313,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x35 CMakeFiles/omni-infantry.elf.dir/application/launcher.c.obj
  .debug_line    0x00000000      0xb84 CMakeFiles/omni-infantry.elf.dir/application/launcher.c.obj
- .debug_str     0x00000000     0x19e4 CMakeFiles/omni-infantry.elf.dir/application/launcher.c.obj
+ .debug_str     0x00000000     0x19f0 CMakeFiles/omni-infantry.elf.dir/application/launcher.c.obj
  .comment       0x00000000       0x56 CMakeFiles/omni-infantry.elf.dir/application/launcher.c.obj
  .debug_frame   0x00000000       0xc0 CMakeFiles/omni-infantry.elf.dir/application/launcher.c.obj
  .ARM.attributes
@@ -2368,6 +2368,7 @@ Discarded input sections
                 0x00000000       0x58 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
  .text.cap_test_loading
                 0x00000000       0x6c CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
+ .bss.cap_mode  0x00000000        0x1 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
  .bss.cap_update_flag
                 0x00000000        0x1 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
  .text          0x00000000        0x0 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_crc32.c.obj
@@ -3803,7 +3804,7 @@ LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb
                 0x08000000                g_pfnVectors
                 0x08000188                        . = ALIGN (0x4)
 
-.text           0x080001c0    0x11f78
+.text           0x080001c0    0x11e08
                 0x080001c0                        . = ALIGN (0x4)
  *(.text)
  .text          0x080001c0      0x378 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
@@ -4971,515 +4972,512 @@ LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb
                 0x0800a4ec       0x7c CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
  .text.chassis_wheel_cal
                 0x0800a568       0xf8 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
- .text.chassis_speed_change
-                0x0800a660       0xcc CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
- .text.chassis_pc_ctrl
-                0x0800a72c       0xa8 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
- *fill*         0x0800a7d4        0x4 
- .text.chassis_ctrl_info_get
-                0x0800a7d8      0x148 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
  .text.chassis_init
-                0x0800a920      0x144 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
+                0x0800a660      0x144 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
  .text.chassis_spin_handle
-                0x0800aa64      0x144 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
+                0x0800a7a4      0x144 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
  .text.chassis_relax_handle
-                0x0800aba8       0x1c CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
+                0x0800a8e8       0x1c CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
  .text.chassis_wheel_loop_cal
-                0x0800abc4       0xdc CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
- .text.send_robot_id
-                0x0800aca0       0x24 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
-                0x0800aca0                send_robot_id
- .text.chassis_can_send_back_mapping
-                0x0800acc4       0x44 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
-                0x0800acc4                chassis_can_send_back_mapping
- .text.chassis_device_offline_handle
-                0x0800ad08       0x20 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
-                0x0800ad08                chassis_device_offline_handle
- .text.chassis_follow_gimbal_handle
-                0x0800ad28      0x110 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
-                0x0800ad28                chassis_follow_gimbal_handle
- .text.chassis_task
-                0x0800ae38      0x114 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
-                0x0800ae38                chassis_task
- .text.detect_init
-                0x0800af4c       0x30 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
- .text.detect_handle
-                0x0800af7c       0x18 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
-                0x0800af7c                detect_handle
- .text.offline_remind
-                0x0800af94       0x84 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
-                0x0800af94                offline_remind
- .text.control_judge
-                0x0800b018       0x48 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
-                0x0800b018                control_judge
- .text.detect_task
-                0x0800b060      0x118 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
-                0x0800b060                detect_task
- .text.judge_team_client
-                0x0800b178      0x178 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
-                0x0800b178                judge_team_client
- .text.Referee_read_data
-                0x0800b2f0      0x494 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
- .text.USART6_IRQHandler
-                0x0800b784       0xb8 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
-                0x0800b784                USART6_IRQHandler
+                0x0800a904       0xdc CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
+ .text.Chassis_Cmd_Update
+                0x0800a9e0      0x148 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
+                0x0800a9e0                Chassis_Cmd_Update
  .text.USART1_IRQHandler
-                0x0800b83c       0xbc CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
-                0x0800b83c                USART1_IRQHandler
+                0x0800ab28       0xb8 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
+                0x0800ab28                USART1_IRQHandler
+ .text.send_robot_id
+                0x0800abe0       0x24 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
+                0x0800abe0                send_robot_id
+ .text.chassis_can_send_back_mapping
+                0x0800ac04       0x44 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
+                0x0800ac04                chassis_can_send_back_mapping
+ .text.chassis_device_offline_handle
+                0x0800ac48       0x20 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
+                0x0800ac48                chassis_device_offline_handle
+ .text.chassis_follow_gimbal_handle
+                0x0800ac68      0x110 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
+                0x0800ac68                chassis_follow_gimbal_handle
+ .text.chassis_task
+                0x0800ad78      0x11c CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
+                0x0800ad78                chassis_task
+ .text.detect_init
+                0x0800ae94       0x30 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
+ .text.detect_handle
+                0x0800aec4       0x18 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
+                0x0800aec4                detect_handle
+ .text.offline_remind
+                0x0800aedc       0x84 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
+                0x0800aedc                offline_remind
+ .text.control_judge
+                0x0800af60       0x48 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
+                0x0800af60                control_judge
+ .text.detect_task
+                0x0800afa8      0x118 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
+                0x0800afa8                detect_task
+ .text.judge_team_client
+                0x0800b0c0      0x178 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
+                0x0800b0c0                judge_team_client
+ .text.Referee_read_data
+                0x0800b238      0x494 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
+ .text.USART6_IRQHandler
+                0x0800b6cc       0xb8 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
+                0x0800b6cc                USART6_IRQHandler
  .text.CAN_cmd_motor
-                0x0800b8f8       0x74 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
-                0x0800b8f8                CAN_cmd_motor
+                0x0800b784       0x74 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
+                0x0800b784                CAN_cmd_motor
  .text.HAL_CAN_RxFifo0MsgPendingCallback
-                0x0800b96c      0x3d0 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
-                0x0800b96c                HAL_CAN_RxFifo0MsgPendingCallback
+                0x0800b7f8      0x3d0 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
+                0x0800b7f8                HAL_CAN_RxFifo0MsgPendingCallback
  .text.key_update
-                0x0800bd3c       0x6e CMakeFiles/omni-infantry.elf.dir/application/key_board.c.obj
- *fill*         0x0800bdaa        0x2 
+                0x0800bbc8       0x6e CMakeFiles/omni-infantry.elf.dir/application/key_board.c.obj
+ *fill*         0x0800bc36        0x2 
  .text.update_pc_info
-                0x0800bdac      0x410 CMakeFiles/omni-infantry.elf.dir/application/key_board.c.obj
-                0x0800bdac                update_pc_info
- .text.RC_abs   0x0800c1bc        0xc CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
+                0x0800bc38      0x410 CMakeFiles/omni-infantry.elf.dir/application/key_board.c.obj
+                0x0800bc38                update_pc_info
+ .text.RC_abs   0x0800c048        0xc CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
  .text.remote_control_init
-                0x0800c1c8       0x14 CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
-                0x0800c1c8                remote_control_init
+                0x0800c054       0x14 CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
+                0x0800c054                remote_control_init
  .text.RC_data_is_error
-                0x0800c1dc       0x7c CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
-                0x0800c1dc                RC_data_is_error
+                0x0800c068       0x7c CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
+                0x0800c068                RC_data_is_error
  .text.sbus_to_rc
-                0x0800c258      0x126 CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
- *fill*         0x0800c37e        0x2 
+                0x0800c0e4      0x126 CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
+ *fill*         0x0800c20a        0x2 
  .text.USART3_IRQHandler
-                0x0800c380       0xe4 CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
-                0x0800c380                USART3_IRQHandler
+                0x0800c20c       0xe4 CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
+                0x0800c20c                USART3_IRQHandler
  .text.adcx_get_chx_value
-                0x0800c464       0x3c CMakeFiles/omni-infantry.elf.dir/bsp/bsp_adc.c.obj
+                0x0800c2f0       0x3c CMakeFiles/omni-infantry.elf.dir/bsp/bsp_adc.c.obj
  .text.get_temprate
-                0x0800c4a0       0x48 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_adc.c.obj
-                0x0800c4a0                get_temprate
+                0x0800c32c       0x48 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_adc.c.obj
+                0x0800c32c                get_temprate
  .text.buzzer_on
-                0x0800c4e8       0x10 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_buzzer.c.obj
-                0x0800c4e8                buzzer_on
+                0x0800c374       0x10 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_buzzer.c.obj
+                0x0800c374                buzzer_on
  .text.buzzer_off
-                0x0800c4f8       0x10 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_buzzer.c.obj
-                0x0800c4f8                buzzer_off
+                0x0800c384       0x10 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_buzzer.c.obj
+                0x0800c384                buzzer_off
  .text.can_filter_init
-                0x0800c508       0x5c CMakeFiles/omni-infantry.elf.dir/bsp/bsp_can.c.obj
-                0x0800c508                can_filter_init
+                0x0800c394       0x5c CMakeFiles/omni-infantry.elf.dir/bsp/bsp_can.c.obj
+                0x0800c394                can_filter_init
  .text.cap_init
-                0x0800c564       0x50 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
-                0x0800c564                cap_init
+                0x0800c3f0       0x50 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
+                0x0800c3f0                cap_init
  .text.delay_init
-                0x0800c5b4       0x34 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_delay.c.obj
-                0x0800c5b4                delay_init
+                0x0800c440       0x34 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_delay.c.obj
+                0x0800c440                delay_init
  .text.delay_us
-                0x0800c5e8       0x40 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_delay.c.obj
-                0x0800c5e8                delay_us
+                0x0800c474       0x40 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_delay.c.obj
+                0x0800c474                delay_us
  .text.flash_read
-                0x0800c628       0x10 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
-                0x0800c628                flash_read
+                0x0800c4b4       0x10 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
+                0x0800c4b4                flash_read
  .text.ger_sector
-                0x0800c638       0xc2 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
-                0x0800c638                ger_sector
+                0x0800c4c4       0xc2 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
+                0x0800c4c4                ger_sector
  .text.flash_erase_address
-                0x0800c6fa       0x2a CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
-                0x0800c6fa                flash_erase_address
+                0x0800c586       0x2a CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
+                0x0800c586                flash_erase_address
  .text.get_next_flash_address
-                0x0800c724       0xf0 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
-                0x0800c724                get_next_flash_address
+                0x0800c5b0       0xf0 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
+                0x0800c5b0                get_next_flash_address
  .text.flash_write_single_address
-                0x0800c814       0x80 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
-                0x0800c814                flash_write_single_address
+                0x0800c6a0       0x80 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
+                0x0800c6a0                flash_write_single_address
  .text.imu_pwm_set
-                0x0800c894        0xc CMakeFiles/omni-infantry.elf.dir/bsp/bsp_imu_pwm.c.obj
-                0x0800c894                imu_pwm_set
+                0x0800c720        0xc CMakeFiles/omni-infantry.elf.dir/bsp/bsp_imu_pwm.c.obj
+                0x0800c720                imu_pwm_set
  .text.aRGB_led_show
-                0x0800c8a0       0x50 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_led.c.obj
-                0x0800c8a0                aRGB_led_show
- .text.RC_Init  0x0800c8f0       0x68 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_rc.c.obj
-                0x0800c8f0                RC_Init
+                0x0800c72c       0x50 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_led.c.obj
+                0x0800c72c                aRGB_led_show
+ .text.RC_Init  0x0800c77c       0x68 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_rc.c.obj
+                0x0800c77c                RC_Init
  .text.RC_unable
-                0x0800c958       0x14 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_rc.c.obj
-                0x0800c958                RC_unable
+                0x0800c7e4       0x14 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_rc.c.obj
+                0x0800c7e4                RC_unable
  .text.RC_restart
-                0x0800c96c       0x40 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_rc.c.obj
-                0x0800c96c                RC_restart
+                0x0800c7f8       0x40 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_rc.c.obj
+                0x0800c7f8                RC_restart
  .text.SPI1_DMA_init
-                0x0800c9ac      0x114 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_spi.c.obj
-                0x0800c9ac                SPI1_DMA_init
+                0x0800c838      0x114 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_spi.c.obj
+                0x0800c838                SPI1_DMA_init
  .text.SPI1_DMA_enable
-                0x0800cac0     0x1d78 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_spi.c.obj
-                0x0800cac0                SPI1_DMA_enable
+                0x0800c94c     0x1d78 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_spi.c.obj
+                0x0800c94c                SPI1_DMA_enable
  .text.usart1_init
-                0x0800e838       0xdc CMakeFiles/omni-infantry.elf.dir/bsp/bsp_usart.c.obj
-                0x0800e838                usart1_init
+                0x0800e6c4       0xdc CMakeFiles/omni-infantry.elf.dir/bsp/bsp_usart.c.obj
+                0x0800e6c4                usart1_init
  .text.usart6_init
-                0x0800e914       0xd8 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_usart.c.obj
-                0x0800e914                usart6_init
+                0x0800e7a0       0xd8 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_usart.c.obj
+                0x0800e7a0                usart6_init
  .text.AHRS_init
-                0x0800e9ec       0x10 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
-                0x0800e9ec                AHRS_init
+                0x0800e878       0x10 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
+                0x0800e878                AHRS_init
  .text.MahonyAHRSupdateIMU
-                0x0800e9fc      0x278 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
-                0x0800e9fc                MahonyAHRSupdateIMU
+                0x0800e888      0x278 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
+                0x0800e888                MahonyAHRSupdateIMU
  .text.MahonyAHRSupdate
-                0x0800ec74      0x3f4 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
-                0x0800ec74                MahonyAHRSupdate
+                0x0800eb00      0x3f4 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
+                0x0800eb00                MahonyAHRSupdate
  .text.AHRS_update
-                0x0800f068       0x2c CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
-                0x0800f068                AHRS_update
+                0x0800eef4       0x2c CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
+                0x0800eef4                AHRS_update
  .text.get_angle
-                0x0800f094       0xbc CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
-                0x0800f094                get_angle
+                0x0800ef20       0xbc CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
+                0x0800ef20                get_angle
  .text.AHRS_invSqrt
-                0x0800f150       0x10 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
-                0x0800f150                AHRS_invSqrt
+                0x0800efdc       0x10 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
+                0x0800efdc                AHRS_invSqrt
  .text.first_Kalman_Create
-                0x0800f160       0x1c CMakeFiles/omni-infantry.elf.dir/component/algorithm/filter.c.obj
-                0x0800f160                first_Kalman_Create
+                0x0800efec       0x1c CMakeFiles/omni-infantry.elf.dir/component/algorithm/filter.c.obj
+                0x0800efec                first_Kalman_Create
  .text.ramp_init
-                0x0800f17c       0x1a CMakeFiles/omni-infantry.elf.dir/component/algorithm/ramp.c.obj
-                0x0800f17c                ramp_init
+                0x0800f008       0x1a CMakeFiles/omni-infantry.elf.dir/component/algorithm/ramp.c.obj
+                0x0800f008                ramp_init
  .text.ramp_calc
-                0x0800f196       0xa6 CMakeFiles/omni-infantry.elf.dir/component/algorithm/ramp.c.obj
-                0x0800f196                ramp_calc
+                0x0800f022       0xa6 CMakeFiles/omni-infantry.elf.dir/component/algorithm/ramp.c.obj
+                0x0800f022                ramp_calc
  .text.usb_fifo_init
-                0x0800f23c       0x18 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
-                0x0800f23c                usb_fifo_init
+                0x0800f0c8       0x18 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
+                0x0800f0c8                usb_fifo_init
  .text.usb_receiver
-                0x0800f254       0x14 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
-                0x0800f254                usb_receiver
+                0x0800f0e0       0x14 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
+                0x0800f0e0                usb_receiver
  .text.decode_data_solve
-                0x0800f268       0x64 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
-                0x0800f268                decode_data_solve
+                0x0800f0f4       0x64 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
+                0x0800f0f4                decode_data_solve
  .text.decode_unpack_fifo_data
-                0x0800f2cc      0x19c CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
-                0x0800f2cc                decode_unpack_fifo_data
+                0x0800f158      0x19c CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
+                0x0800f158                decode_unpack_fifo_data
  .text.decode_task
-                0x0800f468       0x12 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
-                0x0800f468                decode_task
+                0x0800f2f4       0x12 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
+                0x0800f2f4                decode_task
  .text.abs_limit
-                0x0800f47a       0x2a CMakeFiles/omni-infantry.elf.dir/component/controller/PID.c.obj
+                0x0800f306       0x2a CMakeFiles/omni-infantry.elf.dir/component/controller/PID.c.obj
  .text.pid_init
-                0x0800f4a4       0x12 CMakeFiles/omni-infantry.elf.dir/component/controller/PID.c.obj
-                0x0800f4a4                pid_init
+                0x0800f330       0x12 CMakeFiles/omni-infantry.elf.dir/component/controller/PID.c.obj
+                0x0800f330                pid_init
  .text.pid_calc
-                0x0800f4b6       0x88 CMakeFiles/omni-infantry.elf.dir/component/controller/PID.c.obj
-                0x0800f4b6                pid_calc
+                0x0800f342       0x88 CMakeFiles/omni-infantry.elf.dir/component/controller/PID.c.obj
+                0x0800f342                pid_calc
  .text.BMI088_GPIO_init
-                0x0800f53e        0x2 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
-                0x0800f53e                BMI088_GPIO_init
+                0x0800f3ca        0x2 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
+                0x0800f3ca                BMI088_GPIO_init
  .text.BMI088_com_init
-                0x0800f540        0x2 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
-                0x0800f540                BMI088_com_init
+                0x0800f3cc        0x2 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
+                0x0800f3cc                BMI088_com_init
  .text.BMI088_delay_ms
-                0x0800f542        0x8 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
-                0x0800f542                BMI088_delay_ms
+                0x0800f3ce        0x8 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
+                0x0800f3ce                BMI088_delay_ms
  .text.BMI088_delay_us
-                0x0800f54a        0x8 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
-                0x0800f54a                BMI088_delay_us
- *fill*         0x0800f552        0x2 
+                0x0800f3d6        0x8 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
+                0x0800f3d6                BMI088_delay_us
+ *fill*         0x0800f3de        0x2 
  .text.BMI088_ACCEL_NS_L
-                0x0800f554       0x14 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
-                0x0800f554                BMI088_ACCEL_NS_L
+                0x0800f3e0       0x14 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
+                0x0800f3e0                BMI088_ACCEL_NS_L
  .text.BMI088_ACCEL_NS_H
-                0x0800f568       0x14 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
-                0x0800f568                BMI088_ACCEL_NS_H
+                0x0800f3f4       0x14 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
+                0x0800f3f4                BMI088_ACCEL_NS_H
  .text.BMI088_GYRO_NS_L
-                0x0800f57c       0x14 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
-                0x0800f57c                BMI088_GYRO_NS_L
+                0x0800f408       0x14 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
+                0x0800f408                BMI088_GYRO_NS_L
  .text.BMI088_GYRO_NS_H
-                0x0800f590       0x14 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
-                0x0800f590                BMI088_GYRO_NS_H
+                0x0800f41c       0x14 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
+                0x0800f41c                BMI088_GYRO_NS_H
  .text.BMI088_read_write_byte
-                0x0800f5a4       0x2c CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
-                0x0800f5a4                BMI088_read_write_byte
+                0x0800f430       0x2c CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
+                0x0800f430                BMI088_read_write_byte
  .text.BMI088_write_single_reg
-                0x0800f5d0       0x10 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
+                0x0800f45c       0x10 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
  .text.BMI088_read_single_reg
-                0x0800f5e0       0x16 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
+                0x0800f46c       0x16 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
  .text.BMI088_read_muli_reg
-                0x0800f5f6       0x24 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
- *fill*         0x0800f61a        0x2 
+                0x0800f482       0x24 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
+ *fill*         0x0800f4a6        0x2 
  .text.bmi088_accel_init
-                0x0800f61c      0x134 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
-                0x0800f61c                bmi088_accel_init
+                0x0800f4a8      0x134 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
+                0x0800f4a8                bmi088_accel_init
  .text.bmi088_gyro_init
-                0x0800f750       0xf0 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
-                0x0800f750                bmi088_gyro_init
+                0x0800f5dc       0xf0 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
+                0x0800f5dc                bmi088_gyro_init
  .text.bmi088_accel_self_test
-                0x0800f840      0x308 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
-                0x0800f840                bmi088_accel_self_test
+                0x0800f6cc      0x308 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
+                0x0800f6cc                bmi088_accel_self_test
  .text.bmi088_gyro_self_test
-                0x0800fb48       0xd6 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
-                0x0800fb48                bmi088_gyro_self_test
+                0x0800f9d4       0xd6 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
+                0x0800f9d4                bmi088_gyro_self_test
  .text.BMI088_init
-                0x0800fc1e       0x32 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
-                0x0800fc1e                BMI088_init
+                0x0800faaa       0x32 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
+                0x0800faaa                BMI088_init
  .text.BMI088_temperature_read_over
-                0x0800fc50       0x32 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
-                0x0800fc50                BMI088_temperature_read_over
- *fill*         0x0800fc82        0x2 
+                0x0800fadc       0x32 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
+                0x0800fadc                BMI088_temperature_read_over
+ *fill*         0x0800fb0e        0x2 
  .text.BMI088_accel_read_over
-                0x0800fc84       0x90 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
-                0x0800fc84                BMI088_accel_read_over
+                0x0800fb10       0x90 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
+                0x0800fb10                BMI088_accel_read_over
  .text.BMI088_gyro_read_over
-                0x0800fd14       0x64 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
-                0x0800fd14                BMI088_gyro_read_over
+                0x0800fba0       0x64 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
+                0x0800fba0                BMI088_gyro_read_over
  .text.BMI088_read
-                0x0800fd78      0x17c CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
-                0x0800fd78                BMI088_read
+                0x0800fc04      0x17c CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
+                0x0800fc04                BMI088_read
  .text.get_CRC8_check_sum
-                0x0800fef4       0x20 CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
-                0x0800fef4                get_CRC8_check_sum
+                0x0800fd80       0x20 CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
+                0x0800fd80                get_CRC8_check_sum
  .text.verify_CRC8_check_sum
-                0x0800ff14       0x28 CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
-                0x0800ff14                verify_CRC8_check_sum
+                0x0800fda0       0x28 CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
+                0x0800fda0                verify_CRC8_check_sum
  .text.get_CRC16_check_sum
-                0x0800ff3c       0x38 CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
-                0x0800ff3c                get_CRC16_check_sum
+                0x0800fdc8       0x38 CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
+                0x0800fdc8                get_CRC16_check_sum
  .text.verify_CRC16_check_sum
-                0x0800ff74       0x48 CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
-                0x0800ff74                verify_CRC16_check_sum
+                0x0800fe00       0x48 CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
+                0x0800fe00                verify_CRC16_check_sum
  .text.fifo_s_init
-                0x0800ffbc       0x16 CMakeFiles/omni-infantry.elf.dir/component/support/fifo.c.obj
-                0x0800ffbc                fifo_s_init
+                0x0800fe48       0x16 CMakeFiles/omni-infantry.elf.dir/component/support/fifo.c.obj
+                0x0800fe48                fifo_s_init
  .text.fifo_s_puts
-                0x0800ffd2       0x80 CMakeFiles/omni-infantry.elf.dir/component/support/fifo.c.obj
-                0x0800ffd2                fifo_s_puts
+                0x0800fe5e       0x80 CMakeFiles/omni-infantry.elf.dir/component/support/fifo.c.obj
+                0x0800fe5e                fifo_s_puts
  .text.fifo_s_get
-                0x08010052       0x2e CMakeFiles/omni-infantry.elf.dir/component/support/fifo.c.obj
-                0x08010052                fifo_s_get
+                0x0800fede       0x2e CMakeFiles/omni-infantry.elf.dir/component/support/fifo.c.obj
+                0x0800fede                fifo_s_get
  .text.fifo_s_used
-                0x08010080        0x4 CMakeFiles/omni-infantry.elf.dir/component/support/fifo.c.obj
-                0x08010080                fifo_s_used
+                0x0800ff0c        0x4 CMakeFiles/omni-infantry.elf.dir/component/support/fifo.c.obj
+                0x0800ff0c                fifo_s_used
  .text.__udivmoddi4
-                0x08010084      0x2bc c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x08010084                __udivmoddi4
- .text.memset   0x08010340       0xa4 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-memset.o)
-                0x08010340                memset
- .text.__errno  0x080103e4        0xc c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-errno.o)
-                0x080103e4                __errno
+                0x0800ff10      0x2bc c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x0800ff10                __udivmoddi4
+ .text.memset   0x080101cc       0xa4 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-memset.o)
+                0x080101cc                memset
+ .text.__errno  0x08010270        0xc c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-errno.o)
+                0x08010270                __errno
  .text.__libc_init_array
-                0x080103f0       0x50 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-init.o)
-                0x080103f0                __libc_init_array
+                0x0801027c       0x50 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-init.o)
+                0x0801027c                __libc_init_array
  .text.__retarget_lock_acquire_recursive
-                0x08010440        0x4 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
-                0x08010440                __retarget_lock_acquire_recursive
+                0x080102cc        0x4 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
+                0x080102cc                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x08010444        0x4 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
-                0x08010444                __retarget_lock_release_recursive
+                0x080102d0        0x4 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
+                0x080102d0                __retarget_lock_release_recursive
  .text.startup.register_fini
-                0x08010448       0x14 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
- .text.atexit   0x0801045c        0xc c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-atexit.o)
-                0x0801045c                atexit
+                0x080102d4       0x14 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
+ .text.atexit   0x080102e8        0xc c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-atexit.o)
+                0x080102e8                atexit
  .text.__libc_fini_array
-                0x08010468       0x28 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-fini.o)
-                0x08010468                __libc_fini_array
+                0x080102f4       0x28 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-fini.o)
+                0x080102f4                __libc_fini_array
  .text.__register_exitproc
-                0x08010490       0x80 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__atexit.o)
-                0x08010490                __register_exitproc
- .text.sqrt     0x08010510       0x68 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-w_sqrt.o)
-                0x08010510                sqrt
- .text.cos      0x08010578       0x88 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_cos.o)
-                0x08010578                cos
- .text.sin      0x08010600       0x90 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_sin.o)
-                0x08010600                sin
- .text.asinf    0x08010690       0x58 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_asin.o)
-                0x08010690                asinf
- .text.atan2f   0x080106e8        0x4 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_atan2.o)
-                0x080106e8                atan2f
- .text.sqrtf    0x080106ec       0x44 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_sqrt.o)
-                0x080106ec                sqrtf
- .text.fabsf    0x08010730       0x10 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_fabs.o)
-                0x08010730                fabsf
- .text.nanf     0x08010740        0xc c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_nan.o)
-                0x08010740                nanf
+                0x0801031c       0x80 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__atexit.o)
+                0x0801031c                __register_exitproc
+ .text.sqrt     0x0801039c       0x68 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-w_sqrt.o)
+                0x0801039c                sqrt
+ *fill*         0x08010404        0x4 
+ .text.cos      0x08010408       0x88 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_cos.o)
+                0x08010408                cos
+ .text.sin      0x08010490       0x90 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_sin.o)
+                0x08010490                sin
+ .text.asinf    0x08010520       0x58 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_asin.o)
+                0x08010520                asinf
+ .text.atan2f   0x08010578        0x4 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_atan2.o)
+                0x08010578                atan2f
+ .text.sqrtf    0x0801057c       0x44 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_sqrt.o)
+                0x0801057c                sqrtf
+ .text.fabsf    0x080105c0       0x10 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_fabs.o)
+                0x080105c0                fabsf
+ .text.nanf     0x080105d0        0xc c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_nan.o)
+                0x080105d0                nanf
  .text.__ieee754_sqrt
-                0x0801074c      0x1f4 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-e_sqrt.o)
-                0x0801074c                __ieee754_sqrt
+                0x080105dc      0x1f4 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-e_sqrt.o)
+                0x080105dc                __ieee754_sqrt
  .text.__ieee754_sqrtf
-                0x08010940        0x8 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_sqrt.o)
-                0x08010940                __ieee754_sqrtf
+                0x080107d0        0x8 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_sqrt.o)
+                0x080107d0                __ieee754_sqrtf
  .text.__kernel_cos
-                0x08010948      0x264 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-k_cos.o)
-                0x08010948                __kernel_cos
- *fill*         0x08010bac        0x4 
+                0x080107d8      0x264 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-k_cos.o)
+                0x080107d8                __kernel_cos
+ *fill*         0x08010a3c        0x4 
  .text.__kernel_sin
-                0x08010bb0      0x17c c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-k_sin.o)
-                0x08010bb0                __kernel_sin
- *fill*         0x08010d2c        0x4 
+                0x08010a40      0x17c c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-k_sin.o)
+                0x08010a40                __kernel_sin
+ *fill*         0x08010bbc        0x4 
  .text.__ieee754_rem_pio2
-                0x08010d30      0x444 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-e_rem_pio2.o)
-                0x08010d30                __ieee754_rem_pio2
- .text.fabs     0x08011174       0x10 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_fabs.o)
-                0x08011174                fabs
+                0x08010bc0      0x444 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-e_rem_pio2.o)
+                0x08010bc0                __ieee754_rem_pio2
+ .text.fabs     0x08011004       0x10 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_fabs.o)
+                0x08011004                fabs
  .text.__ieee754_asinf
-                0x08011184      0x1fc c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_asin.o)
-                0x08011184                __ieee754_asinf
+                0x08011014      0x1fc c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_asin.o)
+                0x08011014                __ieee754_asinf
  .text.__ieee754_atan2f
-                0x08011380      0x150 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_atan2.o)
-                0x08011380                __ieee754_atan2f
- .text.atanf    0x080114d0      0x1ac c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_atan.o)
-                0x080114d0                atanf
- *fill*         0x0801167c        0x4 
+                0x08011210      0x150 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_atan2.o)
+                0x08011210                __ieee754_atan2f
+ .text.atanf    0x08011360      0x1ac c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_atan.o)
+                0x08011360                atanf
+ *fill*         0x0801150c        0x4 
  .text.__kernel_rem_pio2
-                0x08011680      0x87c c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-k_rem_pio2.o)
-                0x08011680                __kernel_rem_pio2
- *fill*         0x08011efc        0x4 
- .text.scalbn   0x08011f00      0x114 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_scalbn.o)
-                0x08011f00                scalbn
- *fill*         0x08012014        0x4 
- .text.floor    0x08012018      0x108 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_floor.o)
-                0x08012018                floor
+                0x08011510      0x87c c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-k_rem_pio2.o)
+                0x08011510                __kernel_rem_pio2
+ *fill*         0x08011d8c        0x4 
+ .text.scalbn   0x08011d90      0x114 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_scalbn.o)
+                0x08011d90                scalbn
+ *fill*         0x08011ea4        0x4 
+ .text.floor    0x08011ea8      0x108 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_floor.o)
+                0x08011ea8                floor
  *(.glue_7)
- .glue_7        0x08012120        0x0 linker stubs
+ .glue_7        0x08011fb0        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08012120        0x0 linker stubs
+ .glue_7t       0x08011fb0        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08012120        0x0 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x08011fb0        0x0 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x08012120        0x4 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard/crti.o
-                0x08012120                _init
- .init          0x08012124        0x8 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x08011fb0        0x4 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard/crti.o
+                0x08011fb0                _init
+ .init          0x08011fb4        0x8 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x0801212c        0x4 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard/crti.o
-                0x0801212c                _fini
- .fini          0x08012130        0x8 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard/crtn.o
-                0x08012138                        . = ALIGN (0x4)
-                0x08012138                        _etext = .
+ .fini          0x08011fbc        0x4 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard/crti.o
+                0x08011fbc                _fini
+ .fini          0x08011fc0        0x8 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard/crtn.o
+                0x08011fc8                        . = ALIGN (0x4)
+                0x08011fc8                        _etext = .
 
-.vfp11_veneer   0x08012138        0x0
- .vfp11_veneer  0x08012138        0x0 linker stubs
+.vfp11_veneer   0x08011fc8        0x0
+ .vfp11_veneer  0x08011fc8        0x0 linker stubs
 
-.v4_bx          0x08012138        0x0
- .v4_bx         0x08012138        0x0 linker stubs
+.v4_bx          0x08011fc8        0x0
+ .v4_bx         0x08011fc8        0x0 linker stubs
 
-.iplt           0x08012138        0x0
- .iplt          0x08012138        0x0 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x08011fc8        0x0
+ .iplt          0x08011fc8        0x0 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x08012138      0x6e0
-                0x08012138                        . = ALIGN (0x4)
+.rodata         0x08011fc8      0x6e0
+                0x08011fc8                        . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x08012138       0xa8 CMakeFiles/omni-infantry.elf.dir/Core/Src/freertos.c.obj
- .rodata        0x080121e0       0x10 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
+ .rodata        0x08011fc8       0xa8 CMakeFiles/omni-infantry.elf.dir/Core/Src/freertos.c.obj
+ .rodata        0x08012070       0x10 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
  *(.rodata*)
  .rodata.str1.4
-                0x080121f0       0x48 CMakeFiles/omni-infantry.elf.dir/Core/Src/freertos.c.obj
+                0x08012080       0x48 CMakeFiles/omni-infantry.elf.dir/Core/Src/freertos.c.obj
  .rodata.APBPrescTable
-                0x08012238        0x8 CMakeFiles/omni-infantry.elf.dir/Core/Src/system_stm32f4xx.c.obj
-                0x08012238                APBPrescTable
+                0x080120c8        0x8 CMakeFiles/omni-infantry.elf.dir/Core/Src/system_stm32f4xx.c.obj
+                0x080120c8                APBPrescTable
  .rodata.AHBPrescTable
-                0x08012240       0x10 CMakeFiles/omni-infantry.elf.dir/Core/Src/system_stm32f4xx.c.obj
-                0x08012240                AHBPrescTable
+                0x080120d0       0x10 CMakeFiles/omni-infantry.elf.dir/Core/Src/system_stm32f4xx.c.obj
+                0x080120d0                AHBPrescTable
  .rodata.flagBitshiftOffset.0
-                0x08012250        0x8 CMakeFiles/omni-infantry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+                0x080120e0        0x8 CMakeFiles/omni-infantry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
  .rodata.vTaskStartScheduler.str1.4
-                0x08012258        0x5 CMakeFiles/omni-infantry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
- *fill*         0x0801225d        0x3 
+                0x080120e8        0x5 CMakeFiles/omni-infantry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ *fill*         0x080120ed        0x3 
  .rodata.USBD_FS_ProductStrDescriptor.str1.4
-                0x08012260       0x16 CMakeFiles/omni-infantry.elf.dir/USB_DEVICE/App/usbd_desc.c.obj
- *fill*         0x08012276        0x2 
+                0x080120f0       0x16 CMakeFiles/omni-infantry.elf.dir/USB_DEVICE/App/usbd_desc.c.obj
+ *fill*         0x08012106        0x2 
  .rodata.USBD_FS_ManufacturerStrDescriptor.str1.4
-                0x08012278       0x13 CMakeFiles/omni-infantry.elf.dir/USB_DEVICE/App/usbd_desc.c.obj
- *fill*         0x0801228b        0x1 
+                0x08012108       0x13 CMakeFiles/omni-infantry.elf.dir/USB_DEVICE/App/usbd_desc.c.obj
+ *fill*         0x0801211b        0x1 
  .rodata.USBD_FS_ConfigStrDescriptor.str1.4
-                0x0801228c        0xb CMakeFiles/omni-infantry.elf.dir/USB_DEVICE/App/usbd_desc.c.obj
- *fill*         0x08012297        0x1 
+                0x0801211c        0xb CMakeFiles/omni-infantry.elf.dir/USB_DEVICE/App/usbd_desc.c.obj
+ *fill*         0x08012127        0x1 
  .rodata.USBD_FS_InterfaceStrDescriptor.str1.4
-                0x08012298        0xe CMakeFiles/omni-infantry.elf.dir/USB_DEVICE/App/usbd_desc.c.obj
- *fill*         0x080122a6        0x2 
+                0x08012128        0xe CMakeFiles/omni-infantry.elf.dir/USB_DEVICE/App/usbd_desc.c.obj
+ *fill*         0x08012136        0x2 
  .rodata.cali_sensor_size
-                0x080122a8        0x4 CMakeFiles/omni-infantry.elf.dir/application/Calibrate.c.obj
+                0x08012138        0x4 CMakeFiles/omni-infantry.elf.dir/application/Calibrate.c.obj
  .rodata.cali_sensor_buf
-                0x080122ac       0x10 CMakeFiles/omni-infantry.elf.dir/application/Calibrate.c.obj
+                0x0801213c       0x10 CMakeFiles/omni-infantry.elf.dir/application/Calibrate.c.obj
  .rodata.cali_name
-                0x080122bc        0xc CMakeFiles/omni-infantry.elf.dir/application/Calibrate.c.obj
+                0x0801214c        0xc CMakeFiles/omni-infantry.elf.dir/application/Calibrate.c.obj
  .rodata.write_BMI088_ACCEL_self_test_Reg_Data_Error.0
-                0x080122c8       0x12 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
- *fill*         0x080122da        0x2 
+                0x08012158       0x12 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
+ *fill*         0x0801216a        0x2 
  .rodata.write_BMI088_gyro_reg_data_error
-                0x080122dc       0x12 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
- *fill*         0x080122ee        0x2 
+                0x0801216c       0x12 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
+ *fill*         0x0801217e        0x2 
  .rodata.write_BMI088_accel_reg_data_error
-                0x080122f0       0x12 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
- *fill*         0x08012302        0x2 
+                0x08012180       0x12 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
+ *fill*         0x08012192        0x2 
  .rodata.wCRC_table
-                0x08012304      0x200 CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
-                0x08012304                wCRC_table
+                0x08012194      0x200 CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
+                0x08012194                wCRC_table
  .rodata.CRC8_table
-                0x08012504      0x100 CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
-                0x08012504                CRC8_table
+                0x08012394      0x100 CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
+                0x08012394                CRC8_table
  .rodata.asinf.str1.4
-                0x08012604        0xe c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_asin.o)
+                0x08012494        0xe c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_asin.o)
                                   0x1 (size before relaxing)
  .rodata.npio2_hw
-                0x08012604       0x80 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-e_rem_pio2.o)
+                0x08012494       0x80 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-e_rem_pio2.o)
  .rodata.two_over_pi
-                0x08012684      0x108 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-e_rem_pio2.o)
+                0x08012514      0x108 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-e_rem_pio2.o)
  .rodata.CSWTCH.9
-                0x0801278c        0xc c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_atan2.o)
+                0x0801261c        0xc c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_atan2.o)
  .rodata.CSWTCH.8
-                0x08012798        0xc c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_atan2.o)
+                0x08012628        0xc c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_atan2.o)
  .rodata.atanlo
-                0x080127a4       0x10 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_atan.o)
+                0x08012634       0x10 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_atan.o)
  .rodata.atanhi
-                0x080127b4       0x10 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_atan.o)
- *fill*         0x080127c4        0x4 
- .rodata.PIo2   0x080127c8       0x40 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-k_rem_pio2.o)
+                0x08012644       0x10 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_atan.o)
+ *fill*         0x08012654        0x4 
+ .rodata.PIo2   0x08012658       0x40 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-k_rem_pio2.o)
  .rodata.init_jk
-                0x08012808       0x10 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-k_rem_pio2.o)
-                0x08012818                        . = ALIGN (0x4)
+                0x08012698       0x10 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-k_rem_pio2.o)
+                0x080126a8                        . = ALIGN (0x4)
 
-.ARM.extab      0x08012818        0x0
-                0x08012818                        . = ALIGN (0x4)
+.ARM.extab      0x080126a8        0x0
+                0x080126a8                        . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08012818                        . = ALIGN (0x4)
+                0x080126a8                        . = ALIGN (0x4)
 
-.ARM            0x08012818        0x8
-                0x08012818                        . = ALIGN (0x4)
-                0x08012818                        __exidx_start = .
+.ARM            0x080126a8        0x8
+                0x080126a8                        . = ALIGN (0x4)
+                0x080126a8                        __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x08012818        0x8 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-memcpy.o)
- .ARM.exidx     0x08012820        0x0 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-strlen.o)
+ .ARM.exidx     0x080126a8        0x8 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-memcpy.o)
+ .ARM.exidx     0x080126b0        0x0 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-strlen.o)
                                   0x8 (size before relaxing)
  .ARM.exidx.text.__udivmoddi4
-                0x08012820        0x0 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x080126b0        0x0 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
                                   0x8 (size before relaxing)
-                0x08012820                        __exidx_end = .
-                0x08012820                        . = ALIGN (0x4)
+                0x080126b0                        __exidx_end = .
+                0x080126b0                        . = ALIGN (0x4)
 
-.rel.dyn        0x08012820        0x0
- .rel.iplt      0x08012820        0x0 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x080126b0        0x0
+ .rel.iplt      0x080126b0        0x0 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.preinit_array  0x08012820        0x0
-                0x08012820                        . = ALIGN (0x4)
-                0x08012820                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x080126b0        0x0
+                0x080126b0                        . = ALIGN (0x4)
+                0x080126b0                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08012820                        PROVIDE (__preinit_array_end = .)
-                0x08012820                        . = ALIGN (0x4)
+                0x080126b0                        PROVIDE (__preinit_array_end = .)
+                0x080126b0                        . = ALIGN (0x4)
 
-.init_array     0x08012820        0x8
-                0x08012820                        . = ALIGN (0x4)
-                0x08012820                        PROVIDE (__init_array_start = .)
+.init_array     0x080126b0        0x8
+                0x080126b0                        . = ALIGN (0x4)
+                0x080126b0                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  .init_array.00000
-                0x08012820        0x4 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
+                0x080126b0        0x4 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x08012824        0x4 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x08012828                        PROVIDE (__init_array_end = .)
-                0x08012828                        . = ALIGN (0x4)
+ .init_array    0x080126b4        0x4 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x080126b8                        PROVIDE (__init_array_end = .)
+                0x080126b8                        . = ALIGN (0x4)
 
-.fini_array     0x08012828        0x4
-                0x08012828                        . = ALIGN (0x4)
-                0x08012828                        PROVIDE (__fini_array_start = .)
+.fini_array     0x080126b8        0x4
+                0x080126b8                        . = ALIGN (0x4)
+                0x080126b8                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08012828        0x4 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x0801282c                        PROVIDE (__fini_array_end = .)
-                0x0801282c                        . = ALIGN (0x4)
-                0x0801282c                        _sidata = LOADADDR (.data)
+ .fini_array    0x080126b8        0x4 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x080126bc                        PROVIDE (__fini_array_end = .)
+                0x080126bc                        . = ALIGN (0x4)
+                0x080126bc                        _sidata = LOADADDR (.data)
 
-.data           0x20000000      0x2d8 load address 0x0801282c
+.data           0x20000000      0x2d8 load address 0x080126bc
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -5575,19 +5573,19 @@ LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb
  *(.RamFunc*)
                 0x200002d8                        . = ALIGN (0x4)
                 0x200002d8                        _edata = .
-                0x08012b04                        _siccmram = LOADADDR (.ccmram)
+                0x08012994                        _siccmram = LOADADDR (.ccmram)
 
 .tm_clone_table
-                0x200002d8        0x0 load address 0x08012b04
+                0x200002d8        0x0 load address 0x08012994
  .tm_clone_table
                 0x200002d8        0x0 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard/crtbegin.o
  .tm_clone_table
                 0x200002d8        0x0 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard/crtend.o
 
-.igot.plt       0x200002d8        0x0 load address 0x08012b04
+.igot.plt       0x200002d8        0x0 load address 0x08012994
  .igot.plt      0x200002d8        0x0 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.ccmram         0x10000000        0x0 load address 0x08012b04
+.ccmram         0x10000000        0x0 load address 0x08012994
                 0x10000000                        . = ALIGN (0x4)
                 0x10000000                        _sccmram = .
  *(.ccmram)
@@ -5596,7 +5594,7 @@ LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb
                 0x10000000                        _eccmram = .
                 0x10000000                        . = ALIGN (0x4)
 
-.bss            0x200002d8     0x9c24
+.bss            0x200002d8     0x9ce8
                 0x200002d8                        _sbss = .
                 0x200002d8                        __bss_start__ = _sbss
  *(.bss)
@@ -5898,147 +5896,145 @@ LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb
  .bss.chassis_auto_vx_ramp
                 0x20008f40       0x14 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
                 0x20008f40                chassis_auto_vx_ramp
+ .bss.usart1_buff
+                0x20008f54       0xc8 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
  .bss.same_level_count
-                0x20008f54        0x6 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
-                0x20008f54                same_level_count
+                0x2000901c        0x6 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
+                0x2000901c                same_level_count
  .bss.control_flag
-                0x20008f5a        0x1 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
-                0x20008f5a                control_flag
- *fill*         0x20008f5b        0x1 
+                0x20009022        0x1 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
+                0x20009022                control_flag
+ *fill*         0x20009023        0x1 
  .bss.buzzer_remind_count
-                0x20008f5c        0x2 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
-                0x20008f5c                buzzer_remind_count
- *fill*         0x20008f5e        0x2 
+                0x20009024        0x2 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
+                0x20009024                buzzer_remind_count
+ *fill*         0x20009026        0x2 
  .bss.detect_list
-                0x20008f60       0xa0 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
-                0x20008f60                detect_list
- .bss.gimbal    0x20009000      0x2a8 CMakeFiles/omni-infantry.elf.dir/application/Gimbal.c.obj
-                0x20009000                gimbal
+                0x20009028       0xa0 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
+                0x20009028                detect_list
+ .bss.gimbal    0x200090c8      0x2a8 CMakeFiles/omni-infantry.elf.dir/application/Gimbal.c.obj
+                0x200090c8                gimbal
  .bss.power_nihe
-                0x200092a8        0x4 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
-                0x200092a8                power_nihe
+                0x20009370        0x4 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
+                0x20009370                power_nihe
  .bss.all_current_pingfang
-                0x200092ac        0x4 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
-                0x200092ac                all_current_pingfang
+                0x20009374        0x4 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
+                0x20009374                all_current_pingfang
  .bss.all_rpm_mul_current
-                0x200092b0        0x4 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
-                0x200092b0                all_rpm_mul_current
- .bss.Referee   0x200092b4      0x19c CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
-                0x200092b4                Referee
+                0x20009378        0x4 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
+                0x20009378                all_rpm_mul_current
+ .bss.Referee   0x2000937c      0x19c CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
+                0x2000937c                Referee
  .bss.usart1_buf
-                0x20009450       0xc8 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
-                0x20009450                usart1_buf
- .bss.usart6_buf
                 0x20009518       0xc8 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
-                0x20009518                usart6_buf
+                0x20009518                usart1_buf
+ .bss.usart6_buf
+                0x200095e0       0xc8 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
+                0x200095e0                usart6_buf
  .bss.can_send_data
-                0x200095e0        0x8 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
+                0x200096a8        0x8 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
  .bss.tx_message
-                0x200095e8       0x18 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
+                0x200096b0       0x18 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
  .bss.motor_2006_measure
-                0x20009600       0x28 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
-                0x20009600                motor_2006_measure
+                0x200096c8       0x28 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
+                0x200096c8                motor_2006_measure
  .bss.motor_pitch_measure
-                0x20009628       0x28 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
-                0x20009628                motor_pitch_measure
+                0x200096f0       0x28 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
+                0x200096f0                motor_pitch_measure
  .bss.motor_yaw_measure
-                0x20009650       0x28 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
-                0x20009650                motor_yaw_measure
+                0x20009718       0x28 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
+                0x20009718                motor_yaw_measure
  .bss.motor_3508_measure
-                0x20009678       0xf0 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
-                0x20009678                motor_3508_measure
- .bss.KeyBoard  0x20009768      0x120 CMakeFiles/omni-infantry.elf.dir/application/key_board.c.obj
-                0x20009768                KeyBoard
+                0x20009740       0xf0 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
+                0x20009740                motor_3508_measure
+ .bss.KeyBoard  0x20009830      0x120 CMakeFiles/omni-infantry.elf.dir/application/key_board.c.obj
+                0x20009830                KeyBoard
  .bss.this_time_rx_len.0
-                0x20009888        0x2 CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
- *fill*         0x2000988a        0x2 
+                0x20009950        0x2 CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
+ *fill*         0x20009952        0x2 
  .bss.sbus_rx_buf
-                0x2000988c       0x48 CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
- .bss.rc_ctrl   0x200098d4       0x22 CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
-                0x200098d4                rc_ctrl
- *fill*         0x200098f6        0x2 
+                0x20009954       0x48 CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
+ .bss.rc_ctrl   0x2000999c       0x22 CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
+                0x2000999c                rc_ctrl
+ *fill*         0x200099be        0x2 
  .bss.sConfig.0
-                0x200098f8       0x10 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_adc.c.obj
- .bss.cap_mode  0x20009908        0x1 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
-                0x20009908                cap_mode
- *fill*         0x20009909        0x3 
+                0x200099c0       0x10 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_adc.c.obj
  .bss.tx_message
-                0x2000990c       0x18 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
- .bss.Cap       0x20009924       0x10 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
-                0x20009924                Cap
- .bss.fac_ms    0x20009934        0x4 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_delay.c.obj
- .bss.fac_us    0x20009938        0x1 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_delay.c.obj
- *fill*         0x20009939        0x3 
+                0x200099d0       0x18 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
+ .bss.Cap       0x200099e8       0x10 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
+                0x200099e8                Cap
+ .bss.fac_ms    0x200099f8        0x4 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_delay.c.obj
+ .bss.fac_us    0x200099fc        0x1 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_delay.c.obj
+ *fill*         0x200099fd        0x3 
  .bss.data_len.0
-                0x2000993c        0x4 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
+                0x20009a00        0x4 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
  .bss.data_buf.1
-                0x20009940        0x4 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
+                0x20009a04        0x4 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
  .bss.end_address.2
-                0x20009944        0x4 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
+                0x20009a08        0x4 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
  .bss.uw_address.3
-                0x20009948        0x4 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
- .bss.blue.0    0x2000994c        0x2 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_led.c.obj
- .bss.green.1   0x2000994e        0x2 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_led.c.obj
- .bss.red.2     0x20009950        0x2 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_led.c.obj
- .bss.alpha.3   0x20009952        0x1 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_led.c.obj
- *fill*         0x20009953        0x1 
+                0x20009a0c        0x4 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
+ .bss.blue.0    0x20009a10        0x2 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_led.c.obj
+ .bss.green.1   0x20009a12        0x2 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_led.c.obj
+ .bss.red.2     0x20009a14        0x2 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_led.c.obj
+ .bss.alpha.3   0x20009a16        0x1 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_led.c.obj
+ *fill*         0x20009a17        0x1 
  .bss.integralFBz
-                0x20009954        0x4 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
-                0x20009954                integralFBz
+                0x20009a18        0x4 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
+                0x20009a18                integralFBz
  .bss.integralFBy
-                0x20009958        0x4 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
-                0x20009958                integralFBy
+                0x20009a1c        0x4 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
+                0x20009a1c                integralFBy
  .bss.integralFBx
-                0x2000995c        0x4 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
-                0x2000995c                integralFBx
- .bss.twoKi     0x20009960        0x4 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
-                0x20009960                twoKi
- .bss.flag3     0x20009964        0x4 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
-                0x20009964                flag3
+                0x20009a20        0x4 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
+                0x20009a20                integralFBx
+ .bss.twoKi     0x20009a24        0x4 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
+                0x20009a24                twoKi
+ .bss.flag3     0x20009a28        0x4 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
+                0x20009a28                flag3
  .bss.decode_receive_header
-                0x20009968        0x5 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
-                0x20009968                decode_receive_header
- *fill*         0x2000996d        0x3 
+                0x20009a2c        0x5 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
+                0x20009a2c                decode_receive_header
+ *fill*         0x20009a31        0x3 
  .bss.decode_unpack_obj
-                0x20009970       0x89 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
-                0x20009970                decode_unpack_obj
- *fill*         0x200099f9        0x3 
+                0x20009a34       0x89 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
+                0x20009a34                decode_unpack_obj
+ *fill*         0x20009abd        0x3 
  .bss.usb_fifo_buf
-                0x200099fc      0x200 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
-                0x200099fc                usb_fifo_buf
- .bss.usb_fifo  0x20009bfc       0x18 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
-                0x20009bfc                usb_fifo
+                0x20009ac0      0x200 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
+                0x20009ac0                usb_fifo_buf
+ .bss.usb_fifo  0x20009cc0       0x18 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
+                0x20009cc0                usb_fifo
  .bss.robot_ctrl
-                0x20009c14       0x17 CMakeFiles/omni-infantry.elf.dir/component/comunication/packet.c.obj
-                0x20009c14                robot_ctrl
- *fill*         0x20009c2b        0x1 
- .bss.__sf      0x20009c2c      0x138 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-findfp.o)
-                0x20009c2c                __sf
+                0x20009cd8       0x17 CMakeFiles/omni-infantry.elf.dir/component/comunication/packet.c.obj
+                0x20009cd8                robot_ctrl
+ *fill*         0x20009cef        0x1 
+ .bss.__sf      0x20009cf0      0x138 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-findfp.o)
+                0x20009cf0                __sf
  .bss.__lock___atexit_recursive_mutex
-                0x20009d64        0x1 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
-                0x20009d64                __lock___atexit_recursive_mutex
- *fill*         0x20009d65        0x3 
- .bss.__atexit  0x20009d68        0x4 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
-                0x20009d68                __atexit
+                0x20009e28        0x1 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
+                0x20009e28                __lock___atexit_recursive_mutex
+ *fill*         0x20009e29        0x3 
+ .bss.__atexit  0x20009e2c        0x4 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
+                0x20009e2c                __atexit
  .bss.__atexit0
-                0x20009d6c      0x190 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__atexit.o)
-                0x20009d6c                __atexit0
+                0x20009e30      0x190 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__atexit.o)
+                0x20009e30                __atexit0
  *(COMMON)
-                0x20009efc                        . = ALIGN (0x4)
-                0x20009efc                        _ebss = .
-                0x20009efc                        __bss_end__ = _ebss
+                0x20009fc0                        . = ALIGN (0x4)
+                0x20009fc0                        _ebss = .
+                0x20009fc0                        __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x20009efc     0x4004
-                0x20009f00                        . = ALIGN (0x8)
- *fill*         0x20009efc        0x4 
+                0x20009fc0     0x4000
+                0x20009fc0                        . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end = .)
-                0x20009f00                        PROVIDE (_end = .)
-                0x2000bf00                        . = (. + _Min_Heap_Size)
- *fill*         0x20009f00     0x2000 
-                0x2000df00                        . = (. + _Min_Stack_Size)
- *fill*         0x2000bf00     0x2000 
-                0x2000df00                        . = ALIGN (0x8)
+                0x20009fc0                        PROVIDE (_end = .)
+                0x2000bfc0                        . = (. + _Min_Heap_Size)
+ *fill*         0x20009fc0     0x2000 
+                0x2000dfc0                        . = (. + _Min_Stack_Size)
+ *fill*         0x2000bfc0     0x2000 
+                0x2000dfc0                        . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)
@@ -6300,7 +6296,7 @@ LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb
 LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a
 LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a
 
-.debug_info     0x00000000    0x499e3
+.debug_info     0x00000000    0x4a0ee
  .debug_info    0x00000000      0x86a CMakeFiles/omni-infantry.elf.dir/Core/Src/adc.c.obj
  .debug_info    0x0000086a      0xc8d CMakeFiles/omni-infantry.elf.dir/Core/Src/can.c.obj
  .debug_info    0x000014f7      0x43a CMakeFiles/omni-infantry.elf.dir/Core/Src/crc.c.obj
@@ -6348,39 +6344,39 @@ LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb
  .debug_info    0x0002c33e      0x9d2 CMakeFiles/omni-infantry.elf.dir/USB_DEVICE/App/usbd_cdc_if.c.obj
  .debug_info    0x0002cd10      0x5c5 CMakeFiles/omni-infantry.elf.dir/USB_DEVICE/App/usbd_desc.c.obj
  .debug_info    0x0002d2d5     0x2034 CMakeFiles/omni-infantry.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj
- .debug_info    0x0002f309     0x16e2 CMakeFiles/omni-infantry.elf.dir/application/Atti.c.obj
- .debug_info    0x000309eb      0xbf8 CMakeFiles/omni-infantry.elf.dir/application/Calibrate.c.obj
- .debug_info    0x000315e3     0x2811 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
- .debug_info    0x00033df4      0x5c5 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
- .debug_info    0x000343b9     0x2b67 CMakeFiles/omni-infantry.elf.dir/application/Gimbal.c.obj
- .debug_info    0x00036f20     0x413d CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
- .debug_info    0x0003b05d      0xea0 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
- .debug_info    0x0003befd     0x15eb CMakeFiles/omni-infantry.elf.dir/application/key_board.c.obj
- .debug_info    0x0003d4e8      0x9d9 CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
- .debug_info    0x0003dec1      0x7f8 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_adc.c.obj
- .debug_info    0x0003e6b9      0x680 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_buzzer.c.obj
- .debug_info    0x0003ed39      0x625 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_can.c.obj
- .debug_info    0x0003f35e      0x911 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
- .debug_info    0x0003fc6f      0x260 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_delay.c.obj
- .debug_info    0x0003fecf      0x536 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
- .debug_info    0x00040405      0x664 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_imu_pwm.c.obj
- .debug_info    0x00040a69     0x1a9b CMakeFiles/omni-infantry.elf.dir/bsp/bsp_led.c.obj
- .debug_info    0x00042504      0x5e6 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_rc.c.obj
- .debug_info    0x00042aea      0x686 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_spi.c.obj
- .debug_info    0x00043170      0x79f CMakeFiles/omni-infantry.elf.dir/bsp/bsp_usart.c.obj
- .debug_info    0x0004390f      0x76d CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
- .debug_info    0x0004407c      0x368 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
- .debug_info    0x000443e4      0xd5a CMakeFiles/omni-infantry.elf.dir/component/algorithm/filter.c.obj
- .debug_info    0x0004513e      0x163 CMakeFiles/omni-infantry.elf.dir/component/algorithm/ramp.c.obj
- .debug_info    0x000452a1      0x745 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
- .debug_info    0x000459e6      0x5d9 CMakeFiles/omni-infantry.elf.dir/component/comunication/packet.c.obj
- .debug_info    0x00045fbf      0x4fe CMakeFiles/omni-infantry.elf.dir/component/controller/PID.c.obj
- .debug_info    0x000464bd      0x93d CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
- .debug_info    0x00046dfa     0x1549 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
- .debug_info    0x00048343      0x3aa CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
- .debug_info    0x000486ed     0x12f6 CMakeFiles/omni-infantry.elf.dir/component/support/fifo.c.obj
+ .debug_info    0x0002f309     0x1756 CMakeFiles/omni-infantry.elf.dir/application/Atti.c.obj
+ .debug_info    0x00030a5f      0xc69 CMakeFiles/omni-infantry.elf.dir/application/Calibrate.c.obj
+ .debug_info    0x000316c8     0x2baf CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
+ .debug_info    0x00034277      0x5c5 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
+ .debug_info    0x0003483c     0x2c4c CMakeFiles/omni-infantry.elf.dir/application/Gimbal.c.obj
+ .debug_info    0x00037488     0x418a CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
+ .debug_info    0x0003b612      0xf85 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
+ .debug_info    0x0003c597     0x15eb CMakeFiles/omni-infantry.elf.dir/application/key_board.c.obj
+ .debug_info    0x0003db82      0x9d9 CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
+ .debug_info    0x0003e55b      0x7f8 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_adc.c.obj
+ .debug_info    0x0003ed53      0x680 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_buzzer.c.obj
+ .debug_info    0x0003f3d3      0x625 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_can.c.obj
+ .debug_info    0x0003f9f8      0x911 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
+ .debug_info    0x00040309      0x260 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_delay.c.obj
+ .debug_info    0x00040569      0x536 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
+ .debug_info    0x00040a9f      0x664 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_imu_pwm.c.obj
+ .debug_info    0x00041103     0x1b0c CMakeFiles/omni-infantry.elf.dir/bsp/bsp_led.c.obj
+ .debug_info    0x00042c0f      0x5e6 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_rc.c.obj
+ .debug_info    0x000431f5      0x686 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_spi.c.obj
+ .debug_info    0x0004387b      0x79f CMakeFiles/omni-infantry.elf.dir/bsp/bsp_usart.c.obj
+ .debug_info    0x0004401a      0x76d CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
+ .debug_info    0x00044787      0x368 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
+ .debug_info    0x00044aef      0xd5a CMakeFiles/omni-infantry.elf.dir/component/algorithm/filter.c.obj
+ .debug_info    0x00045849      0x163 CMakeFiles/omni-infantry.elf.dir/component/algorithm/ramp.c.obj
+ .debug_info    0x000459ac      0x745 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
+ .debug_info    0x000460f1      0x5d9 CMakeFiles/omni-infantry.elf.dir/component/comunication/packet.c.obj
+ .debug_info    0x000466ca      0x4fe CMakeFiles/omni-infantry.elf.dir/component/controller/PID.c.obj
+ .debug_info    0x00046bc8      0x93d CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
+ .debug_info    0x00047505     0x1549 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
+ .debug_info    0x00048a4e      0x3aa CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
+ .debug_info    0x00048df8     0x12f6 CMakeFiles/omni-infantry.elf.dir/component/support/fifo.c.obj
 
-.debug_abbrev   0x00000000     0xb38d
+.debug_abbrev   0x00000000     0xb436
  .debug_abbrev  0x00000000      0x1ed CMakeFiles/omni-infantry.elf.dir/Core/Src/adc.c.obj
  .debug_abbrev  0x000001ed      0x252 CMakeFiles/omni-infantry.elf.dir/Core/Src/can.c.obj
  .debug_abbrev  0x0000043f      0x1b6 CMakeFiles/omni-infantry.elf.dir/Core/Src/crc.c.obj
@@ -6428,39 +6424,39 @@ LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb
  .debug_abbrev  0x000065e8      0x2df CMakeFiles/omni-infantry.elf.dir/USB_DEVICE/App/usbd_cdc_if.c.obj
  .debug_abbrev  0x000068c7      0x1ec CMakeFiles/omni-infantry.elf.dir/USB_DEVICE/App/usbd_desc.c.obj
  .debug_abbrev  0x00006ab3      0x33e CMakeFiles/omni-infantry.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj
- .debug_abbrev  0x00006df1      0x3cc CMakeFiles/omni-infantry.elf.dir/application/Atti.c.obj
- .debug_abbrev  0x000071bd      0x316 CMakeFiles/omni-infantry.elf.dir/application/Calibrate.c.obj
- .debug_abbrev  0x000074d3      0x4a0 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
- .debug_abbrev  0x00007973      0x206 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
- .debug_abbrev  0x00007b79      0x3d6 CMakeFiles/omni-infantry.elf.dir/application/Gimbal.c.obj
- .debug_abbrev  0x00007f4f      0x4c7 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
- .debug_abbrev  0x00008416      0x2e1 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
- .debug_abbrev  0x000086f7      0x246 CMakeFiles/omni-infantry.elf.dir/application/key_board.c.obj
- .debug_abbrev  0x0000893d      0x289 CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
- .debug_abbrev  0x00008bc6      0x233 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_adc.c.obj
- .debug_abbrev  0x00008df9      0x177 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_buzzer.c.obj
- .debug_abbrev  0x00008f70      0x1a1 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_can.c.obj
- .debug_abbrev  0x00009111      0x21e CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
- .debug_abbrev  0x0000932f      0x110 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_delay.c.obj
- .debug_abbrev  0x0000943f      0x19d CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
- .debug_abbrev  0x000095dc      0x15c CMakeFiles/omni-infantry.elf.dir/bsp/bsp_imu_pwm.c.obj
- .debug_abbrev  0x00009738      0x33d CMakeFiles/omni-infantry.elf.dir/bsp/bsp_led.c.obj
- .debug_abbrev  0x00009a75      0x189 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_rc.c.obj
- .debug_abbrev  0x00009bfe      0x18d CMakeFiles/omni-infantry.elf.dir/bsp/bsp_spi.c.obj
- .debug_abbrev  0x00009d8b      0x1c5 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_usart.c.obj
- .debug_abbrev  0x00009f50      0x182 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
- .debug_abbrev  0x0000a0d2      0x111 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
- .debug_abbrev  0x0000a1e3      0x2fc CMakeFiles/omni-infantry.elf.dir/component/algorithm/filter.c.obj
- .debug_abbrev  0x0000a4df       0xe2 CMakeFiles/omni-infantry.elf.dir/component/algorithm/ramp.c.obj
- .debug_abbrev  0x0000a5c1      0x214 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
- .debug_abbrev  0x0000a7d5      0x1ce CMakeFiles/omni-infantry.elf.dir/component/comunication/packet.c.obj
- .debug_abbrev  0x0000a9a3      0x18d CMakeFiles/omni-infantry.elf.dir/component/controller/PID.c.obj
- .debug_abbrev  0x0000ab30      0x20f CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
- .debug_abbrev  0x0000ad3f      0x231 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
- .debug_abbrev  0x0000af70      0x103 CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
- .debug_abbrev  0x0000b073      0x31a CMakeFiles/omni-infantry.elf.dir/component/support/fifo.c.obj
+ .debug_abbrev  0x00006df1      0x3cb CMakeFiles/omni-infantry.elf.dir/application/Atti.c.obj
+ .debug_abbrev  0x000071bc      0x327 CMakeFiles/omni-infantry.elf.dir/application/Calibrate.c.obj
+ .debug_abbrev  0x000074e3      0x4fb CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
+ .debug_abbrev  0x000079de      0x206 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
+ .debug_abbrev  0x00007be4      0x3e7 CMakeFiles/omni-infantry.elf.dir/application/Gimbal.c.obj
+ .debug_abbrev  0x00007fcb      0x4d2 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
+ .debug_abbrev  0x0000849d      0x2f2 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
+ .debug_abbrev  0x0000878f      0x246 CMakeFiles/omni-infantry.elf.dir/application/key_board.c.obj
+ .debug_abbrev  0x000089d5      0x289 CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
+ .debug_abbrev  0x00008c5e      0x233 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_adc.c.obj
+ .debug_abbrev  0x00008e91      0x177 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_buzzer.c.obj
+ .debug_abbrev  0x00009008      0x1a1 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_can.c.obj
+ .debug_abbrev  0x000091a9      0x21e CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
+ .debug_abbrev  0x000093c7      0x110 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_delay.c.obj
+ .debug_abbrev  0x000094d7      0x19d CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
+ .debug_abbrev  0x00009674      0x15c CMakeFiles/omni-infantry.elf.dir/bsp/bsp_imu_pwm.c.obj
+ .debug_abbrev  0x000097d0      0x34e CMakeFiles/omni-infantry.elf.dir/bsp/bsp_led.c.obj
+ .debug_abbrev  0x00009b1e      0x189 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_rc.c.obj
+ .debug_abbrev  0x00009ca7      0x18d CMakeFiles/omni-infantry.elf.dir/bsp/bsp_spi.c.obj
+ .debug_abbrev  0x00009e34      0x1c5 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_usart.c.obj
+ .debug_abbrev  0x00009ff9      0x182 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
+ .debug_abbrev  0x0000a17b      0x111 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
+ .debug_abbrev  0x0000a28c      0x2fc CMakeFiles/omni-infantry.elf.dir/component/algorithm/filter.c.obj
+ .debug_abbrev  0x0000a588       0xe2 CMakeFiles/omni-infantry.elf.dir/component/algorithm/ramp.c.obj
+ .debug_abbrev  0x0000a66a      0x214 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
+ .debug_abbrev  0x0000a87e      0x1ce CMakeFiles/omni-infantry.elf.dir/component/comunication/packet.c.obj
+ .debug_abbrev  0x0000aa4c      0x18d CMakeFiles/omni-infantry.elf.dir/component/controller/PID.c.obj
+ .debug_abbrev  0x0000abd9      0x20f CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
+ .debug_abbrev  0x0000ade8      0x231 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
+ .debug_abbrev  0x0000b019      0x103 CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
+ .debug_abbrev  0x0000b11c      0x31a CMakeFiles/omni-infantry.elf.dir/component/support/fifo.c.obj
 
-.debug_aranges  0x00000000     0x2bc0
+.debug_aranges  0x00000000     0x2bb0
  .debug_aranges
                 0x00000000       0x30 CMakeFiles/omni-infantry.elf.dir/Core/Src/adc.c.obj
  .debug_aranges
@@ -6560,66 +6556,66 @@ LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb
  .debug_aranges
                 0x000021c8       0x68 CMakeFiles/omni-infantry.elf.dir/application/Calibrate.c.obj
  .debug_aranges
-                0x00002230       0x90 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
+                0x00002230       0x88 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
  .debug_aranges
-                0x000022c0       0x40 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
+                0x000022b8       0x40 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
  .debug_aranges
-                0x00002300       0xa0 CMakeFiles/omni-infantry.elf.dir/application/Gimbal.c.obj
+                0x000022f8       0xa0 CMakeFiles/omni-infantry.elf.dir/application/Gimbal.c.obj
  .debug_aranges
-                0x000023a0       0xb0 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
+                0x00002398       0xa8 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
  .debug_aranges
-                0x00002450       0x48 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
+                0x00002440       0x48 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
  .debug_aranges
-                0x00002498       0x28 CMakeFiles/omni-infantry.elf.dir/application/key_board.c.obj
+                0x00002488       0x28 CMakeFiles/omni-infantry.elf.dir/application/key_board.c.obj
  .debug_aranges
-                0x000024c0       0x50 CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
+                0x000024b0       0x50 CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
  .debug_aranges
-                0x00002510       0x30 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_adc.c.obj
+                0x00002500       0x30 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_adc.c.obj
  .debug_aranges
-                0x00002540       0x28 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_buzzer.c.obj
+                0x00002530       0x28 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_buzzer.c.obj
  .debug_aranges
-                0x00002568       0x20 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_can.c.obj
+                0x00002558       0x20 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_can.c.obj
  .debug_aranges
-                0x00002588       0x38 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
+                0x00002578       0x38 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
  .debug_aranges
-                0x000025c0       0x30 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_delay.c.obj
+                0x000025b0       0x30 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_delay.c.obj
  .debug_aranges
-                0x000025f0       0x48 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
+                0x000025e0       0x48 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
  .debug_aranges
-                0x00002638       0x20 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_imu_pwm.c.obj
+                0x00002628       0x20 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_imu_pwm.c.obj
  .debug_aranges
-                0x00002658       0x78 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_led.c.obj
+                0x00002648       0x78 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_led.c.obj
  .debug_aranges
-                0x000026d0       0x30 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_rc.c.obj
+                0x000026c0       0x30 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_rc.c.obj
  .debug_aranges
-                0x00002700       0x28 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_spi.c.obj
+                0x000026f0       0x28 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_spi.c.obj
  .debug_aranges
-                0x00002728       0x48 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_usart.c.obj
+                0x00002718       0x48 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_usart.c.obj
  .debug_aranges
-                0x00002770       0x40 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
+                0x00002760       0x40 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
  .debug_aranges
-                0x000027b0       0x60 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
+                0x000027a0       0x60 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
  .debug_aranges
-                0x00002810       0x70 CMakeFiles/omni-infantry.elf.dir/component/algorithm/filter.c.obj
+                0x00002800       0x70 CMakeFiles/omni-infantry.elf.dir/component/algorithm/filter.c.obj
  .debug_aranges
-                0x00002880       0x28 CMakeFiles/omni-infantry.elf.dir/component/algorithm/ramp.c.obj
+                0x00002870       0x28 CMakeFiles/omni-infantry.elf.dir/component/algorithm/ramp.c.obj
  .debug_aranges
-                0x000028a8       0x40 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
+                0x00002898       0x40 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
  .debug_aranges
-                0x000028e8       0x30 CMakeFiles/omni-infantry.elf.dir/component/comunication/packet.c.obj
+                0x000028d8       0x30 CMakeFiles/omni-infantry.elf.dir/component/comunication/packet.c.obj
  .debug_aranges
-                0x00002918       0x50 CMakeFiles/omni-infantry.elf.dir/component/controller/PID.c.obj
+                0x00002908       0x50 CMakeFiles/omni-infantry.elf.dir/component/controller/PID.c.obj
  .debug_aranges
-                0x00002968       0x60 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
+                0x00002958       0x60 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
  .debug_aranges
-                0x000029c8       0xa8 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
+                0x000029b8       0xa8 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
  .debug_aranges
-                0x00002a70       0x48 CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
+                0x00002a60       0x48 CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
  .debug_aranges
-                0x00002ab8      0x108 CMakeFiles/omni-infantry.elf.dir/component/support/fifo.c.obj
+                0x00002aa8      0x108 CMakeFiles/omni-infantry.elf.dir/component/support/fifo.c.obj
 
 .debug_rnglists
-                0x00000000     0x222a
+                0x00000000     0x221c
  .debug_rnglists
                 0x00000000       0x1f CMakeFiles/omni-infantry.elf.dir/Core/Src/adc.c.obj
  .debug_rnglists
@@ -6719,65 +6715,65 @@ LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb
  .debug_rnglists
                 0x00001a6f       0x4c CMakeFiles/omni-infantry.elf.dir/application/Calibrate.c.obj
  .debug_rnglists
-                0x00001abb       0x7d CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
+                0x00001abb       0x76 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
  .debug_rnglists
-                0x00001b38       0x47 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
+                0x00001b31       0x47 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
  .debug_rnglists
-                0x00001b7f       0x8a CMakeFiles/omni-infantry.elf.dir/application/Gimbal.c.obj
+                0x00001b78       0x8a CMakeFiles/omni-infantry.elf.dir/application/Gimbal.c.obj
  .debug_rnglists
-                0x00001c09       0xb3 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
+                0x00001c02       0xac CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
  .debug_rnglists
-                0x00001cbc       0x32 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
+                0x00001cae       0x32 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
  .debug_rnglists
-                0x00001cee       0x1a CMakeFiles/omni-infantry.elf.dir/application/key_board.c.obj
+                0x00001ce0       0x1a CMakeFiles/omni-infantry.elf.dir/application/key_board.c.obj
  .debug_rnglists
-                0x00001d08       0x39 CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
+                0x00001cfa       0x39 CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
  .debug_rnglists
-                0x00001d41       0x1f CMakeFiles/omni-infantry.elf.dir/bsp/bsp_adc.c.obj
+                0x00001d33       0x1f CMakeFiles/omni-infantry.elf.dir/bsp/bsp_adc.c.obj
  .debug_rnglists
-                0x00001d60       0x19 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_buzzer.c.obj
+                0x00001d52       0x19 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_buzzer.c.obj
  .debug_rnglists
-                0x00001d79       0x13 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_can.c.obj
+                0x00001d6b       0x13 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_can.c.obj
  .debug_rnglists
-                0x00001d8c       0x25 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
+                0x00001d7e       0x25 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
  .debug_rnglists
-                0x00001db1       0x1f CMakeFiles/omni-infantry.elf.dir/bsp/bsp_delay.c.obj
+                0x00001da3       0x1f CMakeFiles/omni-infantry.elf.dir/bsp/bsp_delay.c.obj
  .debug_rnglists
-                0x00001dd0       0x34 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
+                0x00001dc2       0x34 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
  .debug_rnglists
-                0x00001e04       0x13 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_imu_pwm.c.obj
+                0x00001df6       0x13 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_imu_pwm.c.obj
  .debug_rnglists
-                0x00001e17       0x8a CMakeFiles/omni-infantry.elf.dir/bsp/bsp_led.c.obj
+                0x00001e09       0x8a CMakeFiles/omni-infantry.elf.dir/bsp/bsp_led.c.obj
  .debug_rnglists
-                0x00001ea1       0x1f CMakeFiles/omni-infantry.elf.dir/bsp/bsp_rc.c.obj
+                0x00001e93       0x1f CMakeFiles/omni-infantry.elf.dir/bsp/bsp_rc.c.obj
  .debug_rnglists
-                0x00001ec0       0x1b CMakeFiles/omni-infantry.elf.dir/bsp/bsp_spi.c.obj
+                0x00001eb2       0x1b CMakeFiles/omni-infantry.elf.dir/bsp/bsp_spi.c.obj
  .debug_rnglists
-                0x00001edb       0x35 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_usart.c.obj
+                0x00001ecd       0x35 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_usart.c.obj
  .debug_rnglists
-                0x00001f10       0x2e CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
+                0x00001f02       0x2e CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
  .debug_rnglists
-                0x00001f3e       0x43 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
+                0x00001f30       0x43 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
  .debug_rnglists
-                0x00001f81       0x53 CMakeFiles/omni-infantry.elf.dir/component/algorithm/filter.c.obj
+                0x00001f73       0x53 CMakeFiles/omni-infantry.elf.dir/component/algorithm/filter.c.obj
  .debug_rnglists
-                0x00001fd4       0x1a CMakeFiles/omni-infantry.elf.dir/component/algorithm/ramp.c.obj
+                0x00001fc6       0x1a CMakeFiles/omni-infantry.elf.dir/component/algorithm/ramp.c.obj
  .debug_rnglists
-                0x00001fee       0x2c CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
+                0x00001fe0       0x2c CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
  .debug_rnglists
-                0x0000201a       0x1f CMakeFiles/omni-infantry.elf.dir/component/comunication/packet.c.obj
+                0x0000200c       0x1f CMakeFiles/omni-infantry.elf.dir/component/comunication/packet.c.obj
  .debug_rnglists
-                0x00002039       0x3a CMakeFiles/omni-infantry.elf.dir/component/controller/PID.c.obj
+                0x0000202b       0x3a CMakeFiles/omni-infantry.elf.dir/component/controller/PID.c.obj
  .debug_rnglists
-                0x00002073       0x43 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
+                0x00002065       0x43 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
  .debug_rnglists
-                0x000020b6       0x80 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
+                0x000020a8       0x80 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
  .debug_rnglists
-                0x00002136       0x31 CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
+                0x00002128       0x31 CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
  .debug_rnglists
-                0x00002167       0xc3 CMakeFiles/omni-infantry.elf.dir/component/support/fifo.c.obj
+                0x00002159       0xc3 CMakeFiles/omni-infantry.elf.dir/component/support/fifo.c.obj
 
-.debug_line     0x00000000    0x34fb6
+.debug_line     0x00000000    0x34f71
  .debug_line    0x00000000      0x3cb CMakeFiles/omni-infantry.elf.dir/Core/Src/adc.c.obj
  .debug_line    0x000003cb      0x5e7 CMakeFiles/omni-infantry.elf.dir/Core/Src/can.c.obj
  .debug_line    0x000009b2      0x320 CMakeFiles/omni-infantry.elf.dir/Core/Src/crc.c.obj
@@ -6825,39 +6821,39 @@ LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb
  .debug_line    0x00025d38      0x322 CMakeFiles/omni-infantry.elf.dir/USB_DEVICE/App/usbd_cdc_if.c.obj
  .debug_line    0x0002605a      0x3be CMakeFiles/omni-infantry.elf.dir/USB_DEVICE/App/usbd_desc.c.obj
  .debug_line    0x00026418      0x96c CMakeFiles/omni-infantry.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj
- .debug_line    0x00026d84     0x10c1 CMakeFiles/omni-infantry.elf.dir/application/Atti.c.obj
- .debug_line    0x00027e45      0xbeb CMakeFiles/omni-infantry.elf.dir/application/Calibrate.c.obj
- .debug_line    0x00028a30      0xd7e CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
- .debug_line    0x000297ae      0x5aa CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
- .debug_line    0x00029d58     0x1013 CMakeFiles/omni-infantry.elf.dir/application/Gimbal.c.obj
- .debug_line    0x0002ad6b     0x12bf CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
- .debug_line    0x0002c02a      0x6c8 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
- .debug_line    0x0002c6f2      0x546 CMakeFiles/omni-infantry.elf.dir/application/key_board.c.obj
- .debug_line    0x0002cc38      0x64d CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
- .debug_line    0x0002d285      0x400 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_adc.c.obj
- .debug_line    0x0002d685      0x27c CMakeFiles/omni-infantry.elf.dir/bsp/bsp_buzzer.c.obj
- .debug_line    0x0002d901      0x2b6 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_can.c.obj
- .debug_line    0x0002dbb7      0x47a CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
- .debug_line    0x0002e031      0x335 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_delay.c.obj
- .debug_line    0x0002e366      0x524 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
- .debug_line    0x0002e88a      0x264 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_imu_pwm.c.obj
- .debug_line    0x0002eaee      0xc35 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_led.c.obj
- .debug_line    0x0002f723      0x2e4 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_rc.c.obj
- .debug_line    0x0002fa07      0xf23 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_spi.c.obj
- .debug_line    0x0003092a      0x491 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_usart.c.obj
- .debug_line    0x00030dbb      0x7a5 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
- .debug_line    0x00031560      0x26a CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
- .debug_line    0x000317ca      0x661 CMakeFiles/omni-infantry.elf.dir/component/algorithm/filter.c.obj
- .debug_line    0x00031e2b      0x1d9 CMakeFiles/omni-infantry.elf.dir/component/algorithm/ramp.c.obj
- .debug_line    0x00032004      0x4f1 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
- .debug_line    0x000324f5      0x43a CMakeFiles/omni-infantry.elf.dir/component/comunication/packet.c.obj
- .debug_line    0x0003292f      0x41f CMakeFiles/omni-infantry.elf.dir/component/controller/PID.c.obj
- .debug_line    0x00032d4e      0x439 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
- .debug_line    0x00033187      0xb66 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
- .debug_line    0x00033ced      0x2fb CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
- .debug_line    0x00033fe8      0xfce CMakeFiles/omni-infantry.elf.dir/component/support/fifo.c.obj
+ .debug_line    0x00026d84     0x10bf CMakeFiles/omni-infantry.elf.dir/application/Atti.c.obj
+ .debug_line    0x00027e43      0xbe9 CMakeFiles/omni-infantry.elf.dir/application/Calibrate.c.obj
+ .debug_line    0x00028a2c      0xda4 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
+ .debug_line    0x000297d0      0x5aa CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
+ .debug_line    0x00029d7a     0x1013 CMakeFiles/omni-infantry.elf.dir/application/Gimbal.c.obj
+ .debug_line    0x0002ad8d     0x1267 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
+ .debug_line    0x0002bff4      0x6c8 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
+ .debug_line    0x0002c6bc      0x546 CMakeFiles/omni-infantry.elf.dir/application/key_board.c.obj
+ .debug_line    0x0002cc02      0x64d CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
+ .debug_line    0x0002d24f      0x400 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_adc.c.obj
+ .debug_line    0x0002d64f      0x27c CMakeFiles/omni-infantry.elf.dir/bsp/bsp_buzzer.c.obj
+ .debug_line    0x0002d8cb      0x2b6 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_can.c.obj
+ .debug_line    0x0002db81      0x47a CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
+ .debug_line    0x0002dffb      0x335 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_delay.c.obj
+ .debug_line    0x0002e330      0x524 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
+ .debug_line    0x0002e854      0x264 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_imu_pwm.c.obj
+ .debug_line    0x0002eab8      0xc26 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_led.c.obj
+ .debug_line    0x0002f6de      0x2e4 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_rc.c.obj
+ .debug_line    0x0002f9c2      0xf23 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_spi.c.obj
+ .debug_line    0x000308e5      0x491 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_usart.c.obj
+ .debug_line    0x00030d76      0x7a5 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
+ .debug_line    0x0003151b      0x26a CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
+ .debug_line    0x00031785      0x661 CMakeFiles/omni-infantry.elf.dir/component/algorithm/filter.c.obj
+ .debug_line    0x00031de6      0x1d9 CMakeFiles/omni-infantry.elf.dir/component/algorithm/ramp.c.obj
+ .debug_line    0x00031fbf      0x4f1 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
+ .debug_line    0x000324b0      0x43a CMakeFiles/omni-infantry.elf.dir/component/comunication/packet.c.obj
+ .debug_line    0x000328ea      0x41f CMakeFiles/omni-infantry.elf.dir/component/controller/PID.c.obj
+ .debug_line    0x00032d09      0x439 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
+ .debug_line    0x00033142      0xb66 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
+ .debug_line    0x00033ca8      0x2fb CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
+ .debug_line    0x00033fa3      0xfce CMakeFiles/omni-infantry.elf.dir/component/support/fifo.c.obj
 
-.debug_str      0x00000000    0x101ba
+.debug_str      0x00000000    0x1019b
  .debug_str     0x00000000      0x737 CMakeFiles/omni-infantry.elf.dir/Core/Src/adc.c.obj
                                 0x7de (size before relaxing)
  .debug_str     0x00000737      0x895 CMakeFiles/omni-infantry.elf.dir/Core/Src/can.c.obj
@@ -6952,67 +6948,67 @@ LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb
                                 0x4e9 (size before relaxing)
  .debug_str     0x0000ab42       0xaf CMakeFiles/omni-infantry.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj
                                0x1642 (size before relaxing)
- .debug_str     0x0000abf1      0x640 CMakeFiles/omni-infantry.elf.dir/application/Atti.c.obj
-                                0xfee (size before relaxing)
- .debug_str     0x0000b231      0x3c4 CMakeFiles/omni-infantry.elf.dir/application/Calibrate.c.obj
-                                0x92c (size before relaxing)
- .debug_str     0x0000b5f5     0x16e9 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
-                               0x1cfb (size before relaxing)
- .debug_str     0x0000ccde      0x145 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
+ .debug_str     0x0000abf1      0x4d1 CMakeFiles/omni-infantry.elf.dir/application/Atti.c.obj
+                                0xe7f (size before relaxing)
+ .debug_str     0x0000b0c2      0x3c4 CMakeFiles/omni-infantry.elf.dir/application/Calibrate.c.obj
+                                0x7bd (size before relaxing)
+ .debug_str     0x0000b486     0x169b CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
+                               0x1fba (size before relaxing)
+ .debug_str     0x0000cb21      0x145 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
                                 0x56e (size before relaxing)
- .debug_str     0x0000ce23      0x60e CMakeFiles/omni-infantry.elf.dir/application/Gimbal.c.obj
-                               0x1f13 (size before relaxing)
- .debug_str     0x0000d431      0xff8 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
-                               0x2c3b (size before relaxing)
- .debug_str     0x0000e429      0x293 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
-                                0xd4c (size before relaxing)
- .debug_str     0x0000e6bc       0x78 CMakeFiles/omni-infantry.elf.dir/application/key_board.c.obj
+ .debug_str     0x0000cc66      0x6a5 CMakeFiles/omni-infantry.elf.dir/application/Gimbal.c.obj
+                               0x1f1f (size before relaxing)
+ .debug_str     0x0000d30b      0xff8 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
+                               0x2c2e (size before relaxing)
+ .debug_str     0x0000e303      0x391 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
+                                0xd58 (size before relaxing)
+ .debug_str     0x0000e694       0x78 CMakeFiles/omni-infantry.elf.dir/application/key_board.c.obj
                                0x111b (size before relaxing)
- .debug_str     0x0000e734      0x100 CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
+ .debug_str     0x0000e70c      0x100 CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
                                 0x951 (size before relaxing)
- .debug_str     0x0000e834       0xb2 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_adc.c.obj
+ .debug_str     0x0000e80c       0xb2 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_adc.c.obj
                                 0x776 (size before relaxing)
- .debug_str     0x0000e8e6       0x5b CMakeFiles/omni-infantry.elf.dir/bsp/bsp_buzzer.c.obj
+ .debug_str     0x0000e8be       0x5b CMakeFiles/omni-infantry.elf.dir/bsp/bsp_buzzer.c.obj
                                 0x788 (size before relaxing)
- .debug_str     0x0000e941       0x66 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_can.c.obj
+ .debug_str     0x0000e919       0x66 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_can.c.obj
                                 0x61a (size before relaxing)
- .debug_str     0x0000e9a7       0xb5 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
+ .debug_str     0x0000e97f       0xbe CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
                                 0x75a (size before relaxing)
- .debug_str     0x0000ea5c       0x72 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_delay.c.obj
+ .debug_str     0x0000ea3d       0x72 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_delay.c.obj
                                 0x2d1 (size before relaxing)
- .debug_str     0x0000eace       0xcf CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
+ .debug_str     0x0000eaaf       0xcf CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
                                 0x421 (size before relaxing)
- .debug_str     0x0000eb9d       0x5c CMakeFiles/omni-infantry.elf.dir/bsp/bsp_imu_pwm.c.obj
+ .debug_str     0x0000eb7e       0x5c CMakeFiles/omni-infantry.elf.dir/bsp/bsp_imu_pwm.c.obj
                                 0x781 (size before relaxing)
- .debug_str     0x0000ebf9      0x18c CMakeFiles/omni-infantry.elf.dir/bsp/bsp_led.c.obj
-                               0x141f (size before relaxing)
- .debug_str     0x0000ed85       0x73 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_rc.c.obj
+ .debug_str     0x0000ebda      0x18c CMakeFiles/omni-infantry.elf.dir/bsp/bsp_led.c.obj
+                               0x12b0 (size before relaxing)
+ .debug_str     0x0000ed66       0x73 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_rc.c.obj
                                 0x6ca (size before relaxing)
- .debug_str     0x0000edf8       0x5d CMakeFiles/omni-infantry.elf.dir/bsp/bsp_spi.c.obj
+ .debug_str     0x0000edd9       0x5d CMakeFiles/omni-infantry.elf.dir/bsp/bsp_spi.c.obj
                                 0x6f6 (size before relaxing)
- .debug_str     0x0000ee55       0x97 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_usart.c.obj
+ .debug_str     0x0000ee36       0x97 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_usart.c.obj
                                 0x7d4 (size before relaxing)
- .debug_str     0x0000eeec      0x147 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
+ .debug_str     0x0000eecd      0x147 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
                                 0x38d (size before relaxing)
- .debug_str     0x0000f033       0xff CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
+ .debug_str     0x0000f014       0xff CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
                                 0x306 (size before relaxing)
- .debug_str     0x0000f132      0x35d CMakeFiles/omni-infantry.elf.dir/component/algorithm/filter.c.obj
+ .debug_str     0x0000f113      0x35d CMakeFiles/omni-infantry.elf.dir/component/algorithm/filter.c.obj
                                 0x66a (size before relaxing)
- .debug_str     0x0000f48f       0x76 CMakeFiles/omni-infantry.elf.dir/component/algorithm/ramp.c.obj
+ .debug_str     0x0000f470       0x76 CMakeFiles/omni-infantry.elf.dir/component/algorithm/ramp.c.obj
                                 0x296 (size before relaxing)
- .debug_str     0x0000f505      0x1fd CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
+ .debug_str     0x0000f4e6      0x1fd CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
                                 0x7b4 (size before relaxing)
- .debug_str     0x0000f702       0xed CMakeFiles/omni-infantry.elf.dir/component/comunication/packet.c.obj
+ .debug_str     0x0000f6e3       0xed CMakeFiles/omni-infantry.elf.dir/component/comunication/packet.c.obj
                                 0x490 (size before relaxing)
- .debug_str     0x0000f7ef       0xd6 CMakeFiles/omni-infantry.elf.dir/component/controller/PID.c.obj
+ .debug_str     0x0000f7d0       0xd6 CMakeFiles/omni-infantry.elf.dir/component/controller/PID.c.obj
                                 0x328 (size before relaxing)
- .debug_str     0x0000f8c5      0x114 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
+ .debug_str     0x0000f8a6      0x114 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
                                 0x908 (size before relaxing)
- .debug_str     0x0000f9d9      0x434 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
+ .debug_str     0x0000f9ba      0x434 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
                                 0x78d (size before relaxing)
- .debug_str     0x0000fe0d      0x11c CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
+ .debug_str     0x0000fdee      0x11c CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
                                 0x36c (size before relaxing)
- .debug_str     0x0000ff29      0x291 CMakeFiles/omni-infantry.elf.dir/component/support/fifo.c.obj
+ .debug_str     0x0000ff0a      0x291 CMakeFiles/omni-infantry.elf.dir/component/support/fifo.c.obj
                                 0x52c (size before relaxing)
 
 .comment        0x00000000       0x55
@@ -7095,7 +7091,7 @@ LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb
  .comment       0x00000055       0x56 CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
  .comment       0x00000055       0x56 CMakeFiles/omni-infantry.elf.dir/component/support/fifo.c.obj
 
-.debug_frame    0x00000000     0x7e84
+.debug_frame    0x00000000     0x7e3c
  .debug_frame   0x00000000       0x58 CMakeFiles/omni-infantry.elf.dir/Core/Src/adc.c.obj
  .debug_frame   0x00000058       0x78 CMakeFiles/omni-infantry.elf.dir/Core/Src/can.c.obj
  .debug_frame   0x000000d0       0x50 CMakeFiles/omni-infantry.elf.dir/Core/Src/crc.c.obj
@@ -7144,75 +7140,75 @@ LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb
  .debug_frame   0x0000557c      0x2e4 CMakeFiles/omni-infantry.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj
  .debug_frame   0x00005860      0x134 CMakeFiles/omni-infantry.elf.dir/application/Atti.c.obj
  .debug_frame   0x00005994      0x124 CMakeFiles/omni-infantry.elf.dir/application/Calibrate.c.obj
- .debug_frame   0x00005ab8      0x1e4 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
- .debug_frame   0x00005c9c       0x90 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
- .debug_frame   0x00005d2c      0x1ec CMakeFiles/omni-infantry.elf.dir/application/Gimbal.c.obj
- .debug_frame   0x00005f18      0x2b4 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
- .debug_frame   0x000061cc       0x9c CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
- .debug_frame   0x00006268       0x48 CMakeFiles/omni-infantry.elf.dir/application/key_board.c.obj
- .debug_frame   0x000062b0       0xc4 CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
- .debug_frame   0x00006374       0x5c CMakeFiles/omni-infantry.elf.dir/bsp/bsp_adc.c.obj
- .debug_frame   0x000063d0       0x30 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_buzzer.c.obj
- .debug_frame   0x00006400       0x30 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_can.c.obj
- .debug_frame   0x00006430       0x90 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
- .debug_frame   0x000064c0       0x58 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_delay.c.obj
- .debug_frame   0x00006518       0xa4 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
- .debug_frame   0x000065bc       0x20 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_imu_pwm.c.obj
- .debug_frame   0x000065dc      0x184 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_led.c.obj
- .debug_frame   0x00006760       0x58 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_rc.c.obj
- .debug_frame   0x000067b8       0x54 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_spi.c.obj
- .debug_frame   0x0000680c       0xb0 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_usart.c.obj
- .debug_frame   0x000068bc      0x120 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
- .debug_frame   0x000069dc       0xd8 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
- .debug_frame   0x00006ab4      0x104 CMakeFiles/omni-infantry.elf.dir/component/algorithm/filter.c.obj
- .debug_frame   0x00006bb8       0x30 CMakeFiles/omni-infantry.elf.dir/component/algorithm/ramp.c.obj
- .debug_frame   0x00006be8       0x88 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
- .debug_frame   0x00006c70       0x6c CMakeFiles/omni-infantry.elf.dir/component/comunication/packet.c.obj
- .debug_frame   0x00006cdc       0xa0 CMakeFiles/omni-infantry.elf.dir/component/controller/PID.c.obj
- .debug_frame   0x00006d7c       0xdc CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
- .debug_frame   0x00006e58      0x224 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
- .debug_frame   0x0000707c       0xe4 CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
- .debug_frame   0x00007160      0x2c4 CMakeFiles/omni-infantry.elf.dir/component/support/fifo.c.obj
- .debug_frame   0x00007424       0xac c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
- .debug_frame   0x000074d0       0xc4 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_cmpdf2.o)
- .debug_frame   0x00007594       0x24 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_truncdfsf2.o)
- .debug_frame   0x000075b8       0x2c c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x000075e4       0x34 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
- .debug_frame   0x00007618      0x13c c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-findfp.o)
- .debug_frame   0x00007754       0x2c c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-memset.o)
- .debug_frame   0x00007780       0x20 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-errno.o)
- .debug_frame   0x000077a0       0x2c c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-init.o)
- .debug_frame   0x000077cc       0xb0 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
- .debug_frame   0x0000787c       0x5c c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
- .debug_frame   0x000078d8       0x20 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-atexit.o)
- .debug_frame   0x000078f8       0x34 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-fini.o)
- .debug_frame   0x0000792c       0x34 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__atexit.o)
- .debug_frame   0x00007960       0x48 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-w_sqrt.o)
- .debug_frame   0x000079a8       0x40 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_cos.o)
- .debug_frame   0x000079e8       0x3c c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_sin.o)
- .debug_frame   0x00007a24       0x48 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_asin.o)
- .debug_frame   0x00007a6c       0x20 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_atan2.o)
- .debug_frame   0x00007a8c       0x44 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_sqrt.o)
- .debug_frame   0x00007ad0       0x20 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_fabs.o)
- .debug_frame   0x00007af0       0x20 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_nan.o)
- .debug_frame   0x00007b10       0x38 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-e_sqrt.o)
- .debug_frame   0x00007b48       0x20 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_sqrt.o)
- .debug_frame   0x00007b68       0x4c c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-k_cos.o)
- .debug_frame   0x00007bb4       0x48 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-k_sin.o)
- .debug_frame   0x00007bfc       0x40 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-e_rem_pio2.o)
- .debug_frame   0x00007c3c       0x20 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_fabs.o)
- .debug_frame   0x00007c5c       0x70 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_asin.o)
- .debug_frame   0x00007ccc       0x44 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_atan2.o)
- .debug_frame   0x00007d10       0x2c c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_atan.o)
- .debug_frame   0x00007d3c       0x58 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-k_rem_pio2.o)
- .debug_frame   0x00007d94       0x2c c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_scalbn.o)
- .debug_frame   0x00007dc0       0x30 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_floor.o)
- .debug_frame   0x00007df0       0x50 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_muldivdf3.o)
- .debug_frame   0x00007e40       0x20 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_unorddf2.o)
- .debug_frame   0x00007e60       0x24 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_fixdfsi.o)
+ .debug_frame   0x00005ab8      0x1c0 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
+ .debug_frame   0x00005c78       0x90 CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
+ .debug_frame   0x00005d08      0x1ec CMakeFiles/omni-infantry.elf.dir/application/Gimbal.c.obj
+ .debug_frame   0x00005ef4      0x290 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
+ .debug_frame   0x00006184       0x9c CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
+ .debug_frame   0x00006220       0x48 CMakeFiles/omni-infantry.elf.dir/application/key_board.c.obj
+ .debug_frame   0x00006268       0xc4 CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
+ .debug_frame   0x0000632c       0x5c CMakeFiles/omni-infantry.elf.dir/bsp/bsp_adc.c.obj
+ .debug_frame   0x00006388       0x30 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_buzzer.c.obj
+ .debug_frame   0x000063b8       0x30 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_can.c.obj
+ .debug_frame   0x000063e8       0x90 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
+ .debug_frame   0x00006478       0x58 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_delay.c.obj
+ .debug_frame   0x000064d0       0xa4 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
+ .debug_frame   0x00006574       0x20 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_imu_pwm.c.obj
+ .debug_frame   0x00006594      0x184 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_led.c.obj
+ .debug_frame   0x00006718       0x58 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_rc.c.obj
+ .debug_frame   0x00006770       0x54 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_spi.c.obj
+ .debug_frame   0x000067c4       0xb0 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_usart.c.obj
+ .debug_frame   0x00006874      0x120 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
+ .debug_frame   0x00006994       0xd8 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
+ .debug_frame   0x00006a6c      0x104 CMakeFiles/omni-infantry.elf.dir/component/algorithm/filter.c.obj
+ .debug_frame   0x00006b70       0x30 CMakeFiles/omni-infantry.elf.dir/component/algorithm/ramp.c.obj
+ .debug_frame   0x00006ba0       0x88 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
+ .debug_frame   0x00006c28       0x6c CMakeFiles/omni-infantry.elf.dir/component/comunication/packet.c.obj
+ .debug_frame   0x00006c94       0xa0 CMakeFiles/omni-infantry.elf.dir/component/controller/PID.c.obj
+ .debug_frame   0x00006d34       0xdc CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
+ .debug_frame   0x00006e10      0x224 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
+ .debug_frame   0x00007034       0xe4 CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
+ .debug_frame   0x00007118      0x2c4 CMakeFiles/omni-infantry.elf.dir/component/support/fifo.c.obj
+ .debug_frame   0x000073dc       0xac c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x00007488       0xc4 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_cmpdf2.o)
+ .debug_frame   0x0000754c       0x24 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_truncdfsf2.o)
+ .debug_frame   0x00007570       0x2c c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x0000759c       0x34 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x000075d0      0x13c c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-findfp.o)
+ .debug_frame   0x0000770c       0x2c c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-memset.o)
+ .debug_frame   0x00007738       0x20 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-errno.o)
+ .debug_frame   0x00007758       0x2c c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-init.o)
+ .debug_frame   0x00007784       0xb0 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-lock.o)
+ .debug_frame   0x00007834       0x5c c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__call_atexit.o)
+ .debug_frame   0x00007890       0x20 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-atexit.o)
+ .debug_frame   0x000078b0       0x34 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-fini.o)
+ .debug_frame   0x000078e4       0x34 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__atexit.o)
+ .debug_frame   0x00007918       0x48 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-w_sqrt.o)
+ .debug_frame   0x00007960       0x40 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_cos.o)
+ .debug_frame   0x000079a0       0x3c c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_sin.o)
+ .debug_frame   0x000079dc       0x48 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_asin.o)
+ .debug_frame   0x00007a24       0x20 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_atan2.o)
+ .debug_frame   0x00007a44       0x44 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_sqrt.o)
+ .debug_frame   0x00007a88       0x20 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_fabs.o)
+ .debug_frame   0x00007aa8       0x20 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_nan.o)
+ .debug_frame   0x00007ac8       0x38 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-e_sqrt.o)
+ .debug_frame   0x00007b00       0x20 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_sqrt.o)
+ .debug_frame   0x00007b20       0x4c c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-k_cos.o)
+ .debug_frame   0x00007b6c       0x48 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-k_sin.o)
+ .debug_frame   0x00007bb4       0x40 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-e_rem_pio2.o)
+ .debug_frame   0x00007bf4       0x20 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_fabs.o)
+ .debug_frame   0x00007c14       0x70 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_asin.o)
+ .debug_frame   0x00007c84       0x44 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_atan2.o)
+ .debug_frame   0x00007cc8       0x2c c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_atan.o)
+ .debug_frame   0x00007cf4       0x58 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-k_rem_pio2.o)
+ .debug_frame   0x00007d4c       0x2c c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_scalbn.o)
+ .debug_frame   0x00007d78       0x30 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_floor.o)
+ .debug_frame   0x00007da8       0x50 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_muldivdf3.o)
+ .debug_frame   0x00007df8       0x20 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_unorddf2.o)
+ .debug_frame   0x00007e18       0x24 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_fixdfsi.o)
 
 .debug_loclists
-                0x00000000    0x17b97
+                0x00000000    0x17b77
  .debug_loclists
                 0x00000000       0x8b CMakeFiles/omni-infantry.elf.dir/Core/Src/can.c.obj
  .debug_loclists
@@ -7292,57 +7288,57 @@ LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb
  .debug_loclists
                 0x000137e5      0x2c5 CMakeFiles/omni-infantry.elf.dir/application/Calibrate.c.obj
  .debug_loclists
-                0x00013aaa      0x2b1 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
+                0x00013aaa      0x291 CMakeFiles/omni-infantry.elf.dir/application/Chassis.c.obj
  .debug_loclists
-                0x00013d5b      0x27f CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
+                0x00013d3b      0x27f CMakeFiles/omni-infantry.elf.dir/application/Detection.c.obj
  .debug_loclists
-                0x00013fda       0x50 CMakeFiles/omni-infantry.elf.dir/application/Gimbal.c.obj
+                0x00013fba       0x50 CMakeFiles/omni-infantry.elf.dir/application/Gimbal.c.obj
  .debug_loclists
-                0x0001402a      0x884 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
+                0x0001400a      0x884 CMakeFiles/omni-infantry.elf.dir/application/Referee.c.obj
  .debug_loclists
-                0x000148ae      0x1c6 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
+                0x0001488e      0x1c6 CMakeFiles/omni-infantry.elf.dir/application/can_receive.c.obj
  .debug_loclists
-                0x00014a74       0xde CMakeFiles/omni-infantry.elf.dir/application/key_board.c.obj
+                0x00014a54       0xde CMakeFiles/omni-infantry.elf.dir/application/key_board.c.obj
  .debug_loclists
-                0x00014b52       0x76 CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
+                0x00014b32       0x76 CMakeFiles/omni-infantry.elf.dir/application/remote.c.obj
  .debug_loclists
-                0x00014bc8       0xb1 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_adc.c.obj
+                0x00014ba8       0xb1 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_adc.c.obj
  .debug_loclists
-                0x00014c79       0x97 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
+                0x00014c59       0x97 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_cap.c.obj
  .debug_loclists
-                0x00014d10      0x160 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_delay.c.obj
+                0x00014cf0      0x160 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_delay.c.obj
  .debug_loclists
-                0x00014e70      0x3f0 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
+                0x00014e50      0x3f0 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_flash.c.obj
  .debug_loclists
-                0x00015260      0x2fd CMakeFiles/omni-infantry.elf.dir/bsp/bsp_led.c.obj
+                0x00015240      0x2fd CMakeFiles/omni-infantry.elf.dir/bsp/bsp_led.c.obj
  .debug_loclists
-                0x0001555d       0x23 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_rc.c.obj
+                0x0001553d       0x23 CMakeFiles/omni-infantry.elf.dir/bsp/bsp_rc.c.obj
  .debug_loclists
-                0x00015580       0x5a CMakeFiles/omni-infantry.elf.dir/bsp/bsp_spi.c.obj
+                0x00015560       0x5a CMakeFiles/omni-infantry.elf.dir/bsp/bsp_spi.c.obj
  .debug_loclists
-                0x000155da       0x5f CMakeFiles/omni-infantry.elf.dir/bsp/bsp_usart.c.obj
+                0x000155ba       0x5f CMakeFiles/omni-infantry.elf.dir/bsp/bsp_usart.c.obj
  .debug_loclists
-                0x00015639      0x959 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
+                0x00015619      0x959 CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS.c.obj
  .debug_loclists
-                0x00015f92       0xdc CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
+                0x00015f72       0xdc CMakeFiles/omni-infantry.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
  .debug_loclists
-                0x0001606e      0x302 CMakeFiles/omni-infantry.elf.dir/component/algorithm/filter.c.obj
+                0x0001604e      0x302 CMakeFiles/omni-infantry.elf.dir/component/algorithm/filter.c.obj
  .debug_loclists
-                0x00016370       0x51 CMakeFiles/omni-infantry.elf.dir/component/algorithm/ramp.c.obj
+                0x00016350       0x51 CMakeFiles/omni-infantry.elf.dir/component/algorithm/ramp.c.obj
  .debug_loclists
-                0x000163c1      0x110 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
+                0x000163a1      0x110 CMakeFiles/omni-infantry.elf.dir/component/comunication/decode.c.obj
  .debug_loclists
-                0x000164d1      0x1cc CMakeFiles/omni-infantry.elf.dir/component/comunication/packet.c.obj
+                0x000164b1      0x1cc CMakeFiles/omni-infantry.elf.dir/component/comunication/packet.c.obj
  .debug_loclists
-                0x0001669d      0x407 CMakeFiles/omni-infantry.elf.dir/component/controller/PID.c.obj
+                0x0001667d      0x407 CMakeFiles/omni-infantry.elf.dir/component/controller/PID.c.obj
  .debug_loclists
-                0x00016aa4       0x4f CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
+                0x00016a84       0x4f CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088Middleware.c.obj
  .debug_loclists
-                0x00016af3      0x425 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
+                0x00016ad3      0x425 CMakeFiles/omni-infantry.elf.dir/component/devices/BMI088driver.c.obj
  .debug_loclists
-                0x00016f18      0x2cf CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
+                0x00016ef8      0x2cf CMakeFiles/omni-infantry.elf.dir/component/support/CRC8_CRC16.c.obj
  .debug_loclists
-                0x000171e7      0x9b0 CMakeFiles/omni-infantry.elf.dir/component/support/fifo.c.obj
+                0x000171c7      0x9b0 CMakeFiles/omni-infantry.elf.dir/component/support/fifo.c.obj
 
 .debug_line_str
                 0x00000000      0x2bf

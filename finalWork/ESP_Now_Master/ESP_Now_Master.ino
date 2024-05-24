@@ -343,5 +343,6 @@ void loop() {
     // if(RGB_val[1] <= 0x0A)
     //   RGB_reverse = false;
     // neopixelWrite(RGB_BUILTIN, RGB_val[0], RGB_val[1], RGB_val[2]);
-    delay(100);
+    // delay(100);
+    delay(1);
 }

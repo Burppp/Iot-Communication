@@ -11,10 +11,10 @@ def on_click(x, y, button, pressed):
     if pressed:
         if button == mouse.Button.left:
             print("Left mouse button clicked")
-            ser.write(b'L')  # 发送'L'表示左键点击到串口
+            # ser.write(b'L')  # 发送'L'表示左键点击到串口
         elif button == mouse.Button.right:
             print("Right mouse button clicked")
-            ser.write(b'R')  # 发送'R'表示右键点击到串口
+            # ser.write(b'R')  # 发送'R'表示右键点击到串口
 
 # 创建一个鼠标监听器
 mouse_listener = mouse.Listener(on_click=on_click)

@@ -79,8 +79,8 @@ void OnDataRecv(const uint8_t *mac_addr, const uint8_t *data, int data_len)
     Serial.println(data_len);
     Serial.println(*data);
 
-    Serial1.println(data_len);
-    Serial1.println(*data);
+    Serial1.print(data_len);
+    Serial1.print(*data);
     // Serial.print("Last Packet Recv Data len: ");
     // Serial.println("");
 }
@@ -99,5 +99,5 @@ void loop()
     if(RGB_val[0] <= 0x0A)
       RGB_reverse = false;
     neopixelWrite(RGB_BUILTIN, RGB_val[0], RGB_val[1], RGB_val[2]);
-    delay(100);
+    delay(1);
 }

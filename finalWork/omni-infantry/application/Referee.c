@@ -75,29 +75,29 @@ void USART6_IRQHandler(void)
     }
 }
 //图传串口中断函数
-void USART1_IRQHandler(void)
-{
-    static volatile uint8_t res;
-    if(USART1->SR & UART_FLAG_IDLE)
-    {
-        __HAL_UART_CLEAR_PEFLAG(&huart1);//读取UART1-SR 和UART1-DR; 清除中断标志位
-
-        __HAL_DMA_DISABLE(huart1.hdmarx); //使能dma_rx
-
-        Referee_read_data(&usart1_buf[0]);
-
-        memset(&usart1_buf[0],0,REFEREE_BUFFER_SIZE);//置0
-
-        __HAL_DMA_CLEAR_FLAG(huart1.hdmarx,DMA_LISR_TCIF1); //清除传输完成标志位
-
-        __HAL_DMA_SET_COUNTER(huart1.hdmarx, REFEREE_BUFFER_SIZE);//设置DMA 搬运数据大小 单位为字节
-
-        __HAL_DMA_ENABLE(huart1.hdmarx); //使能DMARx
-
-        detect_handle(DETECT_VIDEO_TRANSIMITTER);
-
-    }
-}
+//void USART1_IRQHandler(void)
+//{
+//    static volatile uint8_t res;
+//    if(USART1->SR & UART_FLAG_IDLE)
+//    {
+//        __HAL_UART_CLEAR_PEFLAG(&huart1);//读取UART1-SR 和UART1-DR; 清除中断标志位
+//
+//        __HAL_DMA_DISABLE(huart1.hdmarx); //使能dma_rx
+//
+//        Referee_read_data(&usart1_buf[0]);
+//
+//        memset(&usart1_buf[0],0,REFEREE_BUFFER_SIZE);//置0
+//
+//        __HAL_DMA_CLEAR_FLAG(huart1.hdmarx,DMA_LISR_TCIF1); //清除传输完成标志位
+//
+//        __HAL_DMA_SET_COUNTER(huart1.hdmarx, REFEREE_BUFFER_SIZE);//设置DMA 搬运数据大小 单位为字节
+//
+//        __HAL_DMA_ENABLE(huart1.hdmarx); //使能DMARx
+//
+//        detect_handle(DETECT_VIDEO_TRANSIMITTER);
+//
+//    }
+//}
 
 //根据裁判系统信息判断机器人的ID和对应客户端的ID
 void judge_team_client(){
