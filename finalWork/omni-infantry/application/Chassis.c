@@ -82,41 +82,32 @@ float Q,R,filterCurrent,nowCurrent;
 fp32 buffer_limit;
 fp32 k;
 
+fp32 speed_change = 0.5;
+bool wasdLR[6] = {false, false, false, false, false, false};
 void Chassis_Cmd_Update(uint8_t *uart_buffer)
 {
-    if(uart_buffer[0] == '1')
+    uint8_t frame_head = 'h';
+    uint8_t frame_tail = 'j';
+    if(uart_buffer[0] == frame_head && uart_buffer[7] == frame_tail)
     {
-        uint8_t cmd = 0;
-        if(uart_buffer[3] == 0)
-            cmd = (uart_buffer[1] - '0') * 10 + uart_buffer[2] - '0';
-        else
-            cmd = (uart_buffer[1] - '0') * 100 + (uart_buffer[2] - '0') * 10 + uart_buffer[3] - '0';
-        switch (cmd)
-        {
-            case 76://'L'
-                chassis.vx = 200;
-                break;
+        wasdLR[0] = uart_buffer[1] == '1';
+        if(wasdLR[0])
+            chassis.vx += speed_change;
 
-            case 82://'R'
-                chassis.vx = 200;
-                break;
+        wasdLR[1] = uart_buffer[2] == '1';
+        if(wasdLR[1])
+            chassis.vy -= speed_change;
 
-            case 119://'w'
-                chassis.vx = 200;
-                break;
+        wasdLR[2] = uart_buffer[3] == '1';
+        if(wasdLR[2])
+            chassis.vx -= speed_change;
 
-            case 97://'a'
-                chassis.vy = -200;
-                break;
+        wasdLR[3] = uart_buffer[4] == '1';
+        if(wasdLR[3])
+            chassis.vy += speed_change;
 
-            case 115://'s'
-                chassis.vx = -200;
-                break;
-
-            case 100://'d'
-                chassis.vy = 200;
-                break;
-        }
+        wasdLR[4] = uart_buffer[5] == '1';
+        wasdLR[5] = uart_buffer[6] == '1';
     }
 }
 

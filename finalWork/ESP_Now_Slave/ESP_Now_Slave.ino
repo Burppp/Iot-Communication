@@ -15,6 +15,7 @@
 #include <WiFi.h>
 
 #define CHANNEL 1
+#define UART_BUFFER_SIZE 8
 
 // Init ESP Now with fallback
 void InitESPNow() 
@@ -69,20 +70,22 @@ void setup()
 }
 
 // callback when data is recv from Master
+uint8_t recvBuffer[UART_BUFFER_SIZE] = {0};
+uint8_t bufferIndex = 0;
 void OnDataRecv(const uint8_t *mac_addr, const uint8_t *data, int data_len) 
 {
     char macStr[18];
     snprintf(macStr, sizeof(macStr), "%02x:%02x:%02x:%02x:%02x:%02x",
-            mac_addr[0], mac_addr[1], mac_addr[2], mac_addr[3], mac_addr[4], mac_addr[5]);
-    // Serial.print("Last Packet Recv from: "); Serial.println(macStr);
-    // Serial.print("Last Packet Recv Data: "); 
-    Serial.println(data_len);
-    Serial.println(*data);
-
-    Serial1.print(data_len);
-    Serial1.print(*data);
-    // Serial.print("Last Packet Recv Data len: ");
-    // Serial.println("");
+            mac_addr[0], mac_addr[1], mac_addr[2], mac_addr[3], mac_addr[4], mac_addr[5]);   
+    recvBuffer[bufferIndex++] = *data;
+    if(*data == 'j')                   
+    {
+      String str = String(recvBuffer, 8);
+      Serial.print(str);
+      Serial1.print(str);
+      memset(recvBuffer, 0, sizeof(recvBuffer));
+      bufferIndex = 0;
+    }
 }
 
 uint8_t RGB_val[3] = {0x00, 0x00, 0x00};
@@ -99,5 +102,5 @@ void loop()
     if(RGB_val[0] <= 0x0A)
       RGB_reverse = false;
     neopixelWrite(RGB_BUILTIN, RGB_val[0], RGB_val[1], RGB_val[2]);
-    delay(1);
+    // delay(1);
 }

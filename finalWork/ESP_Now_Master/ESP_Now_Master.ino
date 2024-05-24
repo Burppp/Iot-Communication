@@ -21,6 +21,10 @@ esp_now_peer_info_t slave;
 #define CHANNEL 1
 #define PRINTSCANRESULTS 0
 #define DELETEBEFOREPAIR 0
+#define UART_BUFFER_SIZE 200
+uint8_t uart_buffer[UART_BUFFER_SIZE] = {0};
+uint8_t bufferIndex = 0;
+bool wasdLR[6] = {false, false, false, false, false, false};
 
 // Init ESP Now with fallback
 void InitESPNow() {
@@ -216,64 +220,24 @@ uint8_t data = 0;
 // send data
 void sendData() 
 {
-    const uint8_t *peer_addr = slave.peer_addr;
     Serial.print("Sending: "); Serial.println(data);
+    data = 0;
     if(Serial.available() > 0)
     {
       data = Serial.read();
-      Serial.println("Receive data");
-      switch (data) {
-        case 'L':
-          neopixelWrite(RGB_BUILTIN, 0x00, 0x00, 0x00);
-          break;
-        case 'R':
-          neopixelWrite(RGB_BUILTIN, 0x00, 0x00, 0x00);
-          break;
-        case 'w':
-          neopixelWrite(RGB_BUILTIN, 0x00, 0x00, 0x00);
-          break;
-        case 'a':
-          neopixelWrite(RGB_BUILTIN, 0x40, 0x00, 0x00);
-          break;
-        case 's':
-          neopixelWrite(RGB_BUILTIN, 0x00, 0x40, 0x00);
-          break;
-        case 'd':
-          neopixelWrite(RGB_BUILTIN, 0x00, 0x00, 0x40);
-          break;
-      }
+      uart_buffer[bufferIndex++] = data;
     }
-    esp_err_t result = esp_now_send(peer_addr, &data, sizeof(data));
-    Serial.print("Send Status: ");
-    if (result == ESP_OK) 
-    {
-        Serial.println("Success");
-    } 
-    else if (result == ESP_ERR_ESPNOW_NOT_INIT) 
-    {
-        // How did we get so far!!
-        Serial.println("ESPNOW not Init.");
-    } 
-    else if (result == ESP_ERR_ESPNOW_ARG) 
-    {
-        Serial.println("Invalid Argument");
-    } 
-    else if (result == ESP_ERR_ESPNOW_INTERNAL) 
-    {
-        Serial.println("Internal Error");
-    } 
-    else if (result == ESP_ERR_ESPNOW_NO_MEM) 
-    {
-        Serial.println("ESP_ERR_ESPNOW_NO_MEM");
-    } 
-    else if (result == ESP_ERR_ESPNOW_NOT_FOUND) 
-    {
-        Serial.println("Peer not found.");
-    } 
-    else 
-    {
-        Serial.println("Not sure what happened");
-    }
+}
+
+void serialEvent()
+{
+  for(uint8_t i = 0;i < bufferIndex;i++)
+  {
+    const uint8_t *peer_addr = slave.peer_addr;
+    esp_now_send(peer_addr, &uart_buffer[i], 1);
+  }
+  memset(uart_buffer, 0, sizeof(uart_buffer));
+  bufferIndex = 0;
 }
 
 // callback when data is sent from Master to Slave
@@ -301,6 +265,8 @@ void setup()
     // Once ESPNow is successfully Init, we will register for Send CB to
     // get the status of Trasnmitted packet
     esp_now_register_send_cb(OnDataSent);
+
+    esp_wifi_set_max_tx_power(80);
 }
 
 uint8_t RGB_val[3] = {0x00, 0x40, 0x00};
@@ -333,16 +299,5 @@ void loop() {
         // No slave found to process
     }
 
-    // wait for 3seconds to run the logic again
-    // if(!RGB_reverse)
-    //   RGB_val[1] += 5;
-    // else
-    //   RGB_val[1] -= 5;
-    // if(RGB_val[1] >= 0x40)
-    //   RGB_reverse = true;
-    // if(RGB_val[1] <= 0x0A)
-    //   RGB_reverse = false;
-    // neopixelWrite(RGB_BUILTIN, RGB_val[0], RGB_val[1], RGB_val[2]);
-    // delay(100);
-    delay(1);
+    // delay(1);
 }
