@@ -82,7 +82,6 @@ float Q,R,filterCurrent,nowCurrent;
 fp32 buffer_limit;
 fp32 k;
 
-fp32 speed_change = 0.5;
 bool wasdLR[6] = {false, false, false, false, false, false};
 void Chassis_Cmd_Update(uint8_t *uart_buffer)
 {
@@ -91,21 +90,9 @@ void Chassis_Cmd_Update(uint8_t *uart_buffer)
     if(uart_buffer[0] == frame_head && uart_buffer[7] == frame_tail)
     {
         wasdLR[0] = uart_buffer[1] == '1';
-        if(wasdLR[0])
-            chassis.vx += speed_change;
-
         wasdLR[1] = uart_buffer[2] == '1';
-        if(wasdLR[1])
-            chassis.vy -= speed_change;
-
         wasdLR[2] = uart_buffer[3] == '1';
-        if(wasdLR[2])
-            chassis.vx -= speed_change;
-
         wasdLR[3] = uart_buffer[4] == '1';
-        if(wasdLR[3])
-            chassis.vy += speed_change;
-
         wasdLR[4] = uart_buffer[5] == '1';
         wasdLR[5] = uart_buffer[6] == '1';
     }
@@ -158,7 +145,7 @@ _Noreturn void chassis_task(void const *pvParameters) {
         chassis_set_mode(&chassis);
 
         //遥控器获取底盘方向矢量
-//        chassis_ctrl_info_get();
+        chassis_ctrl_info_get();
 
         //遥控断电失能
         chassis_device_offline_handle();
@@ -304,19 +291,19 @@ static void chassis_set_mode(chassis_t* chassis){
 
 static void chassis_ctrl_info_get() {
     chassis_pc_ctrl();
-    chassis.vx = -(float)(rc_ctrl.rc.ch[CHASSIS_X_CHANNEL]) * RC_TO_VX-chassis.vx_pc;
-//    VAL_LIMIT(chassis.vx,-(MAX_CHASSIS_VX_SPEED-0.300),(MAX_CHASSIS_VX_SPEED-0.300));
-
-    //   chassis.vy = (float)(rc_ctrl.rc.ch[CHASSIS_Y_CHANNEL]) * RC_TO_VY-chassis.vy_pc;
-    chassis.vy =-(float)(rc_ctrl.rc.ch[CHASSIS_Y_CHANNEL]) * RC_TO_VY+chassis.vy_pc;
-    chassis.vw = (float)(rc_ctrl.rc.ch[CHASSIS_Z_CHANNEL]) * RC_TO_VW+chassis.vw_pc;
-    //操作手主动慢速
-    if(KeyBoard.CTRL.status==KEY_PRESS)
-    {
-        VAL_LIMIT(chassis.vx,-MAX_CHASSIS_VX_SPEED*0.2,MAX_CHASSIS_VX_SPEED*0.2);
-        VAL_LIMIT(chassis.vy,-MAX_CHASSIS_VY_SPEED*0.2,MAX_CHASSIS_VY_SPEED*0.2);
-        VAL_LIMIT(chassis.vw,-MAX_CHASSIS_VW_SPEED,MAX_CHASSIS_VW_SPEED);
-    }
+//    chassis.vx = -(float)(rc_ctrl.rc.ch[CHASSIS_X_CHANNEL]) * RC_TO_VX-chassis.vx_pc;
+////    VAL_LIMIT(chassis.vx,-(MAX_CHASSIS_VX_SPEED-0.300),(MAX_CHASSIS_VX_SPEED-0.300));
+//
+//    //   chassis.vy = (float)(rc_ctrl.rc.ch[CHASSIS_Y_CHANNEL]) * RC_TO_VY-chassis.vy_pc;
+//    chassis.vy =-(float)(rc_ctrl.rc.ch[CHASSIS_Y_CHANNEL]) * RC_TO_VY+chassis.vy_pc;
+//    chassis.vw = (float)(rc_ctrl.rc.ch[CHASSIS_Z_CHANNEL]) * RC_TO_VW+chassis.vw_pc;
+//    //操作手主动慢速
+//    if(KeyBoard.CTRL.status==KEY_PRESS)
+//    {
+//        VAL_LIMIT(chassis.vx,-MAX_CHASSIS_VX_SPEED*0.2,MAX_CHASSIS_VX_SPEED*0.2);
+//        VAL_LIMIT(chassis.vy,-MAX_CHASSIS_VY_SPEED*0.2,MAX_CHASSIS_VY_SPEED*0.2);
+//        VAL_LIMIT(chassis.vw,-MAX_CHASSIS_VW_SPEED,MAX_CHASSIS_VW_SPEED);
+//    }
 }
 
 //将期望速度转为转子期望转速pp
@@ -557,55 +544,73 @@ void chassis_spin_handle()
 
 static void chassis_pc_ctrl(){
 
-    float speed_change=chassis_speed_change();//获取加速度
+    fp32 speed_change = 0.05;
+    if(wasdLR[0])
+        chassis.vx += speed_change;
+    else
+        chassis.vx = 0;
+    if(wasdLR[1])
+        chassis.vy -= speed_change;
+    else
+        chassis.vy = 0;
+    if(wasdLR[2])
+        chassis.vx -= speed_change;
+    else
+        chassis.vx = 0;
+    if(wasdLR[3])
+        chassis.vy += speed_change;
+    else
+        chassis.vy = 0;
 
-    //键盘控制下的底盘以斜坡式变化
-    if(KeyBoard.W.status==KEY_PRESS)//键盘前进键按下
-    {
-        chassis.vx_pc+=speed_change;//速度增量
-    }
-    else if(KeyBoard.S.status==KEY_PRESS)
-    {
-        chassis.vx_pc-=speed_change;
-    }
-    else{
-        chassis.vx_pc=0;
-    }
-
-    if(KeyBoard.A.status==KEY_PRESS)//键盘前进键按下
-    {
-        chassis.vy_pc+=speed_change;
-    }
-    else if(KeyBoard.D.status==KEY_PRESS)
-    {
-        chassis.vy_pc-=speed_change;
-    }
-    else{
-        chassis.vy_pc=0;
-    }
+//    float speed_change=chassis_speed_change();//获取加速度
+//
+//    //键盘控制下的底盘以斜坡式变化
+//    if(KeyBoard.W.status==KEY_PRESS)//键盘前进键按下
+//    {
+//        chassis.vx_pc+=speed_change;//速度增量
+//    }
+//    else if(KeyBoard.S.status==KEY_PRESS)
+//    {
+//        chassis.vx_pc-=speed_change;
+//    }
+//    else{
+//        chassis.vx_pc=0;
+//    }
+//
+//    if(KeyBoard.A.status==KEY_PRESS)//键盘前进键按下
+//    {
+//        chassis.vy_pc+=speed_change;
+//    }
+//    else if(KeyBoard.D.status==KEY_PRESS)
+//    {
+//        chassis.vy_pc-=speed_change;
+//    }
+//    else{
+//        chassis.vy_pc=0;
+//    }
+////    if(chassis.mode==CHASSIS_SPIN)//灯
+////    {
+////        HAL_GPIO_WritePin(LED6_PORT,LED6_PIN,GPIO_PIN_RESET);
+////    } else{
+////        HAL_GPIO_WritePin(LED6_PORT,LED6_PIN,GPIO_PIN_SET);
+////    }
+//
+//    if(KeyBoard.E.click_flag==1)//
+//    {
+//        chassis.mode=CHASSIS_SPIN;
+//    }
+//
 //    if(chassis.mode==CHASSIS_SPIN)//灯
 //    {
-//        HAL_GPIO_WritePin(LED6_PORT,LED6_PIN,GPIO_PIN_RESET);
-//    } else{
-//        HAL_GPIO_WritePin(LED6_PORT,LED6_PIN,GPIO_PIN_SET);
+////        led.mode=SPIN;//无led
 //    }
-
-    if(KeyBoard.E.click_flag==1)//
-    {
-        chassis.mode=CHASSIS_SPIN;
-    }
-
-    if(chassis.mode==CHASSIS_SPIN)//灯
-    {
-//        led.mode=SPIN;//无led
-    }
-    ui_robot_status.chassis_mode=chassis.mode;
-//    if(chassis.mode==CHASSIS_CLIMBING)//灯
-//    {
-//        HAL_GPIO_WritePin(LED5_PORT,LED5_PIN,GPIO_PIN_RESET);
-//    } else{
-//        HAL_GPIO_WritePin(LED5_PORT,LED5_PIN,GPIO_PIN_SET);
-//    }
+//    ui_robot_status.chassis_mode=chassis.mode;
+////    if(chassis.mode==CHASSIS_CLIMBING)//灯
+////    {
+////        HAL_GPIO_WritePin(LED5_PORT,LED5_PIN,GPIO_PIN_RESET);
+////    } else{
+////        HAL_GPIO_WritePin(LED5_PORT,LED5_PIN,GPIO_PIN_SET);
+////    }
 }
 
 static float chassis_speed_change() {

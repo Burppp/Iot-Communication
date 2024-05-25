@@ -77,15 +77,20 @@ void OnDataRecv(const uint8_t *mac_addr, const uint8_t *data, int data_len)
     char macStr[18];
     snprintf(macStr, sizeof(macStr), "%02x:%02x:%02x:%02x:%02x:%02x",
             mac_addr[0], mac_addr[1], mac_addr[2], mac_addr[3], mac_addr[4], mac_addr[5]);   
-    recvBuffer[bufferIndex++] = *data;
-    if(*data == 'j')                   
-    {
-      String str = String(recvBuffer, 8);
-      Serial.print(str);
-      Serial1.print(str);
-      memset(recvBuffer, 0, sizeof(recvBuffer));
-      bufferIndex = 0;
-    }
+    neopixelWrite(RGB_BUILTIN, 0x40, 0x40, 0x40);
+    memcpy_P(recvBuffer, data, data_len);
+    Serial.write(recvBuffer, data_len);
+    Serial1.write(recvBuffer, data_len);
+    memset(recvBuffer, 0, data_len);
+    // recvBuffer[bufferIndex++] = *data;
+    // if(*data == 'j')                   
+    // {
+    //   String str = String(recvBuffer, 8);
+    //   Serial.print(str);
+    //   Serial1.print(str);
+    //   memset(recvBuffer, 0, sizeof(recvBuffer));
+    //   bufferIndex = 0;
+    // }
 }
 
 uint8_t RGB_val[3] = {0x00, 0x00, 0x00};
@@ -93,14 +98,14 @@ bool RGB_reverse = false;
 void loop() 
 {
     // Chill
-    if(!RGB_reverse)
-      RGB_val[0] += 5;
-    else
-      RGB_val[0] -= 5;
-    if(RGB_val[0] >= 0x40)
-      RGB_reverse = true;
-    if(RGB_val[0] <= 0x0A)
-      RGB_reverse = false;
-    neopixelWrite(RGB_BUILTIN, RGB_val[0], RGB_val[1], RGB_val[2]);
+    // if(!RGB_reverse)
+    //   RGB_val[0] += 5;
+    // else
+    //   RGB_val[0] -= 5;
+    // if(RGB_val[0] >= 0x40)
+    //   RGB_reverse = true;
+    // if(RGB_val[0] <= 0x0A)
+    //   RGB_reverse = false;
+    // neopixelWrite(RGB_BUILTIN, RGB_val[0], RGB_val[1], RGB_val[2]);
     // delay(1);
 }

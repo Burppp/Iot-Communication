@@ -231,13 +231,28 @@ void sendData()
 
 void serialEvent()
 {
-  for(uint8_t i = 0;i < bufferIndex;i++)
+  // neopixelWrite(RGB_BUILTIN, 0x40, 0x40, 0x40);
+  if(Serial.available())
   {
-    const uint8_t *peer_addr = slave.peer_addr;
-    esp_now_send(peer_addr, &uart_buffer[i], 1);
+    char recvChar = Serial.read();
+    uart_buffer[bufferIndex++] = recvChar;
+    if(recvChar == 'j')
+    {
+      Serial1.write(uart_buffer, 8);
+      const uint8_t *peer_addr = slave.peer_addr;
+      esp_now_send(peer_addr, uart_buffer, 8);
+      memset(uart_buffer, 0, sizeof(uart_buffer));
+      bufferIndex = 0;
+    }
   }
-  memset(uart_buffer, 0, sizeof(uart_buffer));
-  bufferIndex = 0;
+  // Serial1.write(uart_buffer, 8);
+  // for(uint8_t i = 0;i < bufferIndex;i++)
+  // {
+  //   const uint8_t *peer_addr = slave.peer_addr;
+  //   esp_now_send(peer_addr, &uart_buffer[i], 1);
+  // }
+  // memset(uart_buffer, 0, sizeof(uart_buffer));
+  // bufferIndex = 0;
 }
 
 // callback when data is sent from Master to Slave
@@ -253,13 +268,15 @@ void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status)
 void setup() 
 {
     Serial.begin(115200);
-    //Set device in STA mode to begin with
+    Serial1.begin(115200, SERIAL_8N1, 6, 7);
+    // Set device in STA mode to begin with
     WiFi.mode(WIFI_STA);
     esp_wifi_set_channel(CHANNEL, WIFI_SECOND_CHAN_NONE);
     Serial.println("ESPNow Master");
     // This is the mac address of the Master in Station Mode
     Serial.print("STA MAC: "); Serial.println(WiFi.macAddress());
     Serial.print("STA CHANNEL "); Serial.println(WiFi.channel());
+    Serial1.println("Serial 1 init");
     // Init ESPNow with a fallback logic
     InitESPNow();
     // Once ESPNow is successfully Init, we will register for Send CB to
@@ -299,5 +316,5 @@ void loop() {
         // No slave found to process
     }
 
-    // delay(1);
+    delay(1);
 }
