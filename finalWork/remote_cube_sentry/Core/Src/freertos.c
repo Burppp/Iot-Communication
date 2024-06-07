@@ -78,7 +78,7 @@ void detect_task(void const * argument);
 void Referee_send_task(void const * argument);
 void left_gimbal(void const * argument);
 void right_gimbal(void const * argument);
-void STR_ctrl(void const * argument);
+//void STR_ctrl(void const * argument);
 
 extern void MX_USB_DEVICE_Init(void);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
@@ -142,8 +142,8 @@ void MX_FREERTOS_Init(void) {
   CalibrateTaskHandle = osThreadCreate(osThread(CalibrateTask), NULL);
 
   /* definition and creation of ChassisTask */
-//  osThreadDef(ChassisTask, chassis_task, osPriorityLow, 0, 512);
-//  ChassisTaskHandle = osThreadCreate(osThread(ChassisTask), NULL);
+  osThreadDef(ChassisTask, chassis_task, osPriorityLow, 0, 512);
+  ChassisTaskHandle = osThreadCreate(osThread(ChassisTask), NULL);
 
   /* definition and creation of gimbalTask */
 //  osThreadDef(gimbalTask, gimbal_task, osPriorityHigh, 0, 512);
@@ -177,8 +177,8 @@ void MX_FREERTOS_Init(void) {
 //    osThreadDef(DecodeTask, decode_task, osPriorityHigh, 0, 128);
 //    decode_task_handle = osThreadCreate(osThread(DecodeTask), NULL);
 
-    osThreadDef(strTask, STR_ctrl, osPriorityRealtime, 0, 128);
-    steering_wheelTaskHandle = osThreadCreate(osThread(strTask), NULL);
+//    osThreadDef(strTask, STR_ctrl, osPriorityRealtime, 0, 128);
+//    steering_wheelTaskHandle = osThreadCreate(osThread(strTask), NULL);
 
 //    osThreadDef(traTask, TRA_ctrl, osPriorityRealtime, 0, 128);
 //    travelling_wheelTaskHandle = osThreadCreate(osThread(traTask), NULL);
@@ -196,7 +196,7 @@ void MX_FREERTOS_Init(void) {
 void StartDefaultTask(void const * argument)
 {
   /* init code for USB_DEVICE */
-  MX_USB_DEVICE_Init();
+//  MX_USB_DEVICE_Init();
   /* USER CODE BEGIN StartDefaultTask */
     /* Infinite loop */
     for(;;)

@@ -17,8 +17,6 @@ static motor_measure_t motor_1[8];
 static motor_measure_t motor_2[8];
 
 extern first_order_filter_type_t DM_velocity_filter;
-extern moving_Average_Filter speed_average_filter;
-extern second_lowPass_filter DM_velocity_f;
 extern fp32 DM_velocity;
 extern float aver_speed;
 Power_feedback powerFeedback;
@@ -227,89 +225,7 @@ void chassis_steering_motor_decode(steering_motor_t *motor,uint8_t can_type,uint
     }
 }
 
-void STR_Motor_Can_Decode(STR_MOTOR_t *motor,uint8_t can_type,uint32_t can_id,uint8_t * can_msg)
-{
-    if(can_type == CAN_1)
-    {
-        switch (can_id) {
-            case CAN_STEER_MOTOR_LF:{
-                dji_motor_decode(&(motor[0].motor_data.Can_GetData),can_msg);
-                detect_handle(DETECT_CHASSIS_6020_LF);
-            }
-                break;
-            case CAN_STEER_MOTOR_LB:{
-                dji_motor_decode(&(motor[3].motor_data.Can_GetData),can_msg);
-                detect_handle(DETECT_CHASSIS_6020_LB);
-            }
-                break;
-            default: {
-                break;
-            }
-        }
-    }
-    else if(can_type == CAN_2)
-    {
-        switch (can_id) {
-            case CAN_STEER_MOTOR_RF:{
-                dji_motor_decode(&(motor[1].motor_data.Can_GetData),can_msg);
-                detect_handle(DETECT_CHASSIS_6020_RF);
-            }
-                break;
-            case CAN_STEER_MOTOR_RB:{
-                dji_motor_decode(&(motor[2].motor_data.Can_GetData),can_msg);
-                detect_handle(DETECT_CHASSIS_6020_RB);
-            }
-                break;
-            default: {
-                break;
-            }
-        }
-    }
-}
 
-void TRA_Motor_Can_Decode(TRA_Motor_t *motor,uint8_t can_type,uint32_t can_id,uint8_t * can_msg)
-{
-    if(can_type == CAN_1)
-    {
-        switch (can_id) {
-            case CAN_CHASSIS_3508_MOTOR_LF: {
-                dji_motor_decode(&(motor[1].motor_data.Can_GetData), can_msg);
-                detect_handle(DETECT_CHASSIS_3508_LF);
-            }
-                break;
-
-            case CAN_CHASSIS_3508_MOTOR_LB: {
-                dji_motor_decode(&(motor[2].motor_data.Can_GetData), can_msg);
-                detect_handle(DETECT_CHASSIS_3508_LB);
-            }
-                break;
-            default: {
-                break;
-            }
-        }
-    }
-    else if(can_type == CAN_2)
-    {
-        switch (can_id) {
-            case CAN_CHASSIS_3508_MOTOR_RF: {
-                dji_motor_decode(&(motor[0].motor_data.Can_GetData), can_msg);
-                detect_handle(DETECT_CHASSIS_3508_RF);
-            }
-                break;
-            case CAN_CHASSIS_3508_MOTOR_RB: {
-                dji_motor_decode(&(motor[3].motor_data.Can_GetData), can_msg);
-                detect_handle(DETECT_CHASSIS_3508_RB);
-            }
-                break;
-            default: {
-                break;
-            }
-        }
-    }
-}
-
-CANx_t can_1,can_2;
-DM_Motor yaw_motor;
 uint8_t Data_Enable[8]={0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFC};		//电机使能命令
 uint8_t Data_Failure[8]={0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFD};		//电机失能命令
 uint8_t Data_Save_zero[8]={0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFE};	//电机保存零点命令

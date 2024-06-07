@@ -14,17 +14,10 @@
 #include "travelling_wheel.h"
 #include "can_common.h"
 
-extern STR_Info_t str;
-extern TRA_Info_t tra;
-
 extern CAN_HandleTypeDef hcan1;
 extern CAN_HandleTypeDef hcan2;
 //extern chassis_t chassis;
-extern gimbal_t gimbal;
-extern launcher_t launcher;
 
-extern void STR_Motor_Can_Decode(STR_MOTOR_t *motor,uint8_t can_type,uint32_t can_id,uint8_t * can_msg);
-extern void TRA_Motor_Can_Decode(TRA_Motor_t *motor,uint8_t can_type,uint32_t can_id,uint8_t * can_msg);
 CANCommInstance *register_can_comm[MAX_CAN_COMM_COUNT]={NULL};
 
 void register_can_comm_instance(CANCommInstance *ins)
@@ -70,25 +63,8 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
     HAL_CAN_GetRxMessage(hcan,CAN_RX_FIFO0,&can_msg.rx_header,can_msg.rx_date);
     if(hcan == &hcan1)
     {
-//        chassis_motor_decode(chassis.motor_chassis,CAN_1,can_msg.rx_header.StdId,can_msg.rx_date);
-//        chassis_steering_motor_decode(chassis.motor_steering,CAN_1,can_msg.rx_header.StdId,can_msg.rx_date);
 
-        DM_MotorDecode(&yaw_motor, CAN_1, can_msg.rx_header.StdId,can_msg.rx_date);
-        STR_Motor_Can_Decode(str.STR_Axis,CAN_1,can_msg.rx_header.StdId,can_msg.rx_date);
-        TRA_Motor_Can_Decode(tra.TRA_Axis,CAN_1,can_msg.rx_header.StdId,can_msg.rx_date);
-//        Cap_Decode(CAN_1, can_msg.rx_header.StdId, can_msg.rx_date);
-
-//        gimbal_motor_decode(gimbal.motor_gimbal,CAN_1,can_msg.rx_header.StdId,can_msg.rx_date);
-//        launcher_motor_decode(launcher.motor_launcher,CAN_1,can_msg.rx_header.StdId,can_msg.rx_date);
     }
-//    else if(hcan == &hcan2)
-//    {
-//        STR_Motor_Can_Decode(str.STR_Axis,CAN_2,can_msg.rx_header.StdId,can_msg.rx_date);
-//        TRA_Motor_Can_Decode(tra.TRA_Axis,CAN_2,can_msg.rx_header.StdId,can_msg.rx_date);
-//
-//        yaw_encoder_decode(&gimbal.encoder_yaw,CAN_2,can_msg.rx_header.StdId,can_msg.rx_date);
-//        launcher_motor_decode(launcher.motor_launcher,CAN_2,can_msg.rx_header.StdId,can_msg.rx_date);
-//    }
 }
 
 void HAL_CAN_RxFifo1MsgPendingCallback(CAN_HandleTypeDef *hcan)
@@ -99,11 +75,7 @@ void HAL_CAN_RxFifo1MsgPendingCallback(CAN_HandleTypeDef *hcan)
         HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO1, &can_msg.rx_header, can_msg.rx_date);
         if (hcan == &hcan2)
         {
-            STR_Motor_Can_Decode(str.STR_Axis,CAN_2,can_msg.rx_header.StdId,can_msg.rx_date);
-            TRA_Motor_Can_Decode(tra.TRA_Axis,CAN_2,can_msg.rx_header.StdId,can_msg.rx_date);
-            Cap_Decode(CAN_2, can_msg.rx_header.StdId, can_msg.rx_date);
-//            yaw_encoder_decode(&gimbal.encoder_yaw,CAN_2,can_msg.rx_header.StdId,can_msg.rx_date);
-//            launcher_motor_decode(launcher.motor_launcher,CAN_2,can_msg.rx_header.StdId,can_msg.rx_date);
+
             for(size_t i=0;i<idx;i++)
             {
                 if(register_can_comm[i]->rx_id == can_msg.rx_header.StdId)

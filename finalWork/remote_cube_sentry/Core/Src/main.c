@@ -124,7 +124,7 @@ int main(void)
     delay_init();
     HAL_TIM_PWM_Start(&htim8,TIM_CHANNEL_3);
     HAL_TIM_PWM_Start(&htim8,TIM_CHANNEL_2);
-    usart6_init(&usart6_buf[0], REFEREE_BUFFER_SIZE);
+//    usart6_init(&usart6_buf[0], REFEREE_BUFFER_SIZE);
 
     cali_param_init();
     remote_control_init();

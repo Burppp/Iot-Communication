@@ -1,191 +1,162 @@
-//#ifndef _CHASSIS_H_
-//#define _CHASSIS_H_
 //
-///*include*/
-//#include "struct_typedef.h"
-//#include "bsp_can.h"
-//#include "PID.h"
-//#include "remote.h"
-//#include "user_lib.h"
-//#include "cmsis_os.h"
-//#include "ramp.h"
+// Created by xhuanc on 2021/10/10.
+//
+
+#ifndef _CHASSIS_H_
+#define _CHASSIS_H_
+
+/*include*/
+#include "struct_typedef.h"
+#include "FreeRTOS.h"
+#include "PID.h"
+#include "remote.h"
+#include "user_lib.h"
+#include "queue.h"
+#include "cmsis_os.h"
+#include "user_lib.h"
+#include "ramp.h"
 #include "Gimbal.h"
-//#include "bsp_buzzer.h"
-//#include "math.h"
-//#include "Referee.h"
-//#include "Detection.h"
+#include "bsp_buzzer.h"
+#include "math.h"
+#include "Referee.h"
+#include "Detection.h"
 #include "protocol_shaob.h"
-//#include "packet.h"
+#include "packet.h"
+#include "Cap.h"
+#include "Lora.h"
+
+
+/*define*/
+//底盘在motor_3508_measure中的标号
+typedef enum {
+    RF=0,
+    LF,
+    LB,
+    RB
+}chassis_motor_index_e;
+
+//任务开始空闲一段时间
+
+#define CHASSIS_TASK_INIT_TIME 157
+
+#define CHASSIS_Y_CHANNEL 0
+
+#define CHASSIS_X_CHANNEL 1
+
+#define CHASSIS_Z_CHANNEL 4
+
+#define CHASSIS_MODE_CHANNEL 0
+
+#define CHASSIS_CONTROL_TIME_MS 2
+
+#define CHASSIS_3508_PID_KP     7.0f
+#define CHASSIS_3508_PID_KI     0.0f//1.0f
+#define CHASSIS_3508_PID_KD     0.0f
+#define CHASSIS_3508_PID_MAX_OUT 8000.0f
+#define CHASSIS_3508_PID_MAX_IOUT 1000.0f
+//底盘旋转跟随PID
+#define CHASSIS_FOLLOW_GIMBAL_PID_KP 0.1f//0.1
+#define CHASSIS_FOLLOW_GIMBAL_PID_KI 0.00f
+#define CHASSIS_FOLLOW_GIMBAL_PID_KD 0.f//2.0
+#define CHASSIS_FOLLOW_GIMBAL_PID_MAX_OUT 3.0f
+#define CHASSIS_FOLLOW_GIMBAL_PID_MAX_IOUT 0.2f
+
+#define chassis_start_buzzer buzzer_on  (31, 19999)
+#define chassis_buzzer_off   buzzer_off()            //buzzer off，关闭蜂鸣器
+
+#define MAX_CHASSIS_VX_SPEED 4.4f //根据3508最高转速计算底盘最快移动速度应为3.3m/s左右   减小电机减速比为1：14后，能达到4.47m/s
+#define MAX_CHASSIS_VY_SPEED 4.4f
+#define MAX_CHASSIS_VW_SPEED 4.4f
+//#define CHASSIS_SWING_SPEED f
+#define CHASSIS_SWING_SPEED 9.0f
+#define CHASSIS_ARMOR_NOT_FACING_ENEMY_SPIN_SPEED 0.5 //装甲板没有面向敌人的速度
+#define CHASSIS_ARMOR_FACING_ENEMY_SPIN_SPEED  3.0 //装甲板面向敌人的速度
+
+#define MAX_CHASSIS_AUTO_VX_SPEED 8.0f //根据3508最高转速计算底盘最快移动速度应为3300左右
+#define MAX_CHASSIS_AUTO_VY_SPEED 3.0f
+#define MAX_CHASSIS_AUTO_VW_SPEED 1.5f//150
+
+#define RC_TO_VX  (MAX_CHASSIS_VX_SPEED/660)
+#define RC_TO_VY  (MAX_CHASSIS_VY_SPEED/660)
+#define RC_TO_VW  (MAX_CHASSIS_VW_SPEED/660)    //MAX_CHASSIS_VR_SPEED / RC_MAX_VALUE
+
+#define CHASSIS_CURRENT_LIMIT_TOTAL 23000
+
+#define CHASSIS_CURRENT_LIMIT_40W 5300
+#define CHASSIS_POWER_BUFF 60
+//功率预测模型参数，详情见华中科技大学 狼牙战队 功率控制
+//#define CHASSIS_POWER_K0  0.0020f   //转矩系数    0.0021
+//#define CHASSIS_POWER_R0  0.0891f  //电机电阻      0.0820
+//#define CHASSIS_POWER_P0  7.6015f   //底盘静息功率    8.4443加滤波后的拟合数据
+
+#define CHASSIS_POWER_K0  0.0020f   //转矩系数    0.0021
+#define CHASSIS_POWER_R0  0.0001f  //电机电阻      0.0820
+#define CHASSIS_POWER_P0  11.3380f   //底盘静息功率    8.4443加滤波后的拟合数据
+#define CHASSIS_CURRENT_CONVERT 20/16384.0f  //电机反馈电流毫安转安
+
+//底盘机械信息 /m
+#define Wheel_axlespacing 0.448f //H
+#define Wheel_spacing 0.391f //W
+#define GIMBAL_OFFSET 0
+#define PERIMETER 0.47414f //轮子周长 /m
+#define M3508_DECELE_RATIO (1.0f/14.0f)//1：14 3508减速比
+#define M3508_MAX_RPM 8000   //3508最大转速
+#define TREAD 480 //lun ju
+#define WHEEL_MOTO_RATE 0.00041591f
+
+//枚举 结构体
+typedef enum
+{
+    CHASSIS_RELAX,
+    CHASSIS_ONLY,
+    CHASSIS_SPIN,
+    CHASSIS_FOLLOW_GIMBAL,
+    CHASSIS_BLOCK
+} chassis_mode_e;
+
+typedef enum
+{
+    NORMAL_SPIN,
+    HIDDEN_ARMOR_SPEED_CHANGE
+} chassis_spin_mode_e;
+
+typedef struct {
+    fp32 power_buff;
+    fp32 limit_k;
+    fp32 total_current;
+    fp32 total_current_limit;
+
+    fp32 K[4];
+    fp32 M[4];  //具体参看华中科技大学开源功率控制
+    fp32 k_c;  //rpm_set比例缩减系数
+    fp32 predict_send_power; //当前周期的预测功率值
+    fp32 power_set;//最大功率限制
+
+}chassis_power_limit_t;
+
+typedef struct
+{
+    chassis_mode_e mode;
+    chassis_mode_e last_mode;
+    chassis_spin_mode_e spin_mode;
+//    motor_3508_t motor_chassis[4];
+    QueueHandle_t motor_data_queue;
+
+    pid_t chassis_vw_pid;
+    fp32 vx;
+    fp32 vy;
+    fp32 vw;
+
+    fp32 vx_pc;
+    fp32 vy_pc;
+    fp32 vw_pc;
+
+    chassis_power_limit_t chassis_power_limit;
+} chassis_t;
+
+//函数声明
+_Noreturn extern void chassis_task(void const *pvParameters);
+
 //
-//
-///*define*/
-//
-////任务开始空闲一段时间
-//
-//#define CHASSIS_TASK_INIT_TIME 157
-//
-//#define CHASSIS_Y_CHANNEL 0
-//
-//#define CHASSIS_X_CHANNEL 1
-//
-//#define CHASSIS_Z_CHANNEL 4
-//
-//#define CHASSIS_MODE_CHANNEL 0
-//
-//#define CHASSIS_CONTROL_TIME_MS 2
-//
-////底盘旋转跟随PID
-//#define CHASSIS_FOLLOW_GIMBAL_PID_KP 0.3f
-//#define CHASSIS_FOLLOW_GIMBAL_PID_KI 0.0f
-//#define CHASSIS_FOLLOW_GIMBAL_PID_KD 0.0f
-//#define CHASSIS_FOLLOW_GIMBAL_PID_MAX_OUT 4.0f
-//#define CHASSIS_FOLLOW_GIMBAL_PID_MAX_IOUT 0.8f
-//
-//#define chassis_start_buzzer buzzer_on  (31, 19999)
-//#define chassis_buzzer_off   buzzer_off()            //buzzer off，关闭蜂鸣器
-//
-//#define MAX_CHASSIS_VX_SPEED 2.8f
-//#define MAX_CHASSIS_VY_SPEED 2.8f
-//#define MAX_CHASSIS_VW_SPEED 0.9f
-//#define CHASSIS_SWING_SPEED 1.0f
-//
-//#define MAX_CHASSIS_DEGREE 0.2f
-//
-//#define STEERING_WHEEL_MAX_VX 2.8f      // m/s
-//#define STEERING_WHEEL_MAX_VY 2.8f      // m/s
-//#define STEERING_WHEEL_MAX_VW 0.9f      // rad/s
-//#define STEERING_WHEEL_MAX_DEGREE 0.2  // degree
-//#define STEERING_WHEEL_DR16_RC_TO_CHASSIS_VX (STEERING_WHEEL_MAX_VX/660.0f)
-//#define STEERING_WHEEL_DR16_RC_TO_CHASSIS_VY (STEERING_WHEEL_MAX_VY/660.0f)
-//#define STEERING_WHEEL_DR16_RC_TO_CHASSIS_VW (STEERING_WHEEL_MAX_VW/660.0f)
-//
-//#define STEERING_WHEEL_DR16_RC_TO_CHASSIS_CONTROL_YAW (STEERING_WHEEL_MAX_DEGREE/660.0f)
-//
-//
-//#define CHASSIS_CURRENT_LIMIT_TOTAL 20000
-//#define CHASSIS_CURRENT_LIMIT_40W 7300
-//#define CHASSIS_POWER_BUFF 60
-//
-//
-////底盘机械信息 /m
-//#define Wheel_axlespacing 0.448f //H
-//#define Wheel_spacing 0.391f //W
-//#define GIMBAL_OFFSET 0
-//#define PERIMETER 0.47414f //zhou chang /m
-//#define M3508_DECELE_RATIO 1.0f/19.0f
-//#define M3508_MAX_RPM 8000
-//#define TREAD 480 //lun ju
-//
-//#define STEERING_WHEEL_V_SPEED_LIMIT 3.0f    // m/s
-//#define STEERING_WHEEL_W_SPEED_LIMIT 0.9f    // rad/s
-//
-//#define WHEEL_MOTO_RATE 0.00041591f
-//#define STEERING_WHEEL_WHEELBASE 0.32        // m
-//#define STEERING_WHEEL_TRACK_WIDTH 0.4       // m
-//#define STEERING_WHEEL_WHEEL_RADIUS 0.07     // m
-//
-//#define STEERING_WHEEL_STEERING_MOTOR_OFFSET_0 7605
-//#define STEERING_WHEEL_STEERING_MOTOR_OFFSET_1 6154
-//#define STEERING_WHEEL_STEERING_MOTOR_OFFSET_2 4873
-//#define STEERING_WHEEL_STEERING_MOTOR_OFFSET_3 4040
-//
-//#define STEERING_WHEEL_ROTATE_KP 0.04
-//#define STEERING_WHEEL_ROTATE_KI 0.000006
-//#define STEERING_WHEEL_ROTATE_KD 0.05
-//#define STEERING_WHEEL_ROTATE_OUT 1.5
-//#define STEERING_WHEEL_ROTATE_IOUT 0.8
-//
-//#define STEERING_WHEEL_CHASSIS_KP 20.0
-//#define STEERING_WHEEL_CHASSIS_KI 0.001
-//#define STEERING_WHEEL_CHASSIS_KD 40
-//#define STEERING_WHEEL_CHASSIS_OUT 11000.0
-//#define STEERING_WHEEL_CHASSIS_IOUT 4000.0
-//
-//#define STEERING_WHEEL_STEER_ANGLE_KP 40
-//#define STEERING_WHEEL_STEER_ANGLE_KI 0.02
-//#define STEERING_WHEEL_STEER_ANGLE_KD 5.0
-//#define STEERING_WHEEL_STEER_ANGLE_OUT 150.0
-//#define STEERING_WHEEL_STEER_ANGLE_IOUT 30.0
-//
-//#define STEERING_WHEEL_STEER_SPEED_KP 60.0
-//#define STEERING_WHEEL_STEER_SPEED_KI 0.1
-//#define STEERING_WHEEL_STEER_SPEED_KD 20.0
-//#define STEERING_WHEEL_STEER_SPEED_OUT 28000.0
-//#define STEERING_WHEEL_STEER_SPEED_IOUT 8000.0
-//
-//#define LF_0_WHEEL_OUTWARD_ECD_FROM 1400
-//#define LF_0_WHEEL_OUTWARD_ECD_TO 5300
-//#define RF_1_WHEEL_OUTWARD_ECD_FROM 0
-//#define RF_1_WHEEL_OUTWARD_ECD_TO 4000
-//
-//#define RB_2_WHEEL_OUTWARD_ECD_FROM 6800
-//#define RB_2_WHEEL_OUTWARD_ECD_TO 2700
-//#define LB_3_WHEEL_OUTWARD_ECD_FROM 6100
-//#define LB_3_WHEEL_OUTWARD_ECD_TO 2000
-//
-////枚举 结构体
-//typedef enum
-//{
-//    CHASSIS_RELAX,
-//    CHASSIS_AUTO,
-//    CHASSIS_DEBUG
-//} chassis_mode_e;
-//
-//typedef enum
-//{
-//    INWARD,
-//    OUTWARD
-//}steering_status_e;
-//
-//typedef struct {
-//    fp32 power_buff;
-//    fp32 limit_k;
-//    fp32 total_current;
-//    fp32 total_current_limit;
-//
-//}chassis_power_limit_t;
-//
-//typedef struct {
-//    float wheel_v;      // m/s
-//    float wheel_angle;  //rad
-//    int32_t speed_vector;
-//} steering_velocity_vector_t;
-//
-//typedef struct {
-//    steering_velocity_vector_t velocity_vector;
-//    steering_velocity_vector_t velocity_vector_last;
-//} steering_control_t;
-//
-//typedef struct
-//{
-//    steering_status_e steering_wheel_status[4];
-//
-//    chassis_mode_e mode;
-//    chassis_mode_e last_mode;
-//    chassis_motor_t motor_chassis[4];
-//    steering_motor_t motor_steering[4];
-//    pid_t chassis_vw_pid;
-//    pid_t rotate_pid;
-//    fp32 vx;
-//    fp32 vy;
-//    fp32 vw;
-//    float plane_yaw;
-//    float plane_v;
-//    float control_yaw;
-//    float chassis_yaw;
-//    float circle_rad;
-//    chassis_power_limit_t chassis_power_limit;
-//    steering_control_t wheel[4];
-//    steering_control_t rotate[4];
-//} chassis_t;
-//
-//
-//
-//
-////函数声明
-//_Noreturn extern void chassis_task(void const *pvParameters);
-//
-//extern void chassis_feedback_update();
-////
-//#endif
-//
+#endif
+
