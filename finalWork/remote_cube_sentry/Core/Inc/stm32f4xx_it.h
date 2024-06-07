@@ -32,7 +32,9 @@
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-
+extern volatile uint16_t LPUART1_RX_LEN;
+extern uint8_t bRxBufferUart1[1]; //接收数据
+extern uint8_t LPUART1_RX_BUF[1024];//缓存数据
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
@@ -65,9 +67,7 @@ void DMA2_Stream3_IRQHandler(void);
 void CAN2_RX0_IRQHandler(void);
 void CAN2_RX1_IRQHandler(void);
 void OTG_FS_IRQHandler(void);
-void DMA2_Stream5_IRQHandler(void);
 void DMA2_Stream6_IRQHandler(void);
-void DMA2_Stream7_IRQHandler(void);
 /* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */

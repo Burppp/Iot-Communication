@@ -163,7 +163,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/Lumos/Documents/GitHub/sztu_sentry/remote_cube_sentry/cmake-build-debug"
+			"value" : "c:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -619,7 +619,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Lumos/Documents/GitHub/sztu_sentry/remote_cube_sentry/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -679,7 +679,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/Lumos/Documents/GitHub/sztu_sentry/remote_cube_sentry"
+			"value" : "C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1155,7 +1155,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Lumos/Documents/GitHub/sztu_sentry/remote_cube_sentry/cmake-build-debug"
+			"value" : "C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/cmake-build-debug"
 		},
 		{
 			"name" : "remote_cube_sentry_IS_TOP_LEVEL",
@@ -1179,7 +1179,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Lumos/Documents/GitHub/sztu_sentry/remote_cube_sentry"
+			"value" : "C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry"
 		}
 	],
 	"kind" : "cache",

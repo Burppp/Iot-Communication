@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Lumos/Documents/GitHub/sztu_sentry/remote_cube_sentry
+# Install script for directory: C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Lumos/Documents/GitHub/sztu_sentry/remote_cube_sentry/cmake-build-release/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/cmake-build-release/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

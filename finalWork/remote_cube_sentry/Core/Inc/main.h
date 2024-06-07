@@ -83,8 +83,6 @@ void Error_Handler(void);
 #define CS1_GYRO_GPIO_Port GPIOB
 #define SWITCH_L_Pin GPIO_PIN_14
 #define SWITCH_L_GPIO_Port GPIOB
-#define SWITCH_R_Pin GPIO_PIN_15
-#define SWITCH_R_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

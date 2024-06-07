@@ -54,7 +54,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "C:\Users\Lumos\AppData\Local\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\Lumos\Documents\GitHub\sztu_sentry\remote_cube_sentry -BC:\Users\Lumos\Documents\GitHub\sztu_sentry\remote_cube_sentry\cmake-build-release
+  command = "C:\Users\Lumos\AppData\Local\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\Lumos\Documents\GitHub\Iot-Communication\finalWork\remote_cube_sentry -BC:\Users\Lumos\Documents\GitHub\Iot-Communication\finalWork\remote_cube_sentry\cmake-build-release
   description = Re-running CMake...
   generator = 1
 

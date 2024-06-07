@@ -13,6 +13,7 @@
 #include "usart.h"
 #include "bsp_usart.h"
 #include "CRC8_CRC16.h"
+#include "Lora.h"
 //#include "stdlib.h"
 
 STR_Info_t str = {
@@ -708,31 +709,31 @@ void Chassis_Cmd_Update(uint8_t *uart_buffer)
 }
 
 //串口中断函数
-void USART1_IRQHandler(void)
-{
-    static volatile uint8_t res;
-    if(USART1->SR & UART_FLAG_IDLE)
-    {
-        __HAL_UART_CLEAR_PEFLAG(&huart1);//读取UART6-SR 和UART6-DR; 清除中断标志位
-
-        __HAL_DMA_DISABLE(huart1.hdmarx); //使能dma_rx
-
-        Chassis_Cmd_Update(&usart1_buff[0]);
-
-        detect_handle(DETECT_GYRO_UART);
-
-//        memset(&usart1_buff[0],0,CHASSIS_BUFFER_SIZE);//置0
-
-        __HAL_DMA_CLEAR_FLAG(huart1.hdmarx,DMA_LISR_TCIF1); //清除传输完成标志位
-
-        __HAL_DMA_SET_COUNTER(huart1.hdmarx, CHASSIS_BUFFER_SIZE);//设置DMA 搬运数据大小 单位为字节
-
-        __HAL_DMA_ENABLE(huart1.hdmarx); //使能DMARx
-
-    }
-//    HAL_UART_IRQHandler(&huart1);
-
-}
+//void USART1_IRQHandler(void)
+//{
+//    static volatile uint8_t res;
+//    if(USART1->SR & UART_FLAG_IDLE)
+//    {
+//        __HAL_UART_CLEAR_PEFLAG(&huart1);//读取UART6-SR 和UART6-DR; 清除中断标志位
+//
+//        __HAL_DMA_DISABLE(huart1.hdmarx); //使能dma_rx
+//
+//        Chassis_Cmd_Update(&usart1_buff[0]);
+//
+//        detect_handle(DETECT_GYRO_UART);
+//
+////        memset(&usart1_buff[0],0,CHASSIS_BUFFER_SIZE);//置0
+//
+//        __HAL_DMA_CLEAR_FLAG(huart1.hdmarx,DMA_LISR_TCIF1); //清除传输完成标志位
+//
+//        __HAL_DMA_SET_COUNTER(huart1.hdmarx, CHASSIS_BUFFER_SIZE);//设置DMA 搬运数据大小 单位为字节
+//
+//        __HAL_DMA_ENABLE(huart1.hdmarx); //使能DMARx
+//
+//    }
+////    HAL_UART_IRQHandler(&huart1);
+//
+//}
 
 void chassis_power_ctrl()
 {
@@ -742,8 +743,8 @@ void chassis_power_ctrl()
 _Noreturn void STR_ctrl(void const * pvParameters)
 {
     vTaskDelay(CHASSIS_TASK_INIT_TIME);
-    usart1_init(&usart1_buff[0], CHASSIS_BUFFER_SIZE);
-
+//    usart1_init(&usart1_buff[0], CHASSIS_BUFFER_SIZE);
+    LoRa_T_V_Attach(1,1);
     while(1)
     {
         vTaskSuspendAll(); //锁住RTOS内核防止控制过程中断，造成错误
