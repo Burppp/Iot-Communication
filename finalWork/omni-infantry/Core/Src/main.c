@@ -37,8 +37,8 @@
 #include "bsp_usart.h"
 #include "remote.h"
 #include "Referee.h"
-
 #include "Calibrate.h"
+#include "Lora.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -131,6 +131,8 @@ int main(void)
 
     cali_param_init();
     remote_control_init();
+
+    LoRa_T_P_Attach(1, 1);
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
