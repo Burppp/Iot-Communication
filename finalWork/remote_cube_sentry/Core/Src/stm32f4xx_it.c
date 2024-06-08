@@ -20,6 +20,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "stm32f4xx_it.h"
+#include "string.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 /* USER CODE END Includes */
@@ -27,6 +28,7 @@
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN TD */
 extern uint8_t usart1_buff[1];
+float vx = 0,vy = 0,vw = 0;
 
 /* USER CODE END TD */
 
@@ -64,8 +66,8 @@ extern DMA_HandleTypeDef hdma_usart3_rx;
 extern DMA_HandleTypeDef hdma_usart6_rx;
 extern DMA_HandleTypeDef hdma_usart6_tx;
 extern UART_HandleTypeDef huart1;
+extern UART_HandleTypeDef huart6;
 extern TIM_HandleTypeDef htim2;
-
 /* USER CODE BEGIN EV */
 
 /* USER CODE END EV */
@@ -365,11 +367,39 @@ void DMA2_Stream6_IRQHandler(void)
 }
 
 /* USER CODE BEGIN 1 */
+uint8_t target_vel = 0;
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
 //    if(huart->Instance == &huart1)
     {
         LPUART1_RX_BUF[LPUART1_RX_LEN++]=bRxBufferUart1[0];
+        if(bRxBufferUart1[0] == 0x0A)
+        {
+            for(uint8_t i = 0;i < LPUART1_RX_LEN;i++)
+            {
+                if(LPUART1_RX_BUF[i] == 'v' && i + 4 < LPUART1_RX_LEN)
+                {
+                    uint8_t vel = (LPUART1_RX_BUF[i + 3] - '0') * 10 + LPUART1_RX_BUF[i + 4] - '0';
+                    switch (LPUART1_RX_BUF[i + 1])
+                    {
+                        case 'x':
+                            vx = (float)vel / 100;
+                            break;
+                        case 'y':
+                            vy = (float)vel / 100;
+                            break;
+                        case 'w':
+                            vw = (float)vel / 100;
+                            break;
+                        default:
+                            break;
+                    }
+                    memset(LPUART1_RX_BUF, 0, sizeof(LPUART1_RX_BUF));
+                    LPUART1_RX_LEN = 0;
+                }
+            }
+        }
+        HAL_UART_Transmit(&huart6, &bRxBufferUart1[0], 1, 100);
         HAL_UART_Receive_IT(&huart1,bRxBufferUart1,1);
     }
 }
