@@ -10,20 +10,13 @@
 #include "FreeRTOS.h"
 #include "can_receive.h"
 #include "PID.h"
-#include "remote.h"
 #include "user_lib.h"
 #include "queue.h"
 #include "cmsis_os.h"
 #include "user_lib.h"
 #include "ramp.h"
-#include "Gimbal.h"
 #include "bsp_buzzer.h"
 #include "math.h"
-#include "Referee.h"
-#include "Detection.h"
-#include "protocol_shaob.h"
-#include "packet.h"
-#include "Cap.h"
 
 /*define*/
 //底盘在motor_3508_measure中的标号
@@ -99,25 +92,9 @@ typedef enum {
 #define GIMBAL_OFFSET 0
 #define PERIMETER 0.47414f //轮子周长 /m
 #define M3508_DECELE_RATIO (1.0f/14.0f)//1：14 3508减速比
-#define M3508_MAX_RPM 8000   //3508最大转速
+#define M3508_MAX_RPM 8000
 #define TREAD 480 //lun ju
 #define WHEEL_MOTO_RATE 0.00041591f
-
-//枚举 结构体
-typedef enum
-{
-    CHASSIS_RELAX,
-    CHASSIS_ONLY,
-    CHASSIS_SPIN,
-    CHASSIS_FOLLOW_GIMBAL,
-    CHASSIS_BLOCK
-} chassis_mode_e;
-
-typedef enum
-{
-    NORMAL_SPIN,
-    HIDDEN_ARMOR_SPEED_CHANGE
-} chassis_spin_mode_e;
 
 typedef struct {
     fp32 power_buff;
@@ -135,9 +112,6 @@ typedef struct {
 
 typedef struct
 {
-    chassis_mode_e mode;
-    chassis_mode_e last_mode;
-    chassis_spin_mode_e spin_mode;
     motor_3508_t motor_chassis[4];
     QueueHandle_t motor_data_queue;
 

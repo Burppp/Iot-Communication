@@ -21,35 +21,59 @@ static fp32 rotate_ratio_b = ((Wheel_axlespacing + Wheel_spacing) / 2.0f + GIMBA
 static fp32 wheel_rpm_ratio = 60.0f / (PERIMETER * M3508_DECELE_RATIO); //车轮转速比 2405左右
 /*程序主体*/
 
+void chassis_init()
+{
+    pid_init(&chassis.chassis_vw_pid, CHASSIS_FOLLOW_GIMBAL_PID_MAX_OUT, (uint32_t) CHASSIS_FOLLOW_GIMBAL_PID_MAX_IOUT,
+             CHASSIS_FOLLOW_GIMBAL_PID_KP, CHASSIS_FOLLOW_GIMBAL_PID_KI, CHASSIS_FOLLOW_GIMBAL_PID_KD);
+    //底盘驱动电机速度环初始化和电机数据结构体获取
+    for (int i = 0; i < 4; i++)
+    {
+
+        chassis.motor_chassis[i].motor_measure= motor_3508_measure + i;
+
+        pid_init(&chassis.motor_chassis[i].speed_p,
+                 CHASSIS_3508_PID_MAX_OUT,
+                 CHASSIS_3508_PID_MAX_IOUT,
+                 CHASSIS_3508_PID_KP,
+                 CHASSIS_3508_PID_KI,
+                 CHASSIS_3508_PID_KD);
+    }
+
+}
+
 void chassis_speed_update()
 {
-    if(wasdLR[0])
-        chassis.vx += deltaSpeed;
-    if(wasdLR[2])
-        chassis.vx -= deltaSpeed;
-    if(!wasdLR[0] && !wasdLR[2])
-        chassis.vx = 0;
+//    if(wasdLR[0])
+//        chassis.vx += deltaSpeed;
+//    if(wasdLR[2])
+//        chassis.vx -= deltaSpeed;
+//    if(!wasdLR[0] && !wasdLR[2])
+//        chassis.vx = 0;
+//
+//    if(wasdLR[1])
+//        chassis.vy -= deltaSpeed;
+//    if(wasdLR[3])
+//        chassis.vy += deltaSpeed;
+//    if(!wasdLR[1] && !wasdLR[3])
+//        chassis.vy = 0;
+//
+//    if(wasdLR[4] || wasdLR[5])
+//        chassis.vw = (wasdLR[4] - wasdLR[5]) * 50;
+//    if(!wasdLR[4] && !wasdLR[5])
+//        chassis.vw = 0;
 
-    if(wasdLR[1])
-        chassis.vy -= deltaSpeed;
-    if(wasdLR[3])
-        chassis.vy += deltaSpeed;
-    if(!wasdLR[1] && !wasdLR[3])
-        chassis.vy = 0;
-
-    if(wasdLR[4] || wasdLR[5])
-        chassis.vw = (wasdLR[4] - wasdLR[5]) * 50;
-    if(!wasdLR[4] && !wasdLR[5])
-        chassis.vw = 0;
+    chassis.vx = 0;
+    chassis.vy = 0;
+    chassis.vw = 0;
 
     VAL_LIMIT(chassis.vx, -660, 660);
     VAL_LIMIT(chassis.vy, -660, 660);
     VAL_LIMIT(chassis.vw, -660, 660);
 }
 
+fp32 wheel_rpm[4] = {0};
 void chassis_wheel_cal()
 {
-    fp32 wheel_rpm[4] = {0};
     fp32 vx, vy, vw;
 
     vx = chassis.vx;
@@ -91,17 +115,25 @@ void chassis_can_send_back_mapping()
 {
     int16_t *real_motor_give_current[4];
 
-    real_motor_give_current[0] = &chassis.motor_chassis[LF].give_current;
-    real_motor_give_current[1] = &chassis.motor_chassis[RF].give_current;
-    real_motor_give_current[2] = &chassis.motor_chassis[RB].give_current;
-    real_motor_give_current[3] = &chassis.motor_chassis[LB].give_current;
+    real_motor_give_current[1] = &chassis.motor_chassis[LF].give_current;
+    real_motor_give_current[2] = &chassis.motor_chassis[RF].give_current;
+    real_motor_give_current[3] = &chassis.motor_chassis[RB].give_current;
+    real_motor_give_current[4] = &chassis.motor_chassis[LB].give_current;
+
+//    CAN_cmd_motor(CAN_1,
+//                  CAN_MOTOR_0x200_ID,
+//                  *real_motor_give_current[0],
+//                  *real_motor_give_current[1],
+//                  *real_motor_give_current[2],
+//                  *real_motor_give_current[3]
+//    );
 
     CAN_cmd_motor(CAN_1,
                   CAN_MOTOR_0x200_ID,
-                  *real_motor_give_current[0],
-                  *real_motor_give_current[1],
-                  *real_motor_give_current[2],
-                  *real_motor_give_current[3]
+                  0,
+                  0,
+                  0,
+                  0
     );
 }
 
@@ -109,12 +141,15 @@ _Noreturn void chassis_task(void const *pvParameters) {
 
     vTaskDelay(CHASSIS_TASK_INIT_TIME);
 //    LoRa_T_V_Attach(1,1);
+
     //主任务循环
     while (1) {
 
         vTaskSuspendAll(); //锁住RTOS内核防止控制过程中断，造成错误
 
         HAL_UART_Receive_IT(&huart1, bRxBufferUart1, 1);
+
+        chassis_init();
 
         chassis_speed_update();
 

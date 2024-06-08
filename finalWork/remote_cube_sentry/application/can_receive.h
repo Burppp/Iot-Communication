@@ -36,7 +36,6 @@
 //CAN_ID 该枚举不区分CAN_1还是CAN_2
 typedef enum
 {
-
     //电机控制 发送ID
     CAN_MOTOR_0x200_ID = 0x200,
     CAN_MOTOR_0x1FF_ID = 0x1FF,
@@ -47,19 +46,6 @@ typedef enum
     CAN_CHASSIS_3508_MOTOR_LF=0x201,
     CAN_CHASSIS_3508_MOTOR_LB=0x204,
     CAN_CHASSIS_3508_MOTOR_RB=0x203,
-
-    //0X1FF对应的电机ID(CAN1)
-    CAN_GIMBAL_6020_YAW=0x205,
-//    CAN_LAUNCHER_2006_BARREL=0x206,//test
-
-    //0X200对应的电机ID(CAN2)
-    //0X1FF对应的电机ID(CAN2)
-    CAN_LAUNCHER_3508_FIRE_R=0X205,//这是摩擦轮
-    CAN_GIMBAL_6020_PITCH=0x206,
-    CAN_LAUNCHER_3508_FIRE_L=0X207,//这是摩擦轮
-    CAN_LAUNCHER_2006_TRIGGER=0x208,
-
-
 } can_msg_id_e;
 
 typedef enum {

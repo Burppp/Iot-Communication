@@ -124,7 +124,7 @@ CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/remote_cube_sentry
 CMAKE_LINKER:FILEPATH=C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/12.2 mpacbti-rel1/bin/arm-none-eabi-ld.exe
 
 //make program
-CMAKE_MAKE_PROGRAM:FILEPATH=C:/Users/Lumos/AppData/Local/JETBRA~1/CLION2~1.2/bin/ninja/win/x64/ninja.exe
+CMAKE_MAKE_PROGRAM:FILEPATH=C:/Users/Lumos/AppData/Local/JetBrains/CLion 2023.2.2/bin/ninja/win/x64/ninja.exe
 
 //Flags used by the linker during the creation of modules during
 // all build types.
