@@ -4,18 +4,111 @@
 
 /*include*/
 #include "Chassis.h"
+#include "user_lib.h"
 
-chassis_t chassis;
+chassis_t chassis = {
+        .vx = 0,
+        .vy = 0,
+        .vw = 0,
+};
 extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart6;
 extern uint8_t bRxBufferUart1[1]; //接收数据
-char message[] = "vx=10\r\nvy=10\r\nvw=10\r\n";
-char test[] = "hello\r\n";
+extern int8_t wasdLR[6];
+fp32 deltaSpeed = 0.01;
+static fp32 rotate_ratio_f = ((Wheel_axlespacing + Wheel_spacing) / 2.0f - GIMBAL_OFFSET); //rad 0.4195左右
+static fp32 rotate_ratio_b = ((Wheel_axlespacing + Wheel_spacing) / 2.0f + GIMBAL_OFFSET);//0.4195左右
+static fp32 wheel_rpm_ratio = 60.0f / (PERIMETER * M3508_DECELE_RATIO); //车轮转速比 2405左右
 /*程序主体*/
+
+void chassis_speed_update()
+{
+    if(wasdLR[0])
+        chassis.vx += deltaSpeed;
+    if(wasdLR[2])
+        chassis.vx -= deltaSpeed;
+    if(!wasdLR[0] && !wasdLR[2])
+        chassis.vx = 0;
+
+    if(wasdLR[1])
+        chassis.vy -= deltaSpeed;
+    if(wasdLR[3])
+        chassis.vy += deltaSpeed;
+    if(!wasdLR[1] && !wasdLR[3])
+        chassis.vy = 0;
+
+    if(wasdLR[4] || wasdLR[5])
+        chassis.vw = (wasdLR[4] - wasdLR[5]) * 50;
+    if(!wasdLR[4] && !wasdLR[5])
+        chassis.vw = 0;
+
+    VAL_LIMIT(chassis.vx, -660, 660);
+    VAL_LIMIT(chassis.vy, -660, 660);
+    VAL_LIMIT(chassis.vw, -660, 660);
+}
+
+void chassis_wheel_cal()
+{
+    fp32 wheel_rpm[4] = {0};
+    fp32 vx, vy, vw;
+
+    vx = chassis.vx;
+    vy = chassis.vy;
+    vw = chassis.vw;
+
+    wheel_rpm[0] = (-vy - vx - vw * rotate_ratio_f) * wheel_rpm_ratio;
+    wheel_rpm[1] = (-vy + vx - vw * rotate_ratio_f) * wheel_rpm_ratio;
+    wheel_rpm[2] = (vy + vx - vw * rotate_ratio_b) * wheel_rpm_ratio;
+    wheel_rpm[3] = (vy - vx - vw * rotate_ratio_b) * wheel_rpm_ratio;
+
+    chassis.motor_chassis[RF].rpm_set=wheel_rpm[0];
+    chassis.motor_chassis[LF].rpm_set=wheel_rpm[1];
+    chassis.motor_chassis[LB].rpm_set=wheel_rpm[2];
+    chassis.motor_chassis[RB].rpm_set=wheel_rpm[3];
+}
+
+void chassis_wheel_loop_cal()
+{
+    chassis.motor_chassis[RF].give_current= (int16_t)pid_calc(&chassis.motor_chassis[RF].speed_p,
+                                                              chassis.motor_chassis[RF].motor_measure->speed_rpm,
+                                                              chassis.motor_chassis[RF].rpm_set);
+
+    chassis.motor_chassis[LF].give_current= (int16_t)pid_calc(&chassis.motor_chassis[LF].speed_p,
+                                                              chassis.motor_chassis[LF].motor_measure->speed_rpm,
+                                                              chassis.motor_chassis[LF].rpm_set);
+
+    chassis.motor_chassis[RB].give_current= (int16_t)pid_calc(&chassis.motor_chassis[RB].speed_p,
+                                                              chassis.motor_chassis[RB].motor_measure->speed_rpm,
+                                                              chassis.motor_chassis[RB].rpm_set);
+
+    chassis.motor_chassis[LB].give_current= (int16_t)pid_calc(&chassis.motor_chassis[LB].speed_p,
+                                                              chassis.motor_chassis[LB].motor_measure->speed_rpm,
+                                                              chassis.motor_chassis[LB].rpm_set);
+
+}
+
+void chassis_can_send_back_mapping()
+{
+    int16_t *real_motor_give_current[4];
+
+    real_motor_give_current[0] = &chassis.motor_chassis[LF].give_current;
+    real_motor_give_current[1] = &chassis.motor_chassis[RF].give_current;
+    real_motor_give_current[2] = &chassis.motor_chassis[RB].give_current;
+    real_motor_give_current[3] = &chassis.motor_chassis[LB].give_current;
+
+    CAN_cmd_motor(CAN_1,
+                  CAN_MOTOR_0x200_ID,
+                  *real_motor_give_current[0],
+                  *real_motor_give_current[1],
+                  *real_motor_give_current[2],
+                  *real_motor_give_current[3]
+    );
+}
+
 _Noreturn void chassis_task(void const *pvParameters) {
 
     vTaskDelay(CHASSIS_TASK_INIT_TIME);
-    LoRa_T_V_Attach(1,1);
+//    LoRa_T_V_Attach(1,1);
     //主任务循环
     while (1) {
 
@@ -23,7 +116,13 @@ _Noreturn void chassis_task(void const *pvParameters) {
 
         HAL_UART_Receive_IT(&huart1, bRxBufferUart1, 1);
 
-//        HAL_UART_Transmit_IT(&huart1, (uint8_t *)message, sizeof(message));
+        chassis_speed_update();
+
+        chassis_wheel_cal();
+
+        chassis_wheel_loop_cal();
+
+        chassis_can_send_back_mapping();
 
         xTaskResumeAll();
 

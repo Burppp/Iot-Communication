@@ -6,13 +6,21 @@
   <component name="CMakePresetLoader"><![CDATA[{
   "useNewFormat": true
 }]]></component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="omni-infantry" targetName="omni-infantry.elf" />
+    </generated>
+  </component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7842023-79cc-4863-b1d8-1c9ff276a0ef" name="更改" comment="" />
+    <list default="true" id="42c4f227-b354-4b8f-a166-c9a8f367db54" name="更改" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,8 +29,9 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
@@ -30,9 +39,10 @@
     <option name="minorVersion" value="2.2" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
   "associatedIndex": 3
 }]]></component>
-  <component name="ProjectId" id="2hYqXCfCsleDBzwZ6meaaB7Mtl2" />
+  <component name="ProjectId" id="2hYqwnQrcDxS9T5mSbd0ACIeR8l" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -45,18 +55,26 @@
     "WebServerToolWindowFactoryState": "false",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "settings.editor.selected.configurable": "CLionExternalConfigurable",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager" selected="OpenOCD 下载并运行.infantry">
-    <configuration name="infantry" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" RUN_PATH="$PROJECT_DIR$/cmake-build-debug/omni-infantry.elf" EXPLICIT_BUILD_TARGET_NAME="all">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="omni-infantry.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="omni-infantry" TARGET_NAME="omni-infantry.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="omni-infantry" RUN_TARGET_NAME="omni-infantry.elf">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="infantry" type="com.jetbrains.cidr.embedded.openocd.conf.type" factoryName="com.jetbrains.cidr.embedded.openocd.conf.factory" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" version="1" RUN_PATH="$PROJECT_DIR$/cmake-build-debug/omni-infantry.elf">
-      <openocd version="1" gdb-port="3333" telnet-port="4444" board-config="C:\Users\Lumos\Documents\GitHub\Iot-Communication\finalWork\omni-infantry\stm32f4discovery.cfg" reset-type="INIT" download-type="UPDATED_ONLY">
+    <configuration name="infantry" type="com.jetbrains.cidr.embedded.openocd.conf.type" factoryName="com.jetbrains.cidr.embedded.openocd.conf.factory" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="omni-infantry" TARGET_NAME="omni-infantry.elf" CONFIG_NAME="Debug" version="1" RUN_TARGET_PROJECT_NAME="omni-infantry" RUN_TARGET_NAME="omni-infantry.elf">
+      <openocd version="1" gdb-port="3333" telnet-port="4444" board-config="C:\Users\Lumos\Documents\GitHub\omni-infantry\omni-infantry\stm32f4discovery.cfg" reset-type="INIT" download-type="UPDATED_ONLY">
         <debugger kind="GDB" isBundled="true" />
       </openocd>
       <method v="2">
@@ -64,19 +82,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="CMake 应用程序.infantry" />
+      <item itemvalue="CMake 应用程序.omni-infantry.elf" />
       <item itemvalue="OpenOCD 下载并运行.infantry" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
-      <changelist id="e7842023-79cc-4863-b1d8-1c9ff276a0ef" name="更改" comment="" />
-      <created>1717781395713</created>
+      <changelist id="42c4f227-b354-4b8f-a166-c9a8f367db54" name="更改" comment="" />
+      <created>1717781599737</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1717781395713</updated>
-      <workItem from="1717781396895" duration="161000" />
+      <updated>1717781599737</updated>
+      <workItem from="1717781600949" duration="713000" />
     </task>
     <servers />
   </component>

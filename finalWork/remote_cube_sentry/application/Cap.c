@@ -8,7 +8,6 @@
 #include "bsp_can.h"
 #include "Detection.h"
 
-extern chassis_cmd chassis_cmd_data;
 chassis_status chassisStatus = CHASSIS_OFFLINE;
 uint16_t target_power;
 void cap_task(void const *pvParameters)
@@ -19,7 +18,6 @@ void cap_task(void const *pvParameters)
         vTaskSuspendAll(); //锁住RTOS内核防止控制过程中断，造成错误
         target_power = 0;
         target_power = CHASSIS_ONLINE_POWER;
-        CAN_cmd_cap(target_power);
         xTaskResumeAll();
         vTaskDelay(100);
     }

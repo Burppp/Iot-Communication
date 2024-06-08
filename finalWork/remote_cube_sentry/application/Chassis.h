@@ -8,6 +8,7 @@
 /*include*/
 #include "struct_typedef.h"
 #include "FreeRTOS.h"
+#include "can_receive.h"
 #include "PID.h"
 #include "remote.h"
 #include "user_lib.h"
@@ -23,8 +24,6 @@
 #include "protocol_shaob.h"
 #include "packet.h"
 #include "Cap.h"
-#include "Lora.h"
-
 
 /*define*/
 //底盘在motor_3508_measure中的标号
@@ -139,7 +138,7 @@ typedef struct
     chassis_mode_e mode;
     chassis_mode_e last_mode;
     chassis_spin_mode_e spin_mode;
-//    motor_3508_t motor_chassis[4];
+    motor_3508_t motor_chassis[4];
     QueueHandle_t motor_data_queue;
 
     pid_t chassis_vw_pid;
@@ -156,7 +155,8 @@ typedef struct
 
 //函数声明
 _Noreturn extern void chassis_task(void const *pvParameters);
-
+void chassis_speed_update();
+void chassis_wheel_cal();
 //
 #endif
 

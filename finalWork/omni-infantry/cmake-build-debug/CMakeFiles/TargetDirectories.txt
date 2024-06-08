@@ -1,0 +1,3 @@
+C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/omni-infantry/cmake-build-debug/CMakeFiles/omni-infantry.elf.dir
+C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/omni-infantry/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/omni-infantry/cmake-build-debug/CMakeFiles/rebuild_cache.dir
