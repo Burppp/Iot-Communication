@@ -22,7 +22,6 @@
 #define _CAN_RECEIVE_H_
 #include "struct_typedef.h"
 #include "PID.h"
-#include "Cap.h"
 /******************** define *******************/
 
 #define HALF_ECD_RANGE  4096

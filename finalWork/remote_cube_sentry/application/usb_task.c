@@ -9,7 +9,6 @@
 #include "CRC8_CRC16.h"
 #include "packet.h"
 #include "fifo.h"
-#include "protocol_shaob.h"
 #include "stdio.h"
 #include <stdio.h>
 #include <stdarg.h>

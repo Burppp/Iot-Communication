@@ -6,7 +6,6 @@
 #include "memory.h"
 #include "stdlib.h"
 #include "CRC8_CRC16.h"
-#include "can_hardwares.h"
 /**
  * @brief 重置CAN comm的接收状态和buffer
  *

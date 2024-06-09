@@ -1,5 +1,5 @@
 "C:\Users\Lumos\AppData\Local\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Release "-DCMAKE_MAKE_PROGRAM=C:/Users/Lumos/AppData/Local/JetBrains/CLion 2023.2.2/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\Lumos\Documents\GitHub\Iot-Communication\finalWork\remote_cube_sentry -B C:\Users\Lumos\Documents\GitHub\Iot-Communication\finalWork\remote_cube_sentry\cmake-build-release
 -- Maximum optimization for speed
--- Configuring done (0.1s)
--- Generating done (0.1s)
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
 -- Build files have been written to: C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/cmake-build-release

@@ -26,9 +26,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "queue.h"
-#include "can_hardwares.h"
 #include "bsp_can.h"
-#include "Cap.h."
 
 /* USER CODE END Includes */
 

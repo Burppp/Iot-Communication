@@ -32,12 +32,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "can_hardwares.h"
 #include "bsp_delay.h"
 #include "bsp_usart.h"
 #include "remote.h"
-#include "Referee.h"
-#include "steering_wheel.h"
 
 #include "Calibrate.h"
 #include "bsp_dwt.h"
