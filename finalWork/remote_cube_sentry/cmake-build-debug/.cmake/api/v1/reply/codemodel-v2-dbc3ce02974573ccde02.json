@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.21"
@@ -19,7 +19,7 @@
 					]
 				}
 			],
-			"name" : "Release",
+			"name" : "Debug",
 			"projects" : 
 			[
 				{
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "remote_cube_sentry.elf::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-remote_cube_sentry.elf-Release-b0e89b1a967353acbe40.json",
+					"jsonFile" : "target-remote_cube_sentry.elf-Debug-fb6ca37271634d6ccdde.json",
 					"name" : "remote_cube_sentry.elf",
 					"projectIndex" : 0
 				}
@@ -49,7 +49,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/cmake-build-release",
+		"build" : "C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/cmake-build-debug",
 		"source" : "C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry"
 	},
 	"version" : 

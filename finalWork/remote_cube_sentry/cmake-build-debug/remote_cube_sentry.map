@@ -2058,38 +2058,6 @@ Discarded input sections
  .comment       0x00000000       0x56 CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .ARM.attributes
                 0x00000000       0x34 CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
- .text          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/App/usb_device.c.obj
- .data          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/App/usb_device.c.obj
- .bss           0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/App/usb_device.c.obj
- .debug_line    0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/App/usb_device.c.obj
- .debug_str     0x00000000      0x19c CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/App/usb_device.c.obj
- .comment       0x00000000       0x56 CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/App/usb_device.c.obj
- .ARM.attributes
-                0x00000000       0x34 CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/App/usb_device.c.obj
- .text          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/App/usbd_cdc_if.c.obj
- .data          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/App/usbd_cdc_if.c.obj
- .bss           0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/App/usbd_cdc_if.c.obj
- .debug_line    0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/App/usbd_cdc_if.c.obj
- .debug_str     0x00000000      0x19d CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/App/usbd_cdc_if.c.obj
- .comment       0x00000000       0x56 CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/App/usbd_cdc_if.c.obj
- .ARM.attributes
-                0x00000000       0x34 CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/App/usbd_cdc_if.c.obj
- .text          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/App/usbd_desc.c.obj
- .data          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/App/usbd_desc.c.obj
- .bss           0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/App/usbd_desc.c.obj
- .debug_line    0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/App/usbd_desc.c.obj
- .debug_str     0x00000000      0x19b CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/App/usbd_desc.c.obj
- .comment       0x00000000       0x56 CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/App/usbd_desc.c.obj
- .ARM.attributes
-                0x00000000       0x34 CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/App/usbd_desc.c.obj
- .text          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj
- .data          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj
- .bss           0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj
- .debug_line    0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj
- .debug_str     0x00000000      0x19e CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj
- .comment       0x00000000       0x56 CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj
- .ARM.attributes
-                0x00000000       0x34 CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj
  .text          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/Atti.c.obj
  .data          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/Atti.c.obj
  .bss           0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/Atti.c.obj
@@ -2145,6 +2113,14 @@ Discarded input sections
                 0x00000000        0x1 CMakeFiles/remote_cube_sentry.elf.dir/application/Lora.c.obj
  .bss.LPUART1_RX_STA
                 0x00000000        0x1 CMakeFiles/remote_cube_sentry.elf.dir/application/Lora.c.obj
+ .text          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/Referee.c.obj
+ .data          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/Referee.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/Referee.c.obj
+ .debug_line    0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/Referee.c.obj
+ .debug_str     0x00000000      0x196 CMakeFiles/remote_cube_sentry.elf.dir/application/Referee.c.obj
+ .comment       0x00000000       0x56 CMakeFiles/remote_cube_sentry.elf.dir/application/Referee.c.obj
+ .ARM.attributes
+                0x00000000       0x34 CMakeFiles/remote_cube_sentry.elf.dir/application/Referee.c.obj
  .text          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/can_receive.c.obj
  .data          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/can_receive.c.obj
  .bss           0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/can_receive.c.obj
@@ -2160,6 +2136,14 @@ Discarded input sections
                 0x00000000       0x28 CMakeFiles/remote_cube_sentry.elf.dir/application/can_receive.c.obj
  .bss.motor_yaw_measure
                 0x00000000       0x28 CMakeFiles/remote_cube_sentry.elf.dir/application/can_receive.c.obj
+ .text          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/left_gimbal.c.obj
+ .data          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/left_gimbal.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/left_gimbal.c.obj
+ .debug_line    0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/left_gimbal.c.obj
+ .debug_str     0x00000000      0x19a CMakeFiles/remote_cube_sentry.elf.dir/application/left_gimbal.c.obj
+ .comment       0x00000000       0x56 CMakeFiles/remote_cube_sentry.elf.dir/application/left_gimbal.c.obj
+ .ARM.attributes
+                0x00000000       0x34 CMakeFiles/remote_cube_sentry.elf.dir/application/left_gimbal.c.obj
  .text          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/remote.c.obj
  .data          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/remote.c.obj
  .bss           0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/remote.c.obj
@@ -2172,6 +2156,30 @@ Discarded input sections
                 0x00000000        0xa CMakeFiles/remote_cube_sentry.elf.dir/application/remote.c.obj
  .bss.last_last_rc_s
                 0x00000000        0x4 CMakeFiles/remote_cube_sentry.elf.dir/application/remote.c.obj
+ .text          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/right_gimbal.c.obj
+ .data          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/right_gimbal.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/right_gimbal.c.obj
+ .debug_line    0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/right_gimbal.c.obj
+ .debug_str     0x00000000      0x19b CMakeFiles/remote_cube_sentry.elf.dir/application/right_gimbal.c.obj
+ .comment       0x00000000       0x56 CMakeFiles/remote_cube_sentry.elf.dir/application/right_gimbal.c.obj
+ .ARM.attributes
+                0x00000000       0x34 CMakeFiles/remote_cube_sentry.elf.dir/application/right_gimbal.c.obj
+ .text          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/steering_wheel.c.obj
+ .data          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/steering_wheel.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/steering_wheel.c.obj
+ .debug_line    0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/steering_wheel.c.obj
+ .debug_str     0x00000000      0x19d CMakeFiles/remote_cube_sentry.elf.dir/application/steering_wheel.c.obj
+ .comment       0x00000000       0x56 CMakeFiles/remote_cube_sentry.elf.dir/application/steering_wheel.c.obj
+ .ARM.attributes
+                0x00000000       0x34 CMakeFiles/remote_cube_sentry.elf.dir/application/steering_wheel.c.obj
+ .text          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/travelling_wheel.c.obj
+ .data          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/travelling_wheel.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/travelling_wheel.c.obj
+ .debug_line    0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/travelling_wheel.c.obj
+ .debug_str     0x00000000      0x19f CMakeFiles/remote_cube_sentry.elf.dir/application/travelling_wheel.c.obj
+ .comment       0x00000000       0x56 CMakeFiles/remote_cube_sentry.elf.dir/application/travelling_wheel.c.obj
+ .ARM.attributes
+                0x00000000       0x34 CMakeFiles/remote_cube_sentry.elf.dir/application/travelling_wheel.c.obj
  .text          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_adc.c.obj
  .data          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_adc.c.obj
  .bss           0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_adc.c.obj
@@ -2726,6 +2734,30 @@ Discarded input sections
  .debug_frame   0x00000000       0xa8 CMakeFiles/remote_cube_sentry.elf.dir/component/support/mem_mang4.c.obj
  .ARM.attributes
                 0x00000000       0x34 CMakeFiles/remote_cube_sentry.elf.dir/component/support/mem_mang4.c.obj
+ .text          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/connectivity/can_hardwares.c.obj
+ .data          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/connectivity/can_hardwares.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/connectivity/can_hardwares.c.obj
+ .debug_line    0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/connectivity/can_hardwares.c.obj
+ .debug_str     0x00000000      0x19d CMakeFiles/remote_cube_sentry.elf.dir/connectivity/can_hardwares.c.obj
+ .comment       0x00000000       0x56 CMakeFiles/remote_cube_sentry.elf.dir/connectivity/can_hardwares.c.obj
+ .ARM.attributes
+                0x00000000       0x34 CMakeFiles/remote_cube_sentry.elf.dir/connectivity/can_hardwares.c.obj
+ .text          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/connectivity/spi_hardwares.c.obj
+ .data          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/connectivity/spi_hardwares.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/connectivity/spi_hardwares.c.obj
+ .debug_line    0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/connectivity/spi_hardwares.c.obj
+ .debug_str     0x00000000      0x19d CMakeFiles/remote_cube_sentry.elf.dir/connectivity/spi_hardwares.c.obj
+ .comment       0x00000000       0x56 CMakeFiles/remote_cube_sentry.elf.dir/connectivity/spi_hardwares.c.obj
+ .ARM.attributes
+                0x00000000       0x34 CMakeFiles/remote_cube_sentry.elf.dir/connectivity/spi_hardwares.c.obj
+ .text          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/connectivity/usart_hardwares.c.obj
+ .data          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/connectivity/usart_hardwares.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/connectivity/usart_hardwares.c.obj
+ .debug_line    0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/connectivity/usart_hardwares.c.obj
+ .debug_str     0x00000000      0x19f CMakeFiles/remote_cube_sentry.elf.dir/connectivity/usart_hardwares.c.obj
+ .comment       0x00000000       0x56 CMakeFiles/remote_cube_sentry.elf.dir/connectivity/usart_hardwares.c.obj
+ .ARM.attributes
+                0x00000000       0x34 CMakeFiles/remote_cube_sentry.elf.dir/connectivity/usart_hardwares.c.obj
  .data          0x00000000        0x0 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
  .bss           0x00000000        0x0 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
  .data          0x00000000        0x0 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_truncdfsf2.o)
@@ -3682,17 +3714,18 @@ LOAD CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Sour
 LOAD CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
 LOAD CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
 LOAD CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
-LOAD CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/App/usb_device.c.obj
-LOAD CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/App/usbd_cdc_if.c.obj
-LOAD CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/App/usbd_desc.c.obj
-LOAD CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj
 LOAD CMakeFiles/remote_cube_sentry.elf.dir/application/Atti.c.obj
 LOAD CMakeFiles/remote_cube_sentry.elf.dir/application/Calibrate.c.obj
 LOAD CMakeFiles/remote_cube_sentry.elf.dir/application/Chassis.c.obj
 LOAD CMakeFiles/remote_cube_sentry.elf.dir/application/Detection.c.obj
 LOAD CMakeFiles/remote_cube_sentry.elf.dir/application/Lora.c.obj
+LOAD CMakeFiles/remote_cube_sentry.elf.dir/application/Referee.c.obj
 LOAD CMakeFiles/remote_cube_sentry.elf.dir/application/can_receive.c.obj
+LOAD CMakeFiles/remote_cube_sentry.elf.dir/application/left_gimbal.c.obj
 LOAD CMakeFiles/remote_cube_sentry.elf.dir/application/remote.c.obj
+LOAD CMakeFiles/remote_cube_sentry.elf.dir/application/right_gimbal.c.obj
+LOAD CMakeFiles/remote_cube_sentry.elf.dir/application/steering_wheel.c.obj
+LOAD CMakeFiles/remote_cube_sentry.elf.dir/application/travelling_wheel.c.obj
 LOAD CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_adc.c.obj
 LOAD CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_buzzer.c.obj
 LOAD CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_can.c.obj
@@ -3723,6 +3756,9 @@ LOAD CMakeFiles/remote_cube_sentry.elf.dir/component/devices/test.c.obj
 LOAD CMakeFiles/remote_cube_sentry.elf.dir/component/support/CRC8_CRC16.c.obj
 LOAD CMakeFiles/remote_cube_sentry.elf.dir/component/support/fifo.c.obj
 LOAD CMakeFiles/remote_cube_sentry.elf.dir/component/support/mem_mang4.c.obj
+LOAD CMakeFiles/remote_cube_sentry.elf.dir/connectivity/can_hardwares.c.obj
+LOAD CMakeFiles/remote_cube_sentry.elf.dir/connectivity/spi_hardwares.c.obj
+LOAD CMakeFiles/remote_cube_sentry.elf.dir/connectivity/usart_hardwares.c.obj
 START GROUP
 LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a
 LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libg.a
@@ -5613,127 +5649,127 @@ LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb
 LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a
 LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a
 
-.debug_info     0x00000000    0x31ad4
+.debug_info     0x00000000    0x31abc
  .debug_info    0x00000000      0x86a CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/adc.c.obj
  .debug_info    0x0000086a      0xd18 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/can.c.obj
  .debug_info    0x00001582      0x43a CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/crc.c.obj
  .debug_info    0x000019bc      0x5bf CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/dma.c.obj
  .debug_info    0x00001f7b      0xf3d CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/freertos.c.obj
  .debug_info    0x00002eb8      0x8b6 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/gpio.c.obj
- .debug_info    0x0000376e     0x1322 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/main.c.obj
- .debug_info    0x00004a90      0x405 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/rng.c.obj
- .debug_info    0x00004e95      0xa9a CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/spi.c.obj
- .debug_info    0x0000592f      0x4d1 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_info    0x00005e00      0xc8e CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj
- .debug_info    0x00006a8e     0x10b5 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_info    0x00007b43      0x171 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/sysmem.c.obj
- .debug_info    0x00007cb4      0x527 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/system_stm32f4xx.c.obj
- .debug_info    0x000081db     0x167b CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/tim.c.obj
- .debug_info    0x00009856      0xf72 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/usart.c.obj
- .debug_info    0x0000a7c8       0x30 CMakeFiles/remote_cube_sentry.elf.dir/Core/Startup/startup_stm32f407ighx.s.obj
- .debug_info    0x0000a7f8      0x9e6 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_info    0x0000b1de      0xe76 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
- .debug_info    0x0000c054     0x11ad CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj
- .debug_info    0x0000d201      0xf7d CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_info    0x0000e17e      0x3b2 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c.obj
- .debug_info    0x0000e530      0xad9 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- .debug_info    0x0000f009      0x70c CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
- .debug_info    0x0000f715      0x802 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
- .debug_info    0x0000ff17      0x704 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_info    0x0001061b      0xa6f CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_info    0x0001108a      0x530 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c.obj
- .debug_info    0x000115ba     0x1d76 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .debug_info    0x00013330     0x3b79 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
- .debug_info    0x00016ea9     0x1a9b CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
- .debug_info    0x00018944     0x408c CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .debug_info    0x0001c9d0     0x2c43 CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
- .debug_info    0x0001f613      0x2bf CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
- .debug_info    0x0001f8d2      0x55a CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
- .debug_info    0x0001fe2c      0x593 CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- .debug_info    0x000203bf     0x2335 CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
- .debug_info    0x000226f4     0x3502 CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
- .debug_info    0x00025bf6     0x165a CMakeFiles/remote_cube_sentry.elf.dir/application/Atti.c.obj
- .debug_info    0x00027250      0xb7d CMakeFiles/remote_cube_sentry.elf.dir/application/Calibrate.c.obj
- .debug_info    0x00027dcd      0xdaa CMakeFiles/remote_cube_sentry.elf.dir/application/Chassis.c.obj
- .debug_info    0x00028b77      0x5b2 CMakeFiles/remote_cube_sentry.elf.dir/application/Detection.c.obj
- .debug_info    0x00029129     0x1092 CMakeFiles/remote_cube_sentry.elf.dir/application/Lora.c.obj
- .debug_info    0x0002a1bb      0xb76 CMakeFiles/remote_cube_sentry.elf.dir/application/can_receive.c.obj
- .debug_info    0x0002ad31      0x9b1 CMakeFiles/remote_cube_sentry.elf.dir/application/remote.c.obj
- .debug_info    0x0002b6e2      0x7f8 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_adc.c.obj
- .debug_info    0x0002beda      0x680 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_buzzer.c.obj
- .debug_info    0x0002c55a      0x625 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_can.c.obj
- .debug_info    0x0002cb7f      0x260 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_delay.c.obj
- .debug_info    0x0002cddf      0x536 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_flash.c.obj
- .debug_info    0x0002d315      0x664 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_imu_pwm.c.obj
- .debug_info    0x0002d979      0x6c7 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_led.c.obj
- .debug_info    0x0002e040      0x5e6 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_rc.c.obj
- .debug_info    0x0002e626      0x686 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_spi.c.obj
- .debug_info    0x0002ecac      0x76d CMakeFiles/remote_cube_sentry.elf.dir/component/algorithm/AHRS.c.obj
- .debug_info    0x0002f419      0x368 CMakeFiles/remote_cube_sentry.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
- .debug_info    0x0002f781      0x4cd CMakeFiles/remote_cube_sentry.elf.dir/component/controller/PID.c.obj
- .debug_info    0x0002fc4e      0x93d CMakeFiles/remote_cube_sentry.elf.dir/component/devices/BMI088Middleware.c.obj
- .debug_info    0x0003058b     0x1549 CMakeFiles/remote_cube_sentry.elf.dir/component/devices/BMI088driver.c.obj
+ .debug_info    0x0000376e     0x130a CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/main.c.obj
+ .debug_info    0x00004a78      0x405 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/rng.c.obj
+ .debug_info    0x00004e7d      0xa9a CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/spi.c.obj
+ .debug_info    0x00005917      0x4d1 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_info    0x00005de8      0xc8e CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj
+ .debug_info    0x00006a76     0x10b5 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_info    0x00007b2b      0x171 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/sysmem.c.obj
+ .debug_info    0x00007c9c      0x527 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/system_stm32f4xx.c.obj
+ .debug_info    0x000081c3     0x167b CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/tim.c.obj
+ .debug_info    0x0000983e      0xf72 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/usart.c.obj
+ .debug_info    0x0000a7b0       0x30 CMakeFiles/remote_cube_sentry.elf.dir/Core/Startup/startup_stm32f407ighx.s.obj
+ .debug_info    0x0000a7e0      0x9e6 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_info    0x0000b1c6      0xe76 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
+ .debug_info    0x0000c03c     0x11ad CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj
+ .debug_info    0x0000d1e9      0xf7d CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_info    0x0000e166      0x3b2 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c.obj
+ .debug_info    0x0000e518      0xad9 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_info    0x0000eff1      0x70c CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
+ .debug_info    0x0000f6fd      0x802 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
+ .debug_info    0x0000feff      0x704 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_info    0x00010603      0xa6f CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_info    0x00011072      0x530 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c.obj
+ .debug_info    0x000115a2     0x1d76 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+ .debug_info    0x00013318     0x3b79 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+ .debug_info    0x00016e91     0x1a9b CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+ .debug_info    0x0001892c     0x408c CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+ .debug_info    0x0001c9b8     0x2c43 CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+ .debug_info    0x0001f5fb      0x2bf CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+ .debug_info    0x0001f8ba      0x55a CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+ .debug_info    0x0001fe14      0x593 CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .debug_info    0x000203a7     0x2335 CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+ .debug_info    0x000226dc     0x3502 CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ .debug_info    0x00025bde     0x165a CMakeFiles/remote_cube_sentry.elf.dir/application/Atti.c.obj
+ .debug_info    0x00027238      0xb7d CMakeFiles/remote_cube_sentry.elf.dir/application/Calibrate.c.obj
+ .debug_info    0x00027db5      0xdaa CMakeFiles/remote_cube_sentry.elf.dir/application/Chassis.c.obj
+ .debug_info    0x00028b5f      0x5b2 CMakeFiles/remote_cube_sentry.elf.dir/application/Detection.c.obj
+ .debug_info    0x00029111     0x1092 CMakeFiles/remote_cube_sentry.elf.dir/application/Lora.c.obj
+ .debug_info    0x0002a1a3      0xb76 CMakeFiles/remote_cube_sentry.elf.dir/application/can_receive.c.obj
+ .debug_info    0x0002ad19      0x9b1 CMakeFiles/remote_cube_sentry.elf.dir/application/remote.c.obj
+ .debug_info    0x0002b6ca      0x7f8 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_adc.c.obj
+ .debug_info    0x0002bec2      0x680 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_buzzer.c.obj
+ .debug_info    0x0002c542      0x625 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_can.c.obj
+ .debug_info    0x0002cb67      0x260 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_delay.c.obj
+ .debug_info    0x0002cdc7      0x536 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_flash.c.obj
+ .debug_info    0x0002d2fd      0x664 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_imu_pwm.c.obj
+ .debug_info    0x0002d961      0x6c7 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_led.c.obj
+ .debug_info    0x0002e028      0x5e6 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_rc.c.obj
+ .debug_info    0x0002e60e      0x686 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_spi.c.obj
+ .debug_info    0x0002ec94      0x76d CMakeFiles/remote_cube_sentry.elf.dir/component/algorithm/AHRS.c.obj
+ .debug_info    0x0002f401      0x368 CMakeFiles/remote_cube_sentry.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
+ .debug_info    0x0002f769      0x4cd CMakeFiles/remote_cube_sentry.elf.dir/component/controller/PID.c.obj
+ .debug_info    0x0002fc36      0x93d CMakeFiles/remote_cube_sentry.elf.dir/component/devices/BMI088Middleware.c.obj
+ .debug_info    0x00030573     0x1549 CMakeFiles/remote_cube_sentry.elf.dir/component/devices/BMI088driver.c.obj
 
-.debug_abbrev   0x00000000     0x8025
+.debug_abbrev   0x00000000     0x8009
  .debug_abbrev  0x00000000      0x1ed CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/adc.c.obj
  .debug_abbrev  0x000001ed      0x252 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/can.c.obj
  .debug_abbrev  0x0000043f      0x1b6 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/crc.c.obj
  .debug_abbrev  0x000005f5      0x12d CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/dma.c.obj
  .debug_abbrev  0x00000722      0x271 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/freertos.c.obj
  .debug_abbrev  0x00000993      0x186 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/gpio.c.obj
- .debug_abbrev  0x00000b19      0x2ce CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/main.c.obj
- .debug_abbrev  0x00000de7      0x1b6 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/rng.c.obj
- .debug_abbrev  0x00000f9d      0x21e CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/spi.c.obj
- .debug_abbrev  0x000011bb      0x120 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_abbrev  0x000012db      0x232 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj
- .debug_abbrev  0x0000150d      0x299 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_abbrev  0x000017a6       0xea CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/sysmem.c.obj
- .debug_abbrev  0x00001890      0x11e CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/system_stm32f4xx.c.obj
- .debug_abbrev  0x000019ae      0x268 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/tim.c.obj
- .debug_abbrev  0x00001c16      0x27e CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/usart.c.obj
- .debug_abbrev  0x00001e94       0x24 CMakeFiles/remote_cube_sentry.elf.dir/Core/Startup/startup_stm32f407ighx.s.obj
- .debug_abbrev  0x00001eb8      0x23f CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_abbrev  0x000020f7      0x278 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
- .debug_abbrev  0x0000236f      0x26a CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj
- .debug_abbrev  0x000025d9      0x39b CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_abbrev  0x00002974      0x1d0 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c.obj
- .debug_abbrev  0x00002b44      0x2c0 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- .debug_abbrev  0x00002e04      0x28f CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
- .debug_abbrev  0x00003093      0x268 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
- .debug_abbrev  0x000032fb      0x202 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_abbrev  0x000034fd      0x2c6 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_abbrev  0x000037c3      0x1c2 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c.obj
- .debug_abbrev  0x00003985      0x27c CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .debug_abbrev  0x00003c01      0x26a CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
- .debug_abbrev  0x00003e6b      0x268 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
- .debug_abbrev  0x000040d3      0x32f CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .debug_abbrev  0x00004402      0x476 CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
- .debug_abbrev  0x00004878      0x10a CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
- .debug_abbrev  0x00004982      0x293 CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
- .debug_abbrev  0x00004c15      0x263 CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- .debug_abbrev  0x00004e78      0x3ea CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
- .debug_abbrev  0x00005262      0x45a CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
- .debug_abbrev  0x000056bc      0x3cc CMakeFiles/remote_cube_sentry.elf.dir/application/Atti.c.obj
- .debug_abbrev  0x00005a88      0x316 CMakeFiles/remote_cube_sentry.elf.dir/application/Calibrate.c.obj
- .debug_abbrev  0x00005d9e      0x301 CMakeFiles/remote_cube_sentry.elf.dir/application/Chassis.c.obj
- .debug_abbrev  0x0000609f      0x1f5 CMakeFiles/remote_cube_sentry.elf.dir/application/Detection.c.obj
- .debug_abbrev  0x00006294      0x21e CMakeFiles/remote_cube_sentry.elf.dir/application/Lora.c.obj
- .debug_abbrev  0x000064b2      0x288 CMakeFiles/remote_cube_sentry.elf.dir/application/can_receive.c.obj
- .debug_abbrev  0x0000673a      0x2a8 CMakeFiles/remote_cube_sentry.elf.dir/application/remote.c.obj
- .debug_abbrev  0x000069e2      0x233 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_adc.c.obj
- .debug_abbrev  0x00006c15      0x177 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_buzzer.c.obj
- .debug_abbrev  0x00006d8c      0x1a1 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_can.c.obj
- .debug_abbrev  0x00006f2d      0x110 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_delay.c.obj
- .debug_abbrev  0x0000703d      0x19d CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_flash.c.obj
- .debug_abbrev  0x000071da      0x15c CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_imu_pwm.c.obj
- .debug_abbrev  0x00007336      0x182 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_led.c.obj
- .debug_abbrev  0x000074b8      0x189 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_rc.c.obj
- .debug_abbrev  0x00007641      0x18d CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_spi.c.obj
- .debug_abbrev  0x000077ce      0x182 CMakeFiles/remote_cube_sentry.elf.dir/component/algorithm/AHRS.c.obj
- .debug_abbrev  0x00007950      0x111 CMakeFiles/remote_cube_sentry.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
- .debug_abbrev  0x00007a61      0x184 CMakeFiles/remote_cube_sentry.elf.dir/component/controller/PID.c.obj
- .debug_abbrev  0x00007be5      0x20f CMakeFiles/remote_cube_sentry.elf.dir/component/devices/BMI088Middleware.c.obj
- .debug_abbrev  0x00007df4      0x231 CMakeFiles/remote_cube_sentry.elf.dir/component/devices/BMI088driver.c.obj
+ .debug_abbrev  0x00000b19      0x2b2 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/main.c.obj
+ .debug_abbrev  0x00000dcb      0x1b6 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/rng.c.obj
+ .debug_abbrev  0x00000f81      0x21e CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/spi.c.obj
+ .debug_abbrev  0x0000119f      0x120 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_abbrev  0x000012bf      0x232 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj
+ .debug_abbrev  0x000014f1      0x299 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_abbrev  0x0000178a       0xea CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/sysmem.c.obj
+ .debug_abbrev  0x00001874      0x11e CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/system_stm32f4xx.c.obj
+ .debug_abbrev  0x00001992      0x268 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/tim.c.obj
+ .debug_abbrev  0x00001bfa      0x27e CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/usart.c.obj
+ .debug_abbrev  0x00001e78       0x24 CMakeFiles/remote_cube_sentry.elf.dir/Core/Startup/startup_stm32f407ighx.s.obj
+ .debug_abbrev  0x00001e9c      0x23f CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_abbrev  0x000020db      0x278 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
+ .debug_abbrev  0x00002353      0x26a CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj
+ .debug_abbrev  0x000025bd      0x39b CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_abbrev  0x00002958      0x1d0 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c.obj
+ .debug_abbrev  0x00002b28      0x2c0 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_abbrev  0x00002de8      0x28f CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
+ .debug_abbrev  0x00003077      0x268 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
+ .debug_abbrev  0x000032df      0x202 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_abbrev  0x000034e1      0x2c6 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_abbrev  0x000037a7      0x1c2 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c.obj
+ .debug_abbrev  0x00003969      0x27c CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+ .debug_abbrev  0x00003be5      0x26a CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+ .debug_abbrev  0x00003e4f      0x268 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+ .debug_abbrev  0x000040b7      0x32f CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+ .debug_abbrev  0x000043e6      0x476 CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+ .debug_abbrev  0x0000485c      0x10a CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+ .debug_abbrev  0x00004966      0x293 CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+ .debug_abbrev  0x00004bf9      0x263 CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .debug_abbrev  0x00004e5c      0x3ea CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+ .debug_abbrev  0x00005246      0x45a CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ .debug_abbrev  0x000056a0      0x3cc CMakeFiles/remote_cube_sentry.elf.dir/application/Atti.c.obj
+ .debug_abbrev  0x00005a6c      0x316 CMakeFiles/remote_cube_sentry.elf.dir/application/Calibrate.c.obj
+ .debug_abbrev  0x00005d82      0x301 CMakeFiles/remote_cube_sentry.elf.dir/application/Chassis.c.obj
+ .debug_abbrev  0x00006083      0x1f5 CMakeFiles/remote_cube_sentry.elf.dir/application/Detection.c.obj
+ .debug_abbrev  0x00006278      0x21e CMakeFiles/remote_cube_sentry.elf.dir/application/Lora.c.obj
+ .debug_abbrev  0x00006496      0x288 CMakeFiles/remote_cube_sentry.elf.dir/application/can_receive.c.obj
+ .debug_abbrev  0x0000671e      0x2a8 CMakeFiles/remote_cube_sentry.elf.dir/application/remote.c.obj
+ .debug_abbrev  0x000069c6      0x233 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_adc.c.obj
+ .debug_abbrev  0x00006bf9      0x177 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_buzzer.c.obj
+ .debug_abbrev  0x00006d70      0x1a1 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_can.c.obj
+ .debug_abbrev  0x00006f11      0x110 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_delay.c.obj
+ .debug_abbrev  0x00007021      0x19d CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_flash.c.obj
+ .debug_abbrev  0x000071be      0x15c CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_imu_pwm.c.obj
+ .debug_abbrev  0x0000731a      0x182 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_led.c.obj
+ .debug_abbrev  0x0000749c      0x189 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_rc.c.obj
+ .debug_abbrev  0x00007625      0x18d CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_spi.c.obj
+ .debug_abbrev  0x000077b2      0x182 CMakeFiles/remote_cube_sentry.elf.dir/component/algorithm/AHRS.c.obj
+ .debug_abbrev  0x00007934      0x111 CMakeFiles/remote_cube_sentry.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
+ .debug_abbrev  0x00007a45      0x184 CMakeFiles/remote_cube_sentry.elf.dir/component/controller/PID.c.obj
+ .debug_abbrev  0x00007bc9      0x20f CMakeFiles/remote_cube_sentry.elf.dir/component/devices/BMI088Middleware.c.obj
+ .debug_abbrev  0x00007dd8      0x231 CMakeFiles/remote_cube_sentry.elf.dir/component/devices/BMI088driver.c.obj
 
 .debug_aranges  0x00000000     0x2040
  .debug_aranges
@@ -5976,66 +6012,66 @@ LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb
  .debug_rnglists
                 0x000018b7       0x80 CMakeFiles/remote_cube_sentry.elf.dir/component/devices/BMI088driver.c.obj
 
-.debug_line     0x00000000    0x28173
+.debug_line     0x00000000    0x28180
  .debug_line    0x00000000      0x3df CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/adc.c.obj
  .debug_line    0x000003df      0x611 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/can.c.obj
  .debug_line    0x000009f0      0x334 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/crc.c.obj
  .debug_line    0x00000d24      0x25c CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/dma.c.obj
  .debug_line    0x00000f80      0x567 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/freertos.c.obj
  .debug_line    0x000014e7      0x38e CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/gpio.c.obj
- .debug_line    0x00001875      0x711 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/main.c.obj
- .debug_line    0x00001f86      0x334 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/rng.c.obj
- .debug_line    0x000022ba      0x4fb CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/spi.c.obj
- .debug_line    0x000027b5      0x262 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_line    0x00002a17      0x3b6 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj
- .debug_line    0x00002dcd      0x5f4 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_line    0x000033c1      0x1de CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/sysmem.c.obj
- .debug_line    0x0000359f      0x31e CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/system_stm32f4xx.c.obj
- .debug_line    0x000038bd      0xb80 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/tim.c.obj
- .debug_line    0x0000443d      0x6f3 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/usart.c.obj
- .debug_line    0x00004b30       0x7a CMakeFiles/remote_cube_sentry.elf.dir/Core/Startup/startup_stm32f407ighx.s.obj
- .debug_line    0x00004baa      0x685 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_line    0x0000522f     0x11b4 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
- .debug_line    0x000063e3     0x122a CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj
- .debug_line    0x0000760d      0x930 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_line    0x00007f3d      0x476 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c.obj
- .debug_line    0x000083b3      0xf2a CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- .debug_line    0x000092dd      0x8a2 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
- .debug_line    0x00009b7f      0x79b CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
- .debug_line    0x0000a31a      0x78d CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_line    0x0000aaa7      0xbd2 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_line    0x0000b679      0x659 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c.obj
- .debug_line    0x0000bcd2     0x25c1 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .debug_line    0x0000e293     0x4b11 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
- .debug_line    0x00012da4     0x1df7 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
- .debug_line    0x00014b9b     0x46fa CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .debug_line    0x00019295     0x13db CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
- .debug_line    0x0001a670      0x424 CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
- .debug_line    0x0001aa94      0x79a CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
- .debug_line    0x0001b22e      0x7d3 CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- .debug_line    0x0001ba01     0x1cc3 CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
- .debug_line    0x0001d6c4     0x2a38 CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
- .debug_line    0x000200fc     0x10e9 CMakeFiles/remote_cube_sentry.elf.dir/application/Atti.c.obj
- .debug_line    0x000211e5      0xbf5 CMakeFiles/remote_cube_sentry.elf.dir/application/Calibrate.c.obj
- .debug_line    0x00021dda      0x704 CMakeFiles/remote_cube_sentry.elf.dir/application/Chassis.c.obj
- .debug_line    0x000224de      0x5c1 CMakeFiles/remote_cube_sentry.elf.dir/application/Detection.c.obj
- .debug_line    0x00022a9f      0x4d6 CMakeFiles/remote_cube_sentry.elf.dir/application/Lora.c.obj
- .debug_line    0x00022f75      0x47f CMakeFiles/remote_cube_sentry.elf.dir/application/can_receive.c.obj
- .debug_line    0x000233f4      0x656 CMakeFiles/remote_cube_sentry.elf.dir/application/remote.c.obj
- .debug_line    0x00023a4a      0x419 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_adc.c.obj
- .debug_line    0x00023e63      0x28b CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_buzzer.c.obj
- .debug_line    0x000240ee      0x2c5 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_can.c.obj
- .debug_line    0x000243b3      0x344 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_delay.c.obj
- .debug_line    0x000246f7      0x52e CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_flash.c.obj
- .debug_line    0x00024c25      0x273 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_imu_pwm.c.obj
- .debug_line    0x00024e98      0x299 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_led.c.obj
- .debug_line    0x00025131      0x2f3 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_rc.c.obj
- .debug_line    0x00025424      0xf32 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_spi.c.obj
- .debug_line    0x00026356      0x7af CMakeFiles/remote_cube_sentry.elf.dir/component/algorithm/AHRS.c.obj
- .debug_line    0x00026b05      0x274 CMakeFiles/remote_cube_sentry.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
- .debug_line    0x00026d79      0x438 CMakeFiles/remote_cube_sentry.elf.dir/component/controller/PID.c.obj
- .debug_line    0x000271b1      0x452 CMakeFiles/remote_cube_sentry.elf.dir/component/devices/BMI088Middleware.c.obj
- .debug_line    0x00027603      0xb70 CMakeFiles/remote_cube_sentry.elf.dir/component/devices/BMI088driver.c.obj
+ .debug_line    0x00001875      0x71e CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/main.c.obj
+ .debug_line    0x00001f93      0x334 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/rng.c.obj
+ .debug_line    0x000022c7      0x4fb CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/spi.c.obj
+ .debug_line    0x000027c2      0x262 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_line    0x00002a24      0x3b6 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj
+ .debug_line    0x00002dda      0x5f4 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_line    0x000033ce      0x1de CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/sysmem.c.obj
+ .debug_line    0x000035ac      0x31e CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/system_stm32f4xx.c.obj
+ .debug_line    0x000038ca      0xb80 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/tim.c.obj
+ .debug_line    0x0000444a      0x6f3 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/usart.c.obj
+ .debug_line    0x00004b3d       0x7a CMakeFiles/remote_cube_sentry.elf.dir/Core/Startup/startup_stm32f407ighx.s.obj
+ .debug_line    0x00004bb7      0x685 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_line    0x0000523c     0x11b4 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
+ .debug_line    0x000063f0     0x122a CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj
+ .debug_line    0x0000761a      0x930 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_line    0x00007f4a      0x476 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c.obj
+ .debug_line    0x000083c0      0xf2a CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_line    0x000092ea      0x8a2 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
+ .debug_line    0x00009b8c      0x79b CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
+ .debug_line    0x0000a327      0x78d CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_line    0x0000aab4      0xbd2 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_line    0x0000b686      0x659 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c.obj
+ .debug_line    0x0000bcdf     0x25c1 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+ .debug_line    0x0000e2a0     0x4b11 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+ .debug_line    0x00012db1     0x1df7 CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+ .debug_line    0x00014ba8     0x46fa CMakeFiles/remote_cube_sentry.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+ .debug_line    0x000192a2     0x13db CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+ .debug_line    0x0001a67d      0x424 CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+ .debug_line    0x0001aaa1      0x79a CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+ .debug_line    0x0001b23b      0x7d3 CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .debug_line    0x0001ba0e     0x1cc3 CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+ .debug_line    0x0001d6d1     0x2a38 CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ .debug_line    0x00020109     0x10e9 CMakeFiles/remote_cube_sentry.elf.dir/application/Atti.c.obj
+ .debug_line    0x000211f2      0xbf5 CMakeFiles/remote_cube_sentry.elf.dir/application/Calibrate.c.obj
+ .debug_line    0x00021de7      0x704 CMakeFiles/remote_cube_sentry.elf.dir/application/Chassis.c.obj
+ .debug_line    0x000224eb      0x5c1 CMakeFiles/remote_cube_sentry.elf.dir/application/Detection.c.obj
+ .debug_line    0x00022aac      0x4d6 CMakeFiles/remote_cube_sentry.elf.dir/application/Lora.c.obj
+ .debug_line    0x00022f82      0x47f CMakeFiles/remote_cube_sentry.elf.dir/application/can_receive.c.obj
+ .debug_line    0x00023401      0x656 CMakeFiles/remote_cube_sentry.elf.dir/application/remote.c.obj
+ .debug_line    0x00023a57      0x419 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_adc.c.obj
+ .debug_line    0x00023e70      0x28b CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_buzzer.c.obj
+ .debug_line    0x000240fb      0x2c5 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_can.c.obj
+ .debug_line    0x000243c0      0x344 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_delay.c.obj
+ .debug_line    0x00024704      0x52e CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_flash.c.obj
+ .debug_line    0x00024c32      0x273 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_imu_pwm.c.obj
+ .debug_line    0x00024ea5      0x299 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_led.c.obj
+ .debug_line    0x0002513e      0x2f3 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_rc.c.obj
+ .debug_line    0x00025431      0xf32 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_spi.c.obj
+ .debug_line    0x00026363      0x7af CMakeFiles/remote_cube_sentry.elf.dir/component/algorithm/AHRS.c.obj
+ .debug_line    0x00026b12      0x274 CMakeFiles/remote_cube_sentry.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
+ .debug_line    0x00026d86      0x438 CMakeFiles/remote_cube_sentry.elf.dir/component/controller/PID.c.obj
+ .debug_line    0x000271be      0x452 CMakeFiles/remote_cube_sentry.elf.dir/component/devices/BMI088Middleware.c.obj
+ .debug_line    0x00027610      0xb70 CMakeFiles/remote_cube_sentry.elf.dir/component/devices/BMI088driver.c.obj
 
 .debug_str      0x00000000     0xae8f
  .debug_str     0x00000000      0x758 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/adc.c.obj
