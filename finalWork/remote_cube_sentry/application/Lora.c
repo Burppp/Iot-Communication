@@ -1,21 +1,12 @@
 #include "Lora.h"
-#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include "usart.h"
-#include "stdint.h"
-//#include "stm32l4xx_hal.h"
 
-//extern UART_HandleTypeDef hlpuart1;
-extern uint8_t isPrintf; //定义于 main 函数: 是否打印日志
 #define LPUART1_REC_LEN 1024
 uint8_t bRxBufferUart1[1]; //接收数据
 uint8_t LPUART1_RX_BUF[LPUART1_REC_LEN];//缓存数据
 volatile uint16_t LPUART1_RX_LEN=0;
-uint8_t LPUART1_RX_STA[];
-uint8_t Tran_Data[];
-#define CMD_LEN 100
-char cmdSend[CMD_LEN]; //发送上报数据的 AT 指令
 uint32_t DefaultTimeout=300;//超时
 /*LoRa 模块 AT 指令发送
 * 参数: uint_t *cmd，需要发送的命令
@@ -121,7 +112,6 @@ void LoRa_D_P_Attach(uint8_t isPrintf,uint8_t isReboot)
         //HAL_GPIO_WritePin(PB14_GPIO_Port, PB14_Pin, GPIO_PIN_RESET);
         HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_RESET);
         printf("Attach!\r\n");
-        //请补充代码
     }
 }
 
@@ -147,6 +137,5 @@ void LoRa_D_V_Attach(uint8_t isPrintf,uint8_t isReboot)
         //HAL_GPIO_WritePin(PB14_GPIO_Port, PB14_Pin, GPIO_PIN_RESET);
         HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_RESET);
         printf("Attach!\r\n");
-        //请补充代码
     }
 }

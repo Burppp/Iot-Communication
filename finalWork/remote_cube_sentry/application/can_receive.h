@@ -88,70 +88,11 @@ typedef struct
 
 }motor_3508_t;
 
-typedef struct
-{
-
-    motor_measure_t *motor_measure;
-    //自然状态下pid
-
-    pid_t angle_p;
-
-    pid_t speed_p;
-    //自瞄pid
-
-    pid_t angle_p_auto;
-
-    pid_t speed_p_auto;
-
-
-    fp32 max_relative_angle; //°
-
-    fp32 min_relative_angle; //°
-
-    fp32 relative_angle_get;
-    fp32 relative_angle_set; //°
-
-    fp32 absolute_angle_get;
-    fp32 absolute_angle_set;//rad
-
-    fp32 gyro_set;  //转速设置
-    int16_t give_current; //最终电流值
-
-}motor_6020_t;
-
-
-typedef struct
-{
-    motor_measure_t *motor_measure;
-
-    pid_t angle_p;//角度环pid
-
-    pid_t speed_p;//速度环pid
-
-    fp32 speed;//转速期望值
-
-    int16_t give_current;
-
-}motor_2006_t;
-
 /******************** extern *******************/
 
-
-
 extern motor_measure_t motor_3508_measure[6];
-extern motor_measure_t motor_yaw_measure;
-extern motor_measure_t motor_pitch_measure;
-extern motor_measure_t motor_shoot_measure[4];
 
 void CAN_cmd_motor(CAN_TYPE can_type,can_msg_id_e CMD_ID,int16_t motor1, int16_t motor2, int16_t motor3, int16_t motor4);
-
-extern void CAN_cmd_chassis_rudder(int16_t motor1, int16_t motor2, int16_t motor3, int16_t motor4);
-
-extern fp32 motor_ecd_to_rad_change(uint16_t ecd, uint16_t offset_ecd);
-
-extern fp32 motor_ecd_to_angle_change(uint16_t ecd,uint16_t offset_ecd);
-
-extern void CAN_cmd_communication(CAN_TYPE can_type,can_msg_id_e CMD_ID,fp32 vx,fp32 vy);
 
 #endif
 

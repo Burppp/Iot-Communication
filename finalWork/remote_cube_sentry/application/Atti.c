@@ -75,18 +75,14 @@
   */
 
 #include "Atti.h"
-
 #include "main.h"
-
 #include "cmsis_os.h"
 #include "bsp_imu_pwm.h"
 #include "bsp_spi.h"
 #include "BMI088driver.h"
 #include "PID.h"
 #include "AHRS.h"
-
 #include "Calibrate.h"
-//#include "detect_task.h"
 
 
 #define IMU_temp_PWM(pwm)  imu_pwm_set(pwm)                    //pwm????

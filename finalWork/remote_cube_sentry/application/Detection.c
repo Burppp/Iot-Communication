@@ -6,7 +6,6 @@
 #include "cmsis_os.h"
 #include "bsp_buzzer.h"
 #include "bsp_led.h"
-#include "FreeRTOS.h"
 
 #define DETECT_TASK_INIT_TIME (8000)
 #define buzzer_remind() buzzer_on(1,18888);

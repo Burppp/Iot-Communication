@@ -23,12 +23,9 @@ static fp32 wheel_rpm_ratio = 60.0f / (PERIMETER * M3508_DECELE_RATIO); //车轮
 
 void chassis_init()
 {
-    pid_init(&chassis.chassis_vw_pid, CHASSIS_FOLLOW_GIMBAL_PID_MAX_OUT, (uint32_t) CHASSIS_FOLLOW_GIMBAL_PID_MAX_IOUT,
-             CHASSIS_FOLLOW_GIMBAL_PID_KP, CHASSIS_FOLLOW_GIMBAL_PID_KI, CHASSIS_FOLLOW_GIMBAL_PID_KD);
     //底盘驱动电机速度环初始化和电机数据结构体获取
     for (int i = 0; i < 4; i++)
     {
-
         chassis.motor_chassis[i].motor_measure= motor_3508_measure + i;
 
         pid_init(&chassis.motor_chassis[i].speed_p,

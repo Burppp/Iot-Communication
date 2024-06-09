@@ -6,9 +6,7 @@
 #include "cmsis_os.h"
 #include "main.h"
 #include "Chassis.h"
-#include "math.h"
 #include "Detection.h"
-//#include "launcher.h"
 
 extern CAN_HandleTypeDef hcan1;
 extern CAN_HandleTypeDef hcan2;
@@ -58,10 +56,6 @@ extern CAN_HandleTypeDef hcan2;
 
 
 motor_measure_t motor_3508_measure[6];
-motor_measure_t motor_yaw_measure;
-motor_measure_t motor_pitch_measure;
-motor_measure_t motor_shoot_measure[4];//0:TRIGGER,建为数组方便以后添加
-motor_measure_t motor_2006_measure[1];//TRIGGER
 
 static CAN_TxHeaderTypeDef tx_message;
 static uint8_t can_send_data[8];
