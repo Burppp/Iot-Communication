@@ -2113,14 +2113,6 @@ Discarded input sections
                 0x00000000        0x1 CMakeFiles/remote_cube_sentry.elf.dir/application/Lora.c.obj
  .bss.LPUART1_RX_STA
                 0x00000000        0x1 CMakeFiles/remote_cube_sentry.elf.dir/application/Lora.c.obj
- .text          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/Referee.c.obj
- .data          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/Referee.c.obj
- .bss           0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/Referee.c.obj
- .debug_line    0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/Referee.c.obj
- .debug_str     0x00000000      0x196 CMakeFiles/remote_cube_sentry.elf.dir/application/Referee.c.obj
- .comment       0x00000000       0x56 CMakeFiles/remote_cube_sentry.elf.dir/application/Referee.c.obj
- .ARM.attributes
-                0x00000000       0x34 CMakeFiles/remote_cube_sentry.elf.dir/application/Referee.c.obj
  .text          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/can_receive.c.obj
  .data          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/can_receive.c.obj
  .bss           0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/can_receive.c.obj
@@ -2136,14 +2128,6 @@ Discarded input sections
                 0x00000000       0x28 CMakeFiles/remote_cube_sentry.elf.dir/application/can_receive.c.obj
  .bss.motor_yaw_measure
                 0x00000000       0x28 CMakeFiles/remote_cube_sentry.elf.dir/application/can_receive.c.obj
- .text          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/left_gimbal.c.obj
- .data          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/left_gimbal.c.obj
- .bss           0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/left_gimbal.c.obj
- .debug_line    0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/left_gimbal.c.obj
- .debug_str     0x00000000      0x19a CMakeFiles/remote_cube_sentry.elf.dir/application/left_gimbal.c.obj
- .comment       0x00000000       0x56 CMakeFiles/remote_cube_sentry.elf.dir/application/left_gimbal.c.obj
- .ARM.attributes
-                0x00000000       0x34 CMakeFiles/remote_cube_sentry.elf.dir/application/left_gimbal.c.obj
  .text          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/remote.c.obj
  .data          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/remote.c.obj
  .bss           0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/remote.c.obj
@@ -2156,30 +2140,6 @@ Discarded input sections
                 0x00000000        0xa CMakeFiles/remote_cube_sentry.elf.dir/application/remote.c.obj
  .bss.last_last_rc_s
                 0x00000000        0x4 CMakeFiles/remote_cube_sentry.elf.dir/application/remote.c.obj
- .text          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/right_gimbal.c.obj
- .data          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/right_gimbal.c.obj
- .bss           0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/right_gimbal.c.obj
- .debug_line    0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/right_gimbal.c.obj
- .debug_str     0x00000000      0x19b CMakeFiles/remote_cube_sentry.elf.dir/application/right_gimbal.c.obj
- .comment       0x00000000       0x56 CMakeFiles/remote_cube_sentry.elf.dir/application/right_gimbal.c.obj
- .ARM.attributes
-                0x00000000       0x34 CMakeFiles/remote_cube_sentry.elf.dir/application/right_gimbal.c.obj
- .text          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/steering_wheel.c.obj
- .data          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/steering_wheel.c.obj
- .bss           0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/steering_wheel.c.obj
- .debug_line    0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/steering_wheel.c.obj
- .debug_str     0x00000000      0x19d CMakeFiles/remote_cube_sentry.elf.dir/application/steering_wheel.c.obj
- .comment       0x00000000       0x56 CMakeFiles/remote_cube_sentry.elf.dir/application/steering_wheel.c.obj
- .ARM.attributes
-                0x00000000       0x34 CMakeFiles/remote_cube_sentry.elf.dir/application/steering_wheel.c.obj
- .text          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/travelling_wheel.c.obj
- .data          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/travelling_wheel.c.obj
- .bss           0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/travelling_wheel.c.obj
- .debug_line    0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/application/travelling_wheel.c.obj
- .debug_str     0x00000000      0x19f CMakeFiles/remote_cube_sentry.elf.dir/application/travelling_wheel.c.obj
- .comment       0x00000000       0x56 CMakeFiles/remote_cube_sentry.elf.dir/application/travelling_wheel.c.obj
- .ARM.attributes
-                0x00000000       0x34 CMakeFiles/remote_cube_sentry.elf.dir/application/travelling_wheel.c.obj
  .text          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_adc.c.obj
  .data          0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_adc.c.obj
  .bss           0x00000000        0x0 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_adc.c.obj
@@ -3719,13 +3679,8 @@ LOAD CMakeFiles/remote_cube_sentry.elf.dir/application/Calibrate.c.obj
 LOAD CMakeFiles/remote_cube_sentry.elf.dir/application/Chassis.c.obj
 LOAD CMakeFiles/remote_cube_sentry.elf.dir/application/Detection.c.obj
 LOAD CMakeFiles/remote_cube_sentry.elf.dir/application/Lora.c.obj
-LOAD CMakeFiles/remote_cube_sentry.elf.dir/application/Referee.c.obj
 LOAD CMakeFiles/remote_cube_sentry.elf.dir/application/can_receive.c.obj
-LOAD CMakeFiles/remote_cube_sentry.elf.dir/application/left_gimbal.c.obj
 LOAD CMakeFiles/remote_cube_sentry.elf.dir/application/remote.c.obj
-LOAD CMakeFiles/remote_cube_sentry.elf.dir/application/right_gimbal.c.obj
-LOAD CMakeFiles/remote_cube_sentry.elf.dir/application/steering_wheel.c.obj
-LOAD CMakeFiles/remote_cube_sentry.elf.dir/application/travelling_wheel.c.obj
 LOAD CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_adc.c.obj
 LOAD CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_buzzer.c.obj
 LOAD CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_can.c.obj

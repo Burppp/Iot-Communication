@@ -83,7 +83,7 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 40,
+				"line" : 49,
 				"parent" : 0
 			},
 			{
@@ -112,7 +112,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-O3 -DNDEBUG -std=gnu11 -fdiagnostics-color=always"
+					"fragment" : "-g -std=gnu11 -fdiagnostics-color=always"
 				},
 				{
 					"backtrace" : 6,
@@ -152,7 +152,11 @@
 				},
 				{
 					"backtrace" : 10,
-					"fragment" : "-Ofast"
+					"fragment" : "-Og"
+				},
+				{
+					"backtrace" : 10,
+					"fragment" : "-g"
 				}
 			],
 			"defines" : 
@@ -352,51 +356,46 @@
 				183,
 				185,
 				187,
-				189,
+				190,
 				192,
 				194,
 				196,
-				199,
-				201,
-				203,
-				205,
-				207,
-				209,
-				211,
-				213,
-				215,
-				217,
-				219,
-				221,
-				223,
-				225,
-				227,
+				198,
+				200,
+				202,
+				204,
+				206,
+				208,
+				210,
+				212,
+				214,
+				216,
+				218,
+				220,
+				222,
 				229,
 				231,
 				233,
-				240,
-				242,
-				244,
-				246,
+				235,
+				237,
+				239,
+				241,
+				243,
+				245,
 				248,
 				250,
 				252,
-				254,
-				256,
-				259,
-				261,
-				263,
-				268,
-				269,
-				271,
-				273
+				257,
+				258,
+				260,
+				262
 			]
 		},
 		{
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-O3 -DNDEBUG"
+					"fragment" : "-g"
 				},
 				{
 					"backtrace" : 6,
@@ -444,7 +443,11 @@
 				},
 				{
 					"backtrace" : 10,
-					"fragment" : "-Ofast"
+					"fragment" : "-Og"
+				},
+				{
+					"backtrace" : 10,
+					"fragment" : "-g"
 				}
 			],
 			"defines" : 
@@ -582,7 +585,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-O3 -DNDEBUG",
+				"fragment" : "-g",
 				"role" : "flags"
 			},
 			{
@@ -601,7 +604,7 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "-Wl,-gc-sections,--print-memory-usage,-Map=C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/cmake-build-release/remote_cube_sentry.map",
+				"fragment" : "-Wl,-gc-sections,--print-memory-usage,-Map=C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/cmake-build-debug/remote_cube_sentry.map",
 				"role" : "flags"
 			},
 			{
@@ -757,54 +760,48 @@
 				184,
 				186,
 				188,
-				190,
+				189,
 				191,
 				193,
 				195,
 				197,
-				198,
-				200,
-				202,
-				204,
-				206,
-				208,
-				210,
-				212,
-				214,
-				216,
-				218,
-				220,
-				222,
+				199,
+				201,
+				203,
+				205,
+				207,
+				209,
+				211,
+				213,
+				215,
+				217,
+				219,
+				221,
+				223,
 				224,
+				225,
 				226,
+				227,
 				228,
 				230,
 				232,
 				234,
-				235,
 				236,
-				237,
 				238,
-				239,
-				241,
-				243,
-				245,
+				240,
+				242,
+				244,
+				246,
 				247,
 				249,
 				251,
 				253,
+				254,
 				255,
-				257,
-				258,
-				260,
-				262,
-				264,
-				265,
-				266,
-				267,
-				270,
-				272,
-				274
+				256,
+				259,
+				261,
+				263
 			]
 		},
 		{
@@ -824,7 +821,7 @@
 				172,
 				173,
 				174,
-				275
+				264
 			]
 		},
 		{
@@ -895,44 +892,39 @@
 				183,
 				185,
 				187,
-				189,
+				190,
 				192,
 				194,
 				196,
-				199,
-				201,
-				203,
-				205,
-				207,
-				209,
-				211,
-				213,
-				215,
-				217,
-				219,
-				221,
-				223,
-				225,
-				227,
+				198,
+				200,
+				202,
+				204,
+				206,
+				208,
+				210,
+				212,
+				214,
+				216,
+				218,
+				220,
+				222,
 				229,
 				231,
 				233,
-				240,
-				242,
-				244,
-				246,
+				235,
+				237,
+				239,
+				241,
+				243,
+				245,
 				248,
 				250,
 				252,
-				254,
-				256,
-				259,
-				261,
-				263,
-				268,
-				269,
-				271,
-				273
+				257,
+				258,
+				260,
+				262
 			]
 		}
 	],
@@ -1929,39 +1921,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "application/Referee.c",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "application/Referee.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
 			"path" : "application/can_receive.c",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 1,
 			"path" : "application/can_receive.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "application/left_gimbal.c",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "application/left_gimbal.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "application/protocol_shaob.h",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -1977,40 +1942,7 @@
 		},
 		{
 			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "application/right_gimbal.c",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "application/right_gimbal.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "application/steering_wheel.c",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "application/steering_wheel.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
 			"path" : "application/struct_typedef.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "application/travelling_wheel.c",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "application/travelling_wheel.h",
 			"sourceGroupIndex" : 0
 		},
 		{

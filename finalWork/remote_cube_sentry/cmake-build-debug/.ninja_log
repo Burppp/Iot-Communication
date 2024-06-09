@@ -11,7 +11,7 @@
 38	263	7394824104992945	CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/spi.c.obj	5ef0fc1e78168229
 3	109	7394828718471975	CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/dma.c.obj	7897bc3a3a3258ec
 3	59	7394854216818610	CMakeFiles/remote_cube_sentry.elf.dir/USB_DEVICE/App/usb_device.c.obj	68d4bf4b6e324f51
-3	133	7396259830194656	CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/main.c.obj	d7e655c08346ee58
+2	126	7396260721166082	CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/main.c.obj	d7e655c08346ee58
 1063	1267	7394816017554518	CMakeFiles/remote_cube_sentry.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj	b49826980101cef8
 3	124	7396258031451716	CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/stm32f4xx_it.c.obj	c0cef1b3439f2e98
 30	283	7394824104953014	CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/gpio.c.obj	e7ffc9ff2027fdd7
@@ -102,7 +102,7 @@
 1259	1443	7394824116874185	CMakeFiles/remote_cube_sentry.elf.dir/component/support/CRC8_CRC16.c.obj	90cadf07ff7cf017
 29	123	7396259894511672	CMakeFiles/remote_cube_sentry.elf.dir/connectivity/can_hardwares.c.obj	39a63da782a7eef8
 2255	2578	7394816030755268	CMakeFiles/remote_cube_sentry.elf.dir/component/support/fifo.c.obj	46073a3aff114da7
-120	307	7396259990387539	remote_cube_sentry.elf	f484d48ce99e1c80
+3	189	7396261393016236	remote_cube_sentry.elf	d45f920c4db81004
 40	279	7394816007493763	CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj	6d645384b3f9b8b8
 949	1265	7394824114940044	CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_dwt.c.obj	183556e2927e8e29
 16	99	7396259894187171	CMakeFiles/remote_cube_sentry.elf.dir/application/travelling_wheel.c.obj	ff473f0a788a7187
@@ -112,7 +112,4 @@
 3	164	7396256529721629	CMakeFiles/remote_cube_sentry.elf.dir/component/comunication/can_common.c.obj	42b83b573d4b899c
 15	161	7396254229302488	CMakeFiles/remote_cube_sentry.elf.dir/application/can_receive.c.obj	ef211594d67e09d2
 12	139	7395622279877560	CMakeFiles/remote_cube_sentry.elf.dir/application/Cap.c.obj	2d9572ba671d1dec
-3	317	7396260220205088	build.ninja	24f69ab25783b07
-3	174	7396260250796117	remote_cube_sentry.elf	2f25d2a309bf7579
-2	126	7396260721166082	CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/main.c.obj	d7e655c08346ee58
-126	295	7396260722400786	remote_cube_sentry.elf	2f25d2a309bf7579
+3	317	7396261604486115	build.ninja	24f69ab25783b07
