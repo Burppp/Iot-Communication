@@ -5,7 +5,7 @@ import time
 from pynput import mouse
 
 # 配置串口
-ser = serial.Serial('COM20', 115200, timeout=1)  # 将 'COMx' 替换为你的串口号
+ser = serial.Serial('COM20', 115200, timeout=1)
 
 # 初始化按键状态变量
 key_states = {'w': False, 'a': False, 's': False, 'd': False}
@@ -22,7 +22,6 @@ def send_key_states():
     key_state_string += '1' if mouse_left else '0'
     key_state_string += '1' if mouse_right else '0'
     
-    # 如果当前按键状态字符串和上一次发送的按键状态字符串相同，则不发送串口数据
     if key_state_string == last_sent_key_states:
         return
     
@@ -31,7 +30,7 @@ def send_key_states():
     last_sent_key_states = key_state_string
     print("Sent key states:", frame)
 
-# 监视鼠标点击事件的函数
+# 监视鼠标点击事件
 def on_click(x, y, button, pressed):
     global mouse_left, mouse_right
     if button == mouse.Button.left:
@@ -44,7 +43,7 @@ def on_click(x, y, button, pressed):
 # 创建一个鼠标监听器
 mouse_listener = mouse.Listener(on_click=on_click)
 
-# 开始监听鼠标事件（在新的线程中）
+# 开始监听鼠标事件
 mouse_thread = threading.Thread(target=mouse_listener.start)
 mouse_thread.daemon = True
 mouse_thread.start()
@@ -68,10 +67,6 @@ def LoRa_SendCmd(cmd, result, timeout, isPrintf):
 # LoRa模块透明传输广播模式配置函数
 def LoRa_T_V_Attach(isPrintf, isReboot):
     if isReboot:
-        # 模拟GPIO操作（在实际硬件上需要对应的库）
-        # GPIO.setmode(GPIO.BCM)
-        # GPIO.setup(15, GPIO.OUT)
-        # GPIO.output(15, GPIO.HIGH)
         time.sleep(1)
         
         LoRa_SendCmd("AT+UART=7,0\r\n", "OK", 1000, isPrintf)   # baudrate=115200，无校验
@@ -82,8 +77,7 @@ def LoRa_T_V_Attach(isPrintf, isReboot):
         LoRa_SendCmd("AT+CWMODE=0\r\n", "OK", 1000, isPrintf)   # 一般模式
         LoRa_SendCmd("AT+ADDR=FF,FF\r\n", "OK", 1000, isPrintf) # 地址65535
         LoRa_SendCmd("AT+FLASH=1\r\n", "OK", 1000, isPrintf)    # 掉电后保存
-        
-        # GPIO.output(15, GPIO.LOW)
+
         print("Attach!")
 
 # 调用LoRa配置函数（根据需要设置是否打印Log和是否重启）

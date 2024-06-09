@@ -50,17 +50,22 @@ void chassis_speed_update()
     if(!wasdLR[0] && !wasdLR[2])
         chassis.vx = 0;
 
-    if(wasdLR[1])
-        chassis.vy -= deltaSpeed;
-    if(wasdLR[3])
-        chassis.vy += deltaSpeed;
+    if(wasdLR[1] || wasdLR[3])
+        chassis.vw = (wasdLR[1] - wasdLR[3]) * 5;
     if(!wasdLR[1] && !wasdLR[3])
-        chassis.vy = 0;
-
-    if(wasdLR[4] || wasdLR[5])
-        chassis.vw = (wasdLR[4] - wasdLR[5]) * 5;
-    if(!wasdLR[4] && !wasdLR[5])
         chassis.vw = 0;
+
+//    if(wasdLR[1])
+//        chassis.vy -= deltaSpeed;
+//    if(wasdLR[3])
+//        chassis.vy += deltaSpeed;
+//    if(!wasdLR[1] && !wasdLR[3])
+//        chassis.vy = 0;
+
+//    if(wasdLR[4] || wasdLR[5])
+//        chassis.vw = (wasdLR[4] - wasdLR[5]) * 5;
+//    if(!wasdLR[4] && !wasdLR[5])
+//        chassis.vw = 0;
 
     VAL_LIMIT(chassis.vx, -400, 400);
     VAL_LIMIT(chassis.vy, -400, 400);
