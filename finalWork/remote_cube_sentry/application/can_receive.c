@@ -84,7 +84,14 @@ void CAN_cmd_motor(CAN_TYPE can_type, can_msg_id_e CMD_ID, int16_t motor1, int16
     can_send_data[7] = motor4;
 
     if (can_type == CAN_1) {
-        HAL_CAN_AddTxMessage(&hcan1, &tx_message, can_send_data, &send_mail_box);
+//        HAL_CAN_AddTxMessage(&hcan1, &tx_message, can_send_data, &send_mail_box);
+        if(HAL_CAN_AddTxMessage(&hcan1, &tx_message, can_send_data, (uint32_t*)CAN_TX_MAILBOX0) != HAL_OK) //
+        {
+            if(HAL_CAN_AddTxMessage(&hcan1, &tx_message, can_send_data, (uint32_t*)CAN_TX_MAILBOX1) != HAL_OK)
+            {
+                HAL_CAN_AddTxMessage(&hcan1, &tx_message, can_send_data, (uint32_t*)CAN_TX_MAILBOX2);
+            }
+        }
     } else if (can_type == CAN_2) {
         HAL_CAN_AddTxMessage(&hcan2, &tx_message, can_send_data, &send_mail_box);
     }
@@ -132,6 +139,10 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
     }
 }
 
+void HAL_CAN_RxFifo1MsgPendingCallback(CAN_HandleTypeDef *hcan)
+{
+
+}
 
 fp32 motor_ecd_to_rad_change(uint16_t ecd, uint16_t offset_ecd) {
     int32_t relative_ecd = ecd - offset_ecd;
