@@ -1,0 +1,3 @@
+C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/cmake-build-release/CMakeFiles/remote_cube_sentry.elf.dir
+C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/cmake-build-release/CMakeFiles/edit_cache.dir
+C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/cmake-build-release/CMakeFiles/rebuild_cache.dir
