@@ -54,8 +54,7 @@ extern CAN_HandleTypeDef hcan2;
 #define wheel_circumference (70*2*3.14f)
 /******************** variable *******************/
 
-
-motor_measure_t motor_3508_measure[6];
+motor_measure_t motor_2006_measure[6];
 
 static CAN_TxHeaderTypeDef tx_message;
 static uint8_t can_send_data[8];
@@ -103,22 +102,22 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
     if (hcan == &hcan1) {
         switch (rx_header.StdId) {
             case CAN_CHASSIS_3508_MOTOR_RF: {
-                get_motor_measure(&motor_3508_measure[RF], rx_data);
+                get_motor_measure(&motor_2006_measure[RF], rx_data);
                 detect_handle(DETECT_CHASSIS_3508_RF);
             }break;
 
             case CAN_CHASSIS_3508_MOTOR_LF: {
-                get_motor_measure(&motor_3508_measure[LF], rx_data);
+                get_motor_measure(&motor_2006_measure[LF], rx_data);
                 detect_handle(DETECT_CHASSIS_3508_LF);
             }break;
 
             case CAN_CHASSIS_3508_MOTOR_LB: {
-                get_motor_measure(&motor_3508_measure[LB], rx_data);
+                get_motor_measure(&motor_2006_measure[LB], rx_data);
                 detect_handle(DETECT_CHASSIS_3508_LB);
             }break;
 
             case CAN_CHASSIS_3508_MOTOR_RB: {
-                get_motor_measure(&motor_3508_measure[RB], rx_data);
+                get_motor_measure(&motor_2006_measure[RB], rx_data);
                 detect_handle(DETECT_CHASSIS_3508_RB);
             }break;
 

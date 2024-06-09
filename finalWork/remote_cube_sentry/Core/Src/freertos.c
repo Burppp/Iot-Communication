@@ -54,13 +54,8 @@ osThreadId can_decode_task_handle;
 osThreadId defaultTaskHandle;
 osThreadId CalibrateTaskHandle;
 osThreadId ChassisTaskHandle;
-osThreadId gimbalTaskHandle;
 osThreadId imuTaskHandle;
 osThreadId detectTaskHandle;
-osThreadId steering_wheelTaskHandle;
-osThreadId RefereeTaskHandle;
-osThreadId left_gimbalTaskHandle;
-osThreadId right_gimbalTasHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -70,15 +65,9 @@ osThreadId right_gimbalTasHandle;
 void StartDefaultTask(void const * argument);
 void calibrate_task(void const * argument);
 void chassis_task(void const * argument);
-void gimbal_task(void const * argument);
 void INS_task(void const * argument);
 void detect_task(void const * argument);
-void Referee_send_task(void const * argument);
-void left_gimbal(void const * argument);
-void right_gimbal(void const * argument);
-//void STR_ctrl(void const * argument);
 
-extern void MX_USB_DEVICE_Init(void);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
 /* GetIdleTaskMemory prototype (linked to static allocation support) */
@@ -96,10 +85,6 @@ void vApplicationGetIdleTaskMemory( StaticTask_t **ppxIdleTaskTCBBuffer, StackTy
     /* place for user code */
 }
 QueueHandle_t CDC_send_queue;
-extern void usb_task(void const * argument);
-extern void decode_task(void const * arg);
-
-_Noreturn extern void can_decode_task(void const * argument);
 /* USER CODE END GET_IDLE_TASK_MEMORY */
 
 /**
@@ -143,10 +128,6 @@ void MX_FREERTOS_Init(void) {
   osThreadDef(ChassisTask, chassis_task, osPriorityLow, 0, 512);
   ChassisTaskHandle = osThreadCreate(osThread(ChassisTask), NULL);
 
-  /* definition and creation of gimbalTask */
-//  osThreadDef(gimbalTask, gimbal_task, osPriorityHigh, 0, 512);
-//  gimbalTaskHandle = osThreadCreate(osThread(gimbalTask), NULL);
-
   /* definition and creation of imuTask */
   osThreadDef(imuTask, INS_task, osPriorityIdle, 0, 512);
   imuTaskHandle = osThreadCreate(osThread(imuTask), NULL);
@@ -154,32 +135,6 @@ void MX_FREERTOS_Init(void) {
   /* definition and creation of detectTask */
   osThreadDef(detectTask, detect_task, osPriorityIdle, 0, 128);
   detectTaskHandle = osThreadCreate(osThread(detectTask), NULL);
-
-  /* definition and creation of RefereeTask */
-//  osThreadDef(RefereeTask, Referee_send_task, osPriorityNormal, 0, 128);
-//  RefereeTaskHandle = osThreadCreate(osThread(RefereeTask), NULL);
-
-  /* definition and creation of left_gimbalTask */
-//  osThreadDef(left_gimbalTask, left_gimbal, osPriorityNormal, 0, 128);
-//  left_gimbalTaskHandle = osThreadCreate(osThread(left_gimbalTask), NULL);
-
-  /* definition and creation of right_gimbalTas */
-//  osThreadDef(right_gimbalTas, right_gimbal, osPriorityNormal, 0, 128);
-//  right_gimbalTasHandle = osThreadCreate(osThread(right_gimbalTas), NULL);
-
-  /* USER CODE BEGIN RTOS_THREADS */
-    /* add threads, ... */
-//    osThreadDef(USBtask,usb_task,osPriorityHigh,0,128);
-//    usb_task_handle= osThreadCreate(osThread(USBtask),NULL);
-
-//    osThreadDef(DecodeTask, decode_task, osPriorityHigh, 0, 128);
-//    decode_task_handle = osThreadCreate(osThread(DecodeTask), NULL);
-
-//    osThreadDef(strTask, STR_ctrl, osPriorityRealtime, 0, 128);
-//    steering_wheelTaskHandle = osThreadCreate(osThread(strTask), NULL);
-
-//    osThreadDef(traTask, TRA_ctrl, osPriorityRealtime, 0, 128);
-//    travelling_wheelTaskHandle = osThreadCreate(osThread(traTask), NULL);
   /* USER CODE END RTOS_THREADS */
 
 }

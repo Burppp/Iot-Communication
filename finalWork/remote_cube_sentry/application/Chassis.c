@@ -26,16 +26,14 @@ void chassis_init()
     //底盘驱动电机速度环初始化和电机数据结构体获取
     for (int i = 0; i < 4; i++)
     {
-        chassis.motor_chassis[i].motor_measure= motor_3508_measure + i;
-
+        chassis.motor_chassis[i].motor_measure= motor_2006_measure + i;
         pid_init(&chassis.motor_chassis[i].speed_p,
-                 CHASSIS_3508_PID_MAX_OUT,
-                 CHASSIS_3508_PID_MAX_IOUT,
-                 CHASSIS_3508_PID_KP,
-                 CHASSIS_3508_PID_KI,
-                 CHASSIS_3508_PID_KD);
+                 CHASSIS_2006_PID_MAX_OUT,
+                 CHASSIS_2006_PID_MAX_IOUT,
+                 CHASSIS_2006_PID_KP,
+                 CHASSIS_2006_PID_KI,
+                 CHASSIS_2006_PID_KD);
     }
-
 }
 
 void chassis_speed_update()
@@ -48,7 +46,7 @@ void chassis_speed_update()
         chassis.vx = 0;
 
     if(wasdLR[1] || wasdLR[3])
-        chassis.vw = (wasdLR[1] - wasdLR[3]) * 5;
+        chassis.vw = (wasdLR[1] - wasdLR[3]) * 8;
     if(!wasdLR[1] && !wasdLR[3])
         chassis.vw = 0;
 

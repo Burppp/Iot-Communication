@@ -73,7 +73,6 @@ void LoRa_T_V_Attach(uint8_t isPrintf,uint8_t isReboot)
 {
     if(isReboot == 1)
     {
-        //HAL_GPIO_WritePin(PB14_GPIO_Port, PB14_Pin, GPIO_PIN_SET);
         HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);
         HAL_Delay(1000);
         LoRa_SendCmd((uint8_t *)"AT+UART=7,0\r\n", (uint8_t *)"OK", DefaultTimeout, isPrintf);//baudrate=115200，无校验
@@ -84,7 +83,6 @@ void LoRa_T_V_Attach(uint8_t isPrintf,uint8_t isReboot)
         LoRa_SendCmd((uint8_t *)"AT+CWMODE=0\r\n", (uint8_t *)"OK", DefaultTimeout, isPrintf);//一般模式
         LoRa_SendCmd((uint8_t *)"AT+ADDR=FF,FF\r\n", (uint8_t *)"OK",DefaultTimeout, isPrintf);//地址65535
         LoRa_SendCmd((uint8_t *)"AT+FLASH=1\r\n", (uint8_t *)"OK", DefaultTimeout, isPrintf);//掉电后保存
-        //HAL_GPIO_WritePin(PB14_GPIO_Port, PB14_Pin, GPIO_PIN_RESET);
         HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_RESET);
         printf("Attach!\r\n");
     }

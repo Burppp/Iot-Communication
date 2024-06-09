@@ -90,7 +90,7 @@ typedef struct
 
 /******************** extern *******************/
 
-extern motor_measure_t motor_3508_measure[6];
+extern motor_measure_t motor_2006_measure[6];
 
 void CAN_cmd_motor(CAN_TYPE can_type,can_msg_id_e CMD_ID,int16_t motor1, int16_t motor2, int16_t motor3, int16_t motor4);
 

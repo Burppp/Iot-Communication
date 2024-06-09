@@ -19,7 +19,7 @@
 #include "math.h"
 
 /*define*/
-//底盘在motor_3508_measure中的标号
+//底盘在motor_2006_measure中的标号
 typedef enum {
     RF=0,
     LF,
@@ -31,11 +31,11 @@ typedef enum {
 
 #define CHASSIS_TASK_INIT_TIME 157
 
-#define CHASSIS_3508_PID_KP     7.0f
-#define CHASSIS_3508_PID_KI     0.0f//1.0f
-#define CHASSIS_3508_PID_KD     0.0f
-#define CHASSIS_3508_PID_MAX_OUT 8000.0f
-#define CHASSIS_3508_PID_MAX_IOUT 1000.0f
+#define CHASSIS_2006_PID_KP     7.0f
+#define CHASSIS_2006_PID_KI     0.0f//1.0f
+#define CHASSIS_2006_PID_KD     0.0f
+#define CHASSIS_2006_PID_MAX_OUT 8000.0f
+#define CHASSIS_2006_PID_MAX_IOUT 1000.0f
 
 #define chassis_start_buzzer buzzer_on  (31, 19999)
 #define chassis_buzzer_off   buzzer_off()            //buzzer off，关闭蜂鸣器
