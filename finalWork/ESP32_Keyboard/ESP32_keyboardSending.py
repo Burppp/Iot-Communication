@@ -39,23 +39,18 @@ def send_key_states():
     
     while True:
         if ser.in_waiting > 0:
-            # 读取串口接收的一个字节
             response = ser.read(1)[0]
-            # decoded_response = response.decode('ascii')
 
             print("response = ", response)
             print("sequense_number = ", sequence_number)
 
-            # 检查接收的字节是否与前一个序列号相同
             if response == sequence_number:
-                # 序列号加1，循环从1到9
                 sequence_number = sequence_number + 1 if sequence_number < 9 else 1
                 break
             else:
-                # 重新发送上一帧
                 ser.write(last_sent_frame.encode())
                 print("Resent key states:", last_sent_frame)
-                time.sleep(0.1)  # 等待一小段时间再重发，避免过度占用资源
+                time.sleep(0.1)
 
 # 监视鼠标点击事件
 # def on_click(x, y, button, pressed):
