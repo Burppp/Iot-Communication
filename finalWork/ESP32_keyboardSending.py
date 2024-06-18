@@ -41,16 +41,21 @@ def send_key_states():
         if ser.in_waiting > 0:
             response = ser.read(1)[0]
 
-            print("response = ", response)
-            print("sequense_number = ", sequence_number)
-
-            if response == sequence_number:
-                sequence_number = sequence_number + 1 if sequence_number < 9 else 1
+            if(not response):
+                print(f"Received nothing.")
                 break
+
             else:
-                ser.write(last_sent_frame.encode())
-                print("Resent key states:", last_sent_frame)
-                time.sleep(0.1)
+                print("response = ", response)
+                print("sequense_number = ", sequence_number)
+
+                if response == sequence_number:
+                    sequence_number = sequence_number + 1 if sequence_number < 9 else 1
+                    break
+                else:
+                    ser.write(last_sent_frame.encode())
+                    print("Resent key states:", last_sent_frame)
+            time.sleep(0.1)
 
 # 监视鼠标点击事件
 # def on_click(x, y, button, pressed):
