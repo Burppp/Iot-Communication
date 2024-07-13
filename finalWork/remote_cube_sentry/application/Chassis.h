@@ -61,6 +61,7 @@ typedef struct
     fp32 vy_pc;
     fp32 vw_pc;
 
+    uint8_t relax;
 } chassis_t;
 
 //函数声明

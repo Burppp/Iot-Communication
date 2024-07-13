@@ -10,6 +10,7 @@ chassis_t chassis = {
         .vx = 0,
         .vy = 0,
         .vw = 0,
+        .relax = 1
 };
 extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart6;
@@ -28,6 +29,7 @@ motor_t motorL;
 motor_t motorR;
 pid_t standstill_pid;
 float speed_out_r;
+float target_roll = -0.8f;//-1.9
 extern fp32 INS_angle[3];
 /*程序主体*/
 
@@ -47,9 +49,9 @@ void chassis_init()
     chassis.vx = 0;
     chassis.vw = 0;
 
-    pid_init(&standstill_pid, 1000, 1000, 38, 0, 750);
-    pid_init(&motorL.pid, 500, 200, 14, 0.00f, 90);
-    pid_init(&motorR.pid, 500, 200, 14, 0.00f, 90);
+    pid_init(&standstill_pid, 1000, 1000, 38, 0.0, 750);//30 0.2 1500
+    pid_init(&motorL.pid, 500, 200, 24, 0.00f, 90);
+    pid_init(&motorR.pid, 500, 200, 24, 0.00f, 90);
     first_Kalman_Create(&motorR.kalman, 1, 1);
     first_Kalman_Create(&motorL.kalman, 1, 1);
 }
@@ -68,6 +70,13 @@ void chassis_speed_update()
     if(!wasdLR[1] && !wasdLR[3])
         chassis.vw = 0;
 
+    if(wasdLR[4])
+    {
+        chassis.relax = 1;
+        //standstill_pid.iout = 0;
+    }
+    else
+        chassis.relax = 0;
 //    if(wasdLR[1])
 //        chassis.vy -= deltaSpeed;
 //    if(wasdLR[3])
@@ -123,26 +132,37 @@ _Noreturn void chassis_task(void const *pvParameters) {
 
         chassis_speed_update();
 
-        speed_set=(float)(chassis.vx) * 0.03f;
-        turn_speed_set=(float)(chassis.vw)*0.08f;
-        ins_angle[0]=INS_angle[0]*MOTOR_RAD_TO_ANGLE;
-        ins_angle[1]=INS_angle[1]*MOTOR_RAD_TO_ANGLE;
-        ins_angle[2]=INS_angle[2]*MOTOR_RAD_TO_ANGLE;
+        if(chassis.relax == 1)
+        {
+            speed_set = (float) (chassis.vx) * 0.03f;
+            turn_speed_set = (float) (chassis.vw) * 0.08f;
+            ins_angle[0] = INS_angle[0] * MOTOR_RAD_TO_ANGLE;
+            ins_angle[1] = INS_angle[1] * MOTOR_RAD_TO_ANGLE;
+            ins_angle[2] = INS_angle[2] * MOTOR_RAD_TO_ANGLE;
 
-        first_Kalman_Filter(&motorL.kalman, motorL.speed);
-        first_Kalman_Filter(&motorR.kalman, motorR.speed);
-        float angle_loop_out= pid_calc(&standstill_pid, ins_angle[2], -0.8f);
-        aver_speed=(-motorL.kalman.X_now+motorR.kalman.X_now)/2;
-        speed_out_r=pid_calc(&motorR.pid, aver_speed, speed_set);
-        motorR.give_current=angle_loop_out+speed_out_r+turn_speed_set;//
-        motorL.give_current=-angle_loop_out-speed_out_r+turn_speed_set;//
-        change_current_to_pwm(&motorL);
-        change_current_to_pwm(&motorR);
-        can_send_motor_lg(&motorL,&motorR);
+            first_Kalman_Filter(&motorL.kalman, motorL.speed);
+            first_Kalman_Filter(&motorR.kalman, motorR.speed);
+            float angle_loop_out = pid_calc(&standstill_pid, ins_angle[2], target_roll);
+            aver_speed = (-motorL.kalman.X_now + motorR.kalman.X_now) / 2;
+            speed_out_r = pid_calc(&motorR.pid, aver_speed, speed_set);
+            motorR.give_current = angle_loop_out + speed_out_r + turn_speed_set;
+            motorL.give_current = -angle_loop_out - speed_out_r + turn_speed_set;
+            change_current_to_pwm(&motorL);
+            change_current_to_pwm(&motorR);
+            can_send_motor_lg(&motorL, &motorR);
+        }
+        else if(chassis.relax == 0)
+        {
+            motorR.give_current = 0;
+            motorL.give_current = 0;
+            change_current_to_pwm(&motorL);
+            change_current_to_pwm(&motorR);
+            can_send_motor_lg(&motorL, &motorR);
+        }
 
         xTaskResumeAll();
 
-        vTaskDelay(1);
+        vTaskDelay(10);
     }
 
 }

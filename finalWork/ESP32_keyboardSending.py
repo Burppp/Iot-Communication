@@ -8,7 +8,7 @@ import time
 ser = serial.Serial('COM20', 115200, timeout=1)
 
 # 初始化按键状态变量
-key_states = {'w': False, 'a': False, 's': False, 'd': False}
+key_states = {'w': False, 'a': False, 's': False, 'd': False, 'x': False}
 mouse_left = False
 mouse_right = False
 
@@ -24,7 +24,7 @@ key_pressed_time = {key: None for key in key_states}
 def send_key_states():
     global last_sent_key_states, last_sent_frame, sequence_number
     
-    key_state_string = ''.join(['1' if key_states[key] else '0' for key in ['w', 'a', 's', 'd']])
+    key_state_string = ''.join(['1' if key_states[key] else '0' for key in ['w', 'a', 's', 'd', 'x']])
     key_state_string += '1' if mouse_left else '0'
     key_state_string += '1' if mouse_right else '0'
     

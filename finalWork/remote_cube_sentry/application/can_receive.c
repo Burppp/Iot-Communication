@@ -59,7 +59,8 @@ motor_measure_t motor_2006_measure[6];
 static CAN_TxHeaderTypeDef tx_message;
 static uint8_t can_send_data[8];
 
-
+extern motor_t motorL;
+extern motor_t motorR;
 //车轮电机的发送函数
 void CAN_cmd_motor(CAN_TYPE can_type, can_msg_id_e CMD_ID, int16_t motor1, int16_t motor2, int16_t motor3, int16_t motor4) {
     uint32_t send_mail_box;
@@ -110,7 +111,6 @@ void can_send_motor_lg(motor_t *m1, motor_t *m2)
     HAL_CAN_AddTxMessage(&hcan2, &tx_message, buffer, &send_mail_box);
 }
 
-
 void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
     CAN_RxHeaderTypeDef rx_header;
 
@@ -118,35 +118,16 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 
     HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &rx_header, rx_data);
 
-    if (hcan == &hcan1) {
+    if (hcan == &hcan2) {
         switch (rx_header.StdId) {
-            case CAN_CHASSIS_3508_MOTOR_RF: {
-                get_motor_measure(&motor_2006_measure[RF], rx_data);
-                detect_handle(DETECT_CHASSIS_3508_RF);
+            case 0x0002: {
+                float rpm_l, rpm_r;
+                memcpy(&rpm_l, rx_data, 4);
+                memcpy(&rpm_r, rx_data + 4, 4);
+                motorL.speed = rpm_l*3.14159265f*6.7f;
+                motorR.speed = rpm_r*3.14159265f*6.7f;
             }break;
 
-            case CAN_CHASSIS_3508_MOTOR_LF: {
-                get_motor_measure(&motor_2006_measure[LF], rx_data);
-                detect_handle(DETECT_CHASSIS_3508_LF);
-            }break;
-
-            case CAN_CHASSIS_3508_MOTOR_LB: {
-                get_motor_measure(&motor_2006_measure[LB], rx_data);
-                detect_handle(DETECT_CHASSIS_3508_LB);
-            }break;
-
-            case CAN_CHASSIS_3508_MOTOR_RB: {
-                get_motor_measure(&motor_2006_measure[RB], rx_data);
-                detect_handle(DETECT_CHASSIS_3508_RB);
-            }break;
-
-            default:
-                break;
-        }
-    } else if (hcan == &hcan2) {
-        switch (rx_header.StdId) {
-            default:
-                break;
         }
     }
 }

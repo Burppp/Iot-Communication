@@ -369,7 +369,7 @@ void DMA2_Stream6_IRQHandler(void)
 }
 
 /* USER CODE BEGIN 1 */
-int8_t wasdLR[6] = {0};
+int8_t wasdLR[7] = {0};
 uint8_t num = 0;
 uint8_t *sequence_num = NULL;
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
@@ -384,12 +384,13 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
         {
             num = LPUART1_RX_BUF[LPUART1_RX_LEN - 8] - '0';
             sequence_num = &num;
-            wasdLR[0] = LPUART1_RX_BUF[LPUART1_RX_LEN - 7] - '0';
-            wasdLR[1] = LPUART1_RX_BUF[LPUART1_RX_LEN - 6] - '0';
-            wasdLR[2] = LPUART1_RX_BUF[LPUART1_RX_LEN - 5] - '0';
-            wasdLR[3] = LPUART1_RX_BUF[LPUART1_RX_LEN - 4] - '0';
-            wasdLR[4] = LPUART1_RX_BUF[LPUART1_RX_LEN - 3] - '0';
-            wasdLR[5] = LPUART1_RX_BUF[LPUART1_RX_LEN - 2] - '0';
+            wasdLR[0] = LPUART1_RX_BUF[LPUART1_RX_LEN - 8] - '0';
+            wasdLR[1] = LPUART1_RX_BUF[LPUART1_RX_LEN - 7] - '0';
+            wasdLR[2] = LPUART1_RX_BUF[LPUART1_RX_LEN - 6] - '0';
+            wasdLR[3] = LPUART1_RX_BUF[LPUART1_RX_LEN - 5] - '0';
+            wasdLR[4] = LPUART1_RX_BUF[LPUART1_RX_LEN - 4] - '0';//space
+            wasdLR[5] = LPUART1_RX_BUF[LPUART1_RX_LEN - 3] - '0';
+            wasdLR[6] = LPUART1_RX_BUF[LPUART1_RX_LEN - 2] - '0';
             if(sequence_num)
                 HAL_UART_Transmit(&huart1, (uint8_t *)sequence_num, 1, 100);
         }
