@@ -22,6 +22,7 @@
 #define _CAN_RECEIVE_H_
 #include "struct_typedef.h"
 #include "PID.h"
+#include "filter.h"
 /******************** define *******************/
 
 #define HALF_ECD_RANGE  4096
@@ -88,11 +89,21 @@ typedef struct
 
 }motor_3508_t;
 
+typedef struct {
+    float speed;
+    uint16_t pwm1;
+    uint16_t pwm2;
+    pid_t pid;
+    float give_current;
+    first_kalman_filter_t kalman;
+}motor_t;
+
 /******************** extern *******************/
 
 extern motor_measure_t motor_2006_measure[6];
 
 void CAN_cmd_motor(CAN_TYPE can_type,can_msg_id_e CMD_ID,int16_t motor1, int16_t motor2, int16_t motor3, int16_t motor4);
+extern void can_send_motor_lg(motor_t *m1, motor_t *m2);
 
 #endif
 

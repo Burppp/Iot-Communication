@@ -91,6 +91,25 @@ void CAN_cmd_motor(CAN_TYPE can_type, can_msg_id_e CMD_ID, int16_t motor1, int16
 
 }
 
+void can_send_motor_lg(motor_t *m1, motor_t *m2)
+{
+    uint32_t send_mail_box;
+    tx_message.StdId = 0x0001;
+    tx_message.IDE = CAN_ID_STD;
+    tx_message.RTR = CAN_RTR_DATA;
+    tx_message.DLC = 0x08;
+    uint8_t buffer[8];
+    buffer[0]=m1->pwm1;
+    buffer[1]=m1->pwm1>>8;
+    buffer[2]=m1->pwm2;
+    buffer[3]=m1->pwm2>>8;
+    buffer[4]=m2->pwm1;
+    buffer[5]=m2->pwm1>>8;
+    buffer[6]=m2->pwm2;
+    buffer[7]=m2->pwm2>>8;
+    HAL_CAN_AddTxMessage(&hcan2, &tx_message, buffer, &send_mail_box);
+}
+
 
 void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
     CAN_RxHeaderTypeDef rx_header;

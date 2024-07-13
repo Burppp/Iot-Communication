@@ -66,7 +66,5 @@ typedef struct
 //函数声明
 _Noreturn extern void chassis_task(void const *pvParameters);
 void chassis_speed_update();
-void chassis_wheel_cal();
-//
 #endif
 
