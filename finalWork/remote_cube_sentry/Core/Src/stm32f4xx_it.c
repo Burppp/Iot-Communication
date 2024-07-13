@@ -374,6 +374,7 @@ uint8_t num = 0;
 uint8_t *sequence_num = NULL;
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
+
     if(huart->Instance == USART1)
     {
         LPUART1_RX_BUF[LPUART1_RX_LEN++]=bRxBufferUart1[0];
