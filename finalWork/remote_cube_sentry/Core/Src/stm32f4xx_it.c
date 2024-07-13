@@ -382,7 +382,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
         HAL_UART_Transmit(&huart6, &bRxBufferUart1[0], 1, 100);
         if(bRxBufferUart1[0] == 'j')
         {
-            num = LPUART1_RX_BUF[LPUART1_RX_LEN - 8] - '0';
+            num = LPUART1_RX_BUF[LPUART1_RX_LEN - 9] - '0';
             sequence_num = &num;
             wasdLR[0] = LPUART1_RX_BUF[LPUART1_RX_LEN - 8] - '0';
             wasdLR[1] = LPUART1_RX_BUF[LPUART1_RX_LEN - 7] - '0';

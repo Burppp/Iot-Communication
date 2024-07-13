@@ -16,7 +16,7 @@ extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart6;
 extern uint8_t bRxBufferUart1[1]; //接收数据
 extern int8_t wasdLR[6];
-fp32 deltaSpeed = 0.5;
+fp32 deltaSpeed = 2.5;
 static fp32 rotate_ratio_f = ((Wheel_axlespacing + Wheel_spacing) / 2.0f - GIMBAL_OFFSET); //rad 0.4195左右
 static fp32 rotate_ratio_b = ((Wheel_axlespacing + Wheel_spacing) / 2.0f + GIMBAL_OFFSET);//0.4195左右
 static fp32 wheel_rpm_ratio = 60.0f / (PERIMETER * M3508_DECELE_RATIO); //车轮转速比 2405左右
@@ -49,7 +49,7 @@ void chassis_init()
     chassis.vx = 0;
     chassis.vw = 0;
 
-    pid_init(&standstill_pid, 1000, 1000, 38, 0.0, 750);//30 0.2 1500
+    pid_init(&standstill_pid, 1000, 1000, 38, 0.0, 750);
     pid_init(&motorL.pid, 500, 200, 24, 0.00f, 90);
     pid_init(&motorR.pid, 500, 200, 24, 0.00f, 90);
     first_Kalman_Create(&motorR.kalman, 1, 1);
