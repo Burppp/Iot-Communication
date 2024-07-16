@@ -91,10 +91,12 @@ typedef struct
 
 typedef struct {
     float speed;
+    float speed_last;
     uint16_t pwm1;
     uint16_t pwm2;
     pid_t pid;
     float give_current;
+    float feedforward;
     first_kalman_filter_t kalman;
 }motor_t;
 

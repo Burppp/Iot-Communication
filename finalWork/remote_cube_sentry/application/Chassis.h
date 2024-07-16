@@ -31,6 +31,8 @@ typedef enum {
 
 #define CHASSIS_TASK_INIT_TIME 157
 
+#define CHASSIS_PERIOD 10
+
 #define CHASSIS_2006_PID_KP     7.0f
 #define CHASSIS_2006_PID_KI     0.0f//1.0f
 #define CHASSIS_2006_PID_KD     0.0f

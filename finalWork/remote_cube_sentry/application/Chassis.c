@@ -24,12 +24,14 @@ static fp32 wheel_rpm_ratio = 60.0f / (PERIMETER * M3508_DECELE_RATIO); //车轮
 float speed_set;
 float aver_speed;
 float turn_speed_set;
-float ins_angle[3];
+float ins_angle[6];
 motor_t motorL;
 motor_t motorR;
 pid_t standstill_pid;
 float speed_out_r;
 float target_roll = -0.8f;//-1.9
+float kv_feedforward = 0.1;
+float k_angle_feedforward = 0.1;
 extern fp32 INS_angle[3];
 /*程序主体*/
 
@@ -120,7 +122,11 @@ void change_current_to_pwm(motor_t *motor)
 _Noreturn void chassis_task(void const *pvParameters) {
 
     vTaskDelay(CHASSIS_TASK_INIT_TIME);
+
+    TickType_t last_wake_time = xTaskGetTickCount();
+
 //    LoRa_T_V_Attach(1,1);
+
     chassis_init();
 
     //主任务循环
@@ -136,17 +142,25 @@ _Noreturn void chassis_task(void const *pvParameters) {
         {
             speed_set = (float) (chassis.vx) * 0.03f;
             turn_speed_set = (float) (chassis.vw) * 0.08f;
+            ins_angle[3] = ins_angle[0];
+            ins_angle[4] = ins_angle[1];
+            ins_angle[5] = ins_angle[2];
+
             ins_angle[0] = INS_angle[0] * MOTOR_RAD_TO_ANGLE;
             ins_angle[1] = INS_angle[1] * MOTOR_RAD_TO_ANGLE;
             ins_angle[2] = INS_angle[2] * MOTOR_RAD_TO_ANGLE;
+
+            float angle_feedforward = (ins_angle[2] - ins_angle[5]) / (CHASSIS_PERIOD * 0.001f) * k_angle_feedforward;
 
             first_Kalman_Filter(&motorL.kalman, motorL.speed);
             first_Kalman_Filter(&motorR.kalman, motorR.speed);
             float angle_loop_out = pid_calc(&standstill_pid, ins_angle[2], target_roll);
             aver_speed = (-motorL.kalman.X_now + motorR.kalman.X_now) / 2;
             speed_out_r = pid_calc(&motorR.pid, aver_speed, speed_set);
-            motorR.give_current = angle_loop_out + speed_out_r + turn_speed_set;
-            motorL.give_current = -angle_loop_out - speed_out_r + turn_speed_set;
+            motorL.feedforward = (motorL.speed - motorL.speed_last) / (CHASSIS_PERIOD * 0.001f);
+            motorR.feedforward = (motorR.speed - motorR.speed_last) / (CHASSIS_PERIOD * 0.001f);
+            motorR.give_current = angle_loop_out + angle_feedforward + speed_out_r + turn_speed_set + motorR.feedforward * kv_feedforward;
+            motorL.give_current = -angle_loop_out - angle_feedforward - speed_out_r + turn_speed_set + motorL.feedforward * kv_feedforward;
             change_current_to_pwm(&motorL);
             change_current_to_pwm(&motorR);
             can_send_motor_lg(&motorL, &motorR);
@@ -162,7 +176,8 @@ _Noreturn void chassis_task(void const *pvParameters) {
 
         xTaskResumeAll();
 
-        vTaskDelay(10);
+        //vTaskDelay(10);
+        vTaskDelayUntil(&last_wake_time, CHASSIS_PERIOD);
     }
 
 }
