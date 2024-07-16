@@ -141,7 +141,7 @@ _Noreturn void chassis_task(void const *pvParameters) {
         if(chassis.relax == 1)
         {
             speed_set = (float) (chassis.vx) * 0.03f;
-            turn_speed_set = (float) (chassis.vw) * 0.08f;
+            turn_speed_set = -(float) (chassis.vw) * 0.08f;
             ins_angle[3] = ins_angle[0];
             ins_angle[4] = ins_angle[1];
             ins_angle[5] = ins_angle[2];
