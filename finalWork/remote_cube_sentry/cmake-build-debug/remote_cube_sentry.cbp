@@ -666,6 +666,9 @@
 		<Unit filename="C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/application/.idea/vcs.xml">
 			<Option target="remote_cube_sentry.elf"/>
 		</Unit>
+		<Unit filename="C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/application/.idea/workspace.xml">
+			<Option target="remote_cube_sentry.elf"/>
+		</Unit>
 		<Unit filename="C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/application/Atti.c">
 			<Option target="remote_cube_sentry.elf"/>
 		</Unit>

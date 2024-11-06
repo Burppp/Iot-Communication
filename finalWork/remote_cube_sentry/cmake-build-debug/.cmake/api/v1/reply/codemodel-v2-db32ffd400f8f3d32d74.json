@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "remote_cube_sentry.elf::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-remote_cube_sentry.elf-Debug-6567e5fe17a1f499c685.json",
+					"jsonFile" : "target-remote_cube_sentry.elf-Debug-1443d3e257e87d27efb7.json",
 					"name" : "remote_cube_sentry.elf",
 					"projectIndex" : 0
 				}
@@ -55,6 +55,6 @@
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 5
+		"minor" : 7
 	}
 }
