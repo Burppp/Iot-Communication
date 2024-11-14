@@ -112,26 +112,7 @@ void can_send_motor_lg(motor_t *m1, motor_t *m2)
 }
 
 void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
-    CAN_RxHeaderTypeDef rx_header;
 
-    uint8_t rx_data[8];
-
-    HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &rx_header, rx_data);
-
-    if (hcan == &hcan2) {
-        switch (rx_header.StdId) {
-            case 0x0002: {
-                float rpm_l, rpm_r;
-                memcpy(&rpm_l, rx_data, 4);
-                memcpy(&rpm_r, rx_data + 4, 4);
-                motorL.speed_last = motorL.speed;
-                motorR.speed_last = motorR.speed;
-                motorL.speed = rpm_l*3.14159265f*6.7f;
-                motorR.speed = rpm_r*3.14159265f*6.7f;
-            }break;
-
-        }
-    }
 }
 
 void HAL_CAN_RxFifo1MsgPendingCallback(CAN_HandleTypeDef *hcan)
