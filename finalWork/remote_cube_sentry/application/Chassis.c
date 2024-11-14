@@ -120,6 +120,9 @@ void change_current_to_pwm(motor_t *motor)
     }
 }
 
+uint8_t data = 0;
+fp32 data_origin = 0.1;
+float count = 0;
 _Noreturn void chassis_task(void const *pvParameters) {
 
     vTaskDelay(CHASSIS_TASK_INIT_TIME);
@@ -137,43 +140,15 @@ _Noreturn void chassis_task(void const *pvParameters) {
 
         HAL_UART_Receive_IT(&huart1, bRxBufferUart1, 1);
 
-        chassis_speed_update();
+        data_origin += 0.1;
 
-        if(chassis.relax == 1)
-        {
-            speed_set = (float) (chassis.vx) * 0.03f;
-            turn_speed_set = -(float) (chassis.vw) * 0.08f;
-            ins_angle[3] = ins_angle[0];
-            ins_angle[4] = ins_angle[1];
-            ins_angle[5] = ins_angle[2];
+        HAL_UART_Transmit(&huart1, (uint8_t *)&data_origin, 4, 0xff);
 
-            ins_angle[0] = INS_angle[0] * MOTOR_RAD_TO_ANGLE;
-            ins_angle[1] = INS_angle[1] * MOTOR_RAD_TO_ANGLE;
-            ins_angle[2] = INS_angle[2] * MOTOR_RAD_TO_ANGLE;
-
-            first_Kalman_Filter(&motorL.kalman, motorL.speed);
-            first_Kalman_Filter(&motorR.kalman, motorR.speed);
-            aver_speed = (-motorL.kalman.X_now + motorR.kalman.X_now) / 2;
-            speed_out_r = pid_calc(&motorR.pid, aver_speed, speed_set);
-            motorL.feedforward = (motorL.speed - motorL.speed_last) / (CHASSIS_PERIOD * 0.001f);
-            motorR.feedforward = (motorR.speed - motorR.speed_last) / (CHASSIS_PERIOD * 0.001f);
-
-            change_current_to_pwm(&motorL);
-            change_current_to_pwm(&motorR);
-            can_send_motor_lg(&motorL, &motorR);
-        }
-        else if(chassis.relax == 0)
-        {
-            motorR.give_current = 0;
-            motorL.give_current = 0;
-            change_current_to_pwm(&motorL);
-            change_current_to_pwm(&motorR);
-            can_send_motor_lg(&motorL, &motorR);
-        }
+//        osDelay(100);
 
         xTaskResumeAll();
 
-        //vTaskDelay(10);
+//        vTaskDelay(2);
         vTaskDelayUntil(&last_wake_time, CHASSIS_PERIOD);
     }
 
