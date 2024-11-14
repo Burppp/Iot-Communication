@@ -16,7 +16,7 @@ uint32_t DefaultTimeout=300;//超时
 */
 void LoRa_SendCmd(uint8_t *cmd, uint8_t *result, uint32_t timeOut, uint8_t isPrintf) {
     char *pos;
-    HAL_UART_Transmit( &huart1, cmd,strlen((const char *)cmd), 0xff); //发送AT 指令
+    HAL_UART_Transmit(&huart1, cmd,strlen((const char *)cmd), 0xff); //发送AT 指令
     HAL_UART_Receive_IT(&huart1,bRxBufferUart1,1);//启动低功耗串口接收中断
     HAL_Delay(timeOut); //延时等待
     while(1)

@@ -5,6 +5,7 @@
 /*include*/
 #include "Chassis.h"
 #include "user_lib.h"
+#include "Lora.h"
 
 chassis_t chassis = {
         .vx = 0,
@@ -150,17 +151,13 @@ _Noreturn void chassis_task(void const *pvParameters) {
             ins_angle[1] = INS_angle[1] * MOTOR_RAD_TO_ANGLE;
             ins_angle[2] = INS_angle[2] * MOTOR_RAD_TO_ANGLE;
 
-//            float angle_feedforward = (ins_angle[2] - ins_angle[5]) / (CHASSIS_PERIOD * 0.001f) * k_angle_feedforward;
-
             first_Kalman_Filter(&motorL.kalman, motorL.speed);
             first_Kalman_Filter(&motorR.kalman, motorR.speed);
-            float angle_loop_out = pid_calc(&standstill_pid, ins_angle[2], target_roll);
             aver_speed = (-motorL.kalman.X_now + motorR.kalman.X_now) / 2;
             speed_out_r = pid_calc(&motorR.pid, aver_speed, speed_set);
             motorL.feedforward = (motorL.speed - motorL.speed_last) / (CHASSIS_PERIOD * 0.001f);
             motorR.feedforward = (motorR.speed - motorR.speed_last) / (CHASSIS_PERIOD * 0.001f);
-//            motorR.give_current = angle_loop_out + angle_feedforward + speed_out_r + turn_speed_set + motorR.feedforward * kv_feedforward;
-//            motorL.give_current = -angle_loop_out - angle_feedforward - speed_out_r + turn_speed_set + motorL.feedforward * kv_feedforward;
+
             change_current_to_pwm(&motorL);
             change_current_to_pwm(&motorR);
             can_send_motor_lg(&motorL, &motorR);

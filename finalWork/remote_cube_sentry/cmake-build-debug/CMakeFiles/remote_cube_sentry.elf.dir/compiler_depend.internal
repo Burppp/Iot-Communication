@@ -2690,6 +2690,7 @@ CMakeFiles/remote_cube_sentry.elf.dir/application/Calibrate.c.obj
 CMakeFiles/remote_cube_sentry.elf.dir/application/Chassis.c.obj
  C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/application/Chassis.c
  C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/Core/Inc/FreeRTOSConfig.h
+ C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/Core/Inc/gpio.h
  C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/Core/Inc/main.h
  C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/Core/Inc/stm32f4xx_hal_conf.h
  C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
@@ -2744,6 +2745,7 @@ CMakeFiles/remote_cube_sentry.elf.dir/application/Chassis.c.obj
  C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h
  C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/application/struct_typedef.h
  C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/application/Chassis.h
+ C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/application/Lora.h
  C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/application/can_receive.h
  C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/application/struct_typedef.h
  C:/Users/Lumos/Documents/GitHub/Iot-Communication/finalWork/remote_cube_sentry/bsp/bsp_buzzer.h

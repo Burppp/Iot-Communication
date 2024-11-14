@@ -89,4 +89,7 @@ CMakeFiles/remote_cube_sentry.elf.dir/application/Chassis.c.obj: \
  C:\Users\Lumos\Documents\GitHub\Iot-Communication\finalWork\remote_cube_sentry\Middlewares\Third_Party\FreeRTOS\Source\include/event_groups.h \
  C:\Users\Lumos\Documents\GitHub\Iot-Communication\finalWork\remote_cube_sentry\Middlewares\Third_Party\FreeRTOS\Source\include/timers.h \
  C:\Users\Lumos\Documents\GitHub\Iot-Communication\finalWork\remote_cube_sentry\component\algorithm/ramp.h \
- C:\Users\Lumos\Documents\GitHub\Iot-Communication\finalWork\remote_cube_sentry\bsp/bsp_buzzer.h
+ C:\Users\Lumos\Documents\GitHub\Iot-Communication\finalWork\remote_cube_sentry\bsp/bsp_buzzer.h \
+ C:\Users\Lumos\Documents\GitHub\Iot-Communication\finalWork\remote_cube_sentry\application\Lora.h \
+ C:\Users\Lumos\Documents\GitHub\Iot-Communication\finalWork\remote_cube_sentry\Core\Inc/gpio.h \
+ C:\Users\Lumos\Documents\GitHub\Iot-Communication\finalWork\remote_cube_sentry\Core\Inc/main.h

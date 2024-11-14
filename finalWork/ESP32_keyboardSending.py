@@ -5,7 +5,7 @@ import time
 #from pynput import mouse
 
 # 配置串口
-ser = serial.Serial('COM20', 115200, timeout=1)
+ser = serial.Serial('COM6', 115200, timeout=1)
 
 # 初始化按键状态变量
 key_states = {'w': False, 'a': False, 's': False, 'd': False, 'x': False}
