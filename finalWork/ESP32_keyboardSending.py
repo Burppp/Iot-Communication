@@ -5,7 +5,7 @@ import time
 #from pynput import mouse
 
 # 配置串口
-ser = serial.Serial('COM20', 115200, timeout=1)
+ser = serial.Serial('COM11', 115200, timeout=1)
 
 # 初始化按键状态变量
 key_states = {'w': False, 'a': False, 's': False, 'd': False}
@@ -24,6 +24,9 @@ key_pressed_time = {key: None for key in key_states}
 def send_key_states():
     global last_sent_key_states, last_sent_frame, sequence_number
     
+    # 定义前缀
+    prefix = bytearray([0x27, 0x66, 10])
+    
     key_state_string = ''.join(['1' if key_states[key] else '0' for key in ['w', 'a', 's', 'd']])
     key_state_string += '1' if mouse_left else '0'
     key_state_string += '1' if mouse_right else '0'
@@ -32,7 +35,8 @@ def send_key_states():
         return
     
     frame = f"h{sequence_number}{key_state_string}j"
-    ser.write(frame.encode())
+    full_frame = prefix + frame.encode()  # 将前缀和帧内容合并
+    ser.write(full_frame)
     last_sent_key_states = key_state_string
     last_sent_frame = frame
     print("Sent key states:", frame)
@@ -41,19 +45,19 @@ def send_key_states():
         if ser.in_waiting > 0:
             response = ser.read(1)[0]
 
-            if(not response):
+            if not response:
                 print(f"Received nothing.")
                 break
 
             else:
                 print("response = ", response)
-                print("sequense_number = ", sequence_number)
+                print("sequence_number = ", sequence_number)
 
                 if response == sequence_number:
                     sequence_number = sequence_number + 1 if sequence_number < 9 else 1
                     break
                 else:
-                    ser.write(last_sent_frame.encode())
+                    ser.write(full_frame)  # 重发完整的帧，包括前缀
                     print("Resent key states:", last_sent_frame)
             time.sleep(0.1)
 

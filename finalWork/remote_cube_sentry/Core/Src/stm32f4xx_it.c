@@ -369,6 +369,7 @@ void DMA2_Stream6_IRQHandler(void)
 }
 
 /* USER CODE BEGIN 1 */
+uint8_t frame_head[3] = {0x27, 0x66, 10};
 int8_t wasdLR[6] = {0};
 uint8_t num = 0;
 uint8_t *sequence_num = NULL;
@@ -391,7 +392,11 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
             wasdLR[4] = LPUART1_RX_BUF[LPUART1_RX_LEN - 3] - '0';
             wasdLR[5] = LPUART1_RX_BUF[LPUART1_RX_LEN - 2] - '0';
             if(sequence_num)
-                HAL_UART_Transmit(&huart1, (uint8_t *)sequence_num, 1, 100);
+            {
+                HAL_UART_Transmit(&huart1, (uint8_t *)frame_head, sizeof(frame_head), 100);
+
+                HAL_UART_Transmit(&huart1, (uint8_t *) sequence_num, 1, 100);
+            }
         }
         HAL_UART_Receive_IT(&huart1,bRxBufferUart1,1);
     }
