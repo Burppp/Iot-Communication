@@ -33,7 +33,7 @@ try:
     while True:
         data = ser.read(ser.in_waiting)
         
-
+    
         incomplete_data += data
         
         while len(incomplete_data) >= 4:

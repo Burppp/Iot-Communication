@@ -48,17 +48,16 @@ void LoRa_SendCmd(uint8_t *cmd, uint8_t *result, uint32_t timeOut, uint8_t isPri
 void LoRa_T_P_Attach(uint8_t isPrintf,uint8_t isReboot){
     if(isReboot == 1)
     {
-        //HAL_GPIO_WritePin(PB14_GPIO_Port, PB14_Pin, GPIO_PIN_SET);
         HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);
         HAL_Delay(1000);
         LoRa_SendCmd((uint8_t *)"AT+UART=7,0\r\n", (uint8_t *)"OK",DefaultTimeout, isPrintf);
         LoRa_SendCmd((uint8_t *)"AT+WLRATE=10,5\r\n", (uint8_t *)"OK",DefaultTimeout, isPrintf);
-        LoRa_SendCmd((uint8_t *)"AT+TPOWER=0\r\n", (uint8_t *)"OK",DefaultTimeout, isPrintf);
-        LoRa_SendCmd((uint8_t *)"AT+TMODE=0\r\n", (uint8_t *)"OK",DefaultTimeout, isPrintf);
+        LoRa_SendCmd((uint8_t *)"AT+TPOWER=3\r\n", (uint8_t *)"OK",DefaultTimeout, isPrintf);
+        LoRa_SendCmd((uint8_t *)"AT+TMODE=1\r\n", (uint8_t *)"OK",DefaultTimeout, isPrintf);
         LoRa_SendCmd((uint8_t *)"AT+WLTIME=0\r\n", (uint8_t *)"OK",DefaultTimeout, isPrintf);
         LoRa_SendCmd((uint8_t *)"AT+CWMODE=0\r\n", (uint8_t *)"OK",DefaultTimeout, isPrintf);
         LoRa_SendCmd((uint8_t *)"AT+ADDR=27,66\r\n", (uint8_t *)"OK",DefaultTimeout, isPrintf);
-        //HAL_GPIO_WritePin(PB14_GPIO_Port, PB14_Pin, GPIO_PIN_RESET);
+        LoRa_SendCmd((uint8_t *)"AT+FLASH=1\r\n", (uint8_t *)"OK", DefaultTimeout, isPrintf);//掉电后保存
         HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_RESET);
         printf("Attach!\r\n");
     }
